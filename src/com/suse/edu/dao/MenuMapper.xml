@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suse.edu.dao.MenuMapper" >
+  <resultMap id="BaseResultMap" type="com.suse.edu.bean.Menu" >
+    <id column="MENU_ID" property="menuId" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="VARCHAR" />
+    <result column="MENU_DESCRIPTION" property="menuDescription" jdbcType="VARCHAR" />
+    <result column="TYPE" property="type" jdbcType="VARCHAR" />
+    <result column="PARENT_ID" property="parentId" jdbcType="VARCHAR" />
+    <result column="SORT" property="sort" jdbcType="DECIMAL" />
+    <result column="ICON" property="icon" jdbcType="VARCHAR" />
+    <result column="OPEN_ADDRESS" property="openAddress" jdbcType="VARCHAR" />
+    <result column="ENABLE" property="enable" jdbcType="DECIMAL" />
+    <result column="LEAF" property="leaf" jdbcType="DECIMAL" />
+    <result column="MENUCODE" property="menucode" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    MENU_ID, NAME, MENU_DESCRIPTION, TYPE, PARENT_ID, SORT, ICON, OPEN_ADDRESS, ENABLE, 
+    LEAF, MENUCODE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_SYSTEM_MENU
+    where MENU_ID = #{menuId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from T_SYSTEM_MENU
+    where MENU_ID = #{menuId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.suse.edu.bean.Menu" >
+    insert into T_SYSTEM_MENU (MENU_ID, NAME, MENU_DESCRIPTION, 
+      TYPE, PARENT_ID, SORT, 
+      ICON, OPEN_ADDRESS, ENABLE, 
+      LEAF, MENUCODE)
+    values (#{menuId,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{menuDescription,jdbcType=VARCHAR}, 
+      #{type,jdbcType=VARCHAR}, #{parentId,jdbcType=VARCHAR}, #{sort,jdbcType=DECIMAL}, 
+      #{icon,jdbcType=VARCHAR}, #{openAddress,jdbcType=VARCHAR}, #{enable,jdbcType=DECIMAL}, 
+      #{leaf,jdbcType=DECIMAL}, #{menucode,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suse.edu.bean.Menu" >
+    insert into T_SYSTEM_MENU
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="menuId != null" >
+        MENU_ID,
+      </if>
+      <if test="name != null" >
+        NAME,
+      </if>
+      <if test="menuDescription != null" >
+        MENU_DESCRIPTION,
+      </if>
+      <if test="type != null" >
+        TYPE,
+      </if>
+      <if test="parentId != null" >
+        PARENT_ID,
+      </if>
+      <if test="sort != null" >
+        SORT,
+      </if>
+      <if test="icon != null" >
+        ICON,
+      </if>
+      <if test="openAddress != null" >
+        OPEN_ADDRESS,
+      </if>
+      <if test="enable != null" >
+        ENABLE,
+      </if>
+      <if test="leaf != null" >
+        LEAF,
+      </if>
+      <if test="menucode != null" >
+        MENUCODE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="menuId != null" >
+        #{menuId,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="menuDescription != null" >
+        #{menuDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null" >
+        #{parentId,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null" >
+        #{sort,jdbcType=DECIMAL},
+      </if>
+      <if test="icon != null" >
+        #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="openAddress != null" >
+        #{openAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="enable != null" >
+        #{enable,jdbcType=DECIMAL},
+      </if>
+      <if test="leaf != null" >
+        #{leaf,jdbcType=DECIMAL},
+      </if>
+      <if test="menucode != null" >
+        #{menucode,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suse.edu.bean.Menu" >
+    update T_SYSTEM_MENU
+    <set >
+      <if test="name != null" >
+        NAME = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="menuDescription != null" >
+        MENU_DESCRIPTION = #{menuDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="type != null" >
+        TYPE = #{type,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null" >
+        PARENT_ID = #{parentId,jdbcType=VARCHAR},
+      </if>
+      <if test="sort != null" >
+        SORT = #{sort,jdbcType=DECIMAL},
+      </if>
+      <if test="icon != null" >
+        ICON = #{icon,jdbcType=VARCHAR},
+      </if>
+      <if test="openAddress != null" >
+        OPEN_ADDRESS = #{openAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="enable != null" >
+        ENABLE = #{enable,jdbcType=DECIMAL},
+      </if>
+      <if test="leaf != null" >
+        LEAF = #{leaf,jdbcType=DECIMAL},
+      </if>
+      <if test="menucode != null" >
+        MENUCODE = #{menucode,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where MENU_ID = #{menuId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suse.edu.bean.Menu" >
+    update T_SYSTEM_MENU
+    set NAME = #{name,jdbcType=VARCHAR},
+      MENU_DESCRIPTION = #{menuDescription,jdbcType=VARCHAR},
+      TYPE = #{type,jdbcType=VARCHAR},
+      PARENT_ID = #{parentId,jdbcType=VARCHAR},
+      SORT = #{sort,jdbcType=DECIMAL},
+      ICON = #{icon,jdbcType=VARCHAR},
+      OPEN_ADDRESS = #{openAddress,jdbcType=VARCHAR},
+      ENABLE = #{enable,jdbcType=DECIMAL},
+      LEAF = #{leaf,jdbcType=DECIMAL},
+      MENUCODE = #{menucode,jdbcType=VARCHAR}
+    where MENU_ID = #{menuId,jdbcType=VARCHAR}
+  </update>
+</mapper>

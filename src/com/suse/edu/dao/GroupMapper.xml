@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suse.edu.dao.GroupMapper" >
+  <resultMap id="BaseResultMap" type="com.suse.edu.bean.Group" >
+    <id column="GROUPID" property="groupid" jdbcType="VARCHAR" />
+    <result column="GROUP_NAME" property="groupName" jdbcType="VARCHAR" />
+    <result column="GROUP_DESCRIPTION" property="groupDescription" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="ADD_USER" property="addUser" jdbcType="VARCHAR" />
+    <result column="ADD_DATE" property="addDate" jdbcType="TIMESTAMP" />
+    <result column="UPDATE_USER" property="updateUser" jdbcType="VARCHAR" />
+    <result column="UPDATE_DATE" property="updateDate" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    GROUPID, GROUP_NAME, GROUP_DESCRIPTION, STATUS, ADD_USER, ADD_DATE, UPDATE_USER, 
+    UPDATE_DATE
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_SYSTEM_GROUP
+    where GROUPID = #{groupid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from T_SYSTEM_GROUP
+    where GROUPID = #{groupid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.suse.edu.bean.Group" >
+    insert into T_SYSTEM_GROUP (GROUPID, GROUP_NAME, GROUP_DESCRIPTION, 
+      STATUS, ADD_USER, ADD_DATE, 
+      UPDATE_USER, UPDATE_DATE)
+    values (#{groupid,jdbcType=VARCHAR}, #{groupName,jdbcType=VARCHAR}, #{groupDescription,jdbcType=VARCHAR}, 
+      #{status,jdbcType=DECIMAL}, #{addUser,jdbcType=VARCHAR}, #{addDate,jdbcType=TIMESTAMP}, 
+      #{updateUser,jdbcType=VARCHAR}, #{updateDate,jdbcType=TIMESTAMP})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suse.edu.bean.Group" >
+    insert into T_SYSTEM_GROUP
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="groupid != null" >
+        GROUPID,
+      </if>
+      <if test="groupName != null" >
+        GROUP_NAME,
+      </if>
+      <if test="groupDescription != null" >
+        GROUP_DESCRIPTION,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="addUser != null" >
+        ADD_USER,
+      </if>
+      <if test="addDate != null" >
+        ADD_DATE,
+      </if>
+      <if test="updateUser != null" >
+        UPDATE_USER,
+      </if>
+      <if test="updateDate != null" >
+        UPDATE_DATE,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="groupid != null" >
+        #{groupid,jdbcType=VARCHAR},
+      </if>
+      <if test="groupName != null" >
+        #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="groupDescription != null" >
+        #{groupDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="addUser != null" >
+        #{addUser,jdbcType=VARCHAR},
+      </if>
+      <if test="addDate != null" >
+        #{addDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suse.edu.bean.Group" >
+    update T_SYSTEM_GROUP
+    <set >
+      <if test="groupName != null" >
+        GROUP_NAME = #{groupName,jdbcType=VARCHAR},
+      </if>
+      <if test="groupDescription != null" >
+        GROUP_DESCRIPTION = #{groupDescription,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="addUser != null" >
+        ADD_USER = #{addUser,jdbcType=VARCHAR},
+      </if>
+      <if test="addDate != null" >
+        ADD_DATE = #{addDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateUser != null" >
+        UPDATE_USER = #{updateUser,jdbcType=VARCHAR},
+      </if>
+      <if test="updateDate != null" >
+        UPDATE_DATE = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where GROUPID = #{groupid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suse.edu.bean.Group" >
+    update T_SYSTEM_GROUP
+    set GROUP_NAME = #{groupName,jdbcType=VARCHAR},
+      GROUP_DESCRIPTION = #{groupDescription,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=DECIMAL},
+      ADD_USER = #{addUser,jdbcType=VARCHAR},
+      ADD_DATE = #{addDate,jdbcType=TIMESTAMP},
+      UPDATE_USER = #{updateUser,jdbcType=VARCHAR},
+      UPDATE_DATE = #{updateDate,jdbcType=TIMESTAMP}
+    where GROUPID = #{groupid,jdbcType=VARCHAR}
+  </update>
+</mapper>

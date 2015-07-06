@@ -1,0 +1,4367 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suse.edu.dao.MyerMapper" >
+  <resultMap id="BaseResultMap" type="com.suse.edu.bean.Myer" >
+    <id column="D_RECORD_ID" property="dRecordId" jdbcType="DECIMAL" />
+    <result column="D_DATA_ID" property="dDataId" jdbcType="VARCHAR" />
+    <result column="V04298" property="v04298" jdbcType="DECIMAL" />
+    <result column="D_IYMDHM" property="dIymdhm" jdbcType="TIMESTAMP" />
+    <result column="D_RYMDHM" property="dRymdhm" jdbcType="TIMESTAMP" />
+    <result column="D_UPDATE_TIME" property="dUpdateTime" jdbcType="TIMESTAMP" />
+    <result column="V01300" property="v01300" jdbcType="VARCHAR" />
+    <result column="V05001" property="v05001" jdbcType="DECIMAL" />
+    <result column="V06001" property="v06001" jdbcType="DECIMAL" />
+    <result column="V07001" property="v07001" jdbcType="DECIMAL" />
+    <result column="V07031" property="v07031" jdbcType="DECIMAL" />
+    <result column="V07311" property="v07311" jdbcType="DECIMAL" />
+    <result column="V07032_04" property="v0703204" jdbcType="DECIMAL" />
+    <result column="V_TIME_AVAILA" property="vTimeAvaila" jdbcType="VARCHAR" />
+    <result column="V10051_701" property="v10051701" jdbcType="DECIMAL" />
+    <result column="V10004_701" property="v10004701" jdbcType="DECIMAL" />
+    <result column="V10301" property="v10301" jdbcType="DECIMAL" />
+    <result column="V10301_057" property="v10301057" jdbcType="DECIMAL" />
+    <result column="V10301_058" property="v10301058" jdbcType="DECIMAL" />
+    <result column="V10301_060" property="v10301060" jdbcType="DECIMAL" />
+    <result column="V10302" property="v10302" jdbcType="DECIMAL" />
+    <result column="V10302_057" property="v10302057" jdbcType="DECIMAL" />
+    <result column="V10302_058" property="v10302058" jdbcType="DECIMAL" />
+    <result column="V10302_060" property="v10302060" jdbcType="DECIMAL" />
+    <result column="V10384" property="v10384" jdbcType="DECIMAL" />
+    <result column="V10386" property="v10386" jdbcType="DECIMAL" />
+    <result column="V10389" property="v10389" jdbcType="DECIMAL" />
+    <result column="V10390" property="v10390" jdbcType="DECIMAL" />
+    <result column="V12001_701" property="v12001701" jdbcType="DECIMAL" />
+    <result column="V12306" property="v12306" jdbcType="DECIMAL" />
+    <result column="V12011_701" property="v12011701" jdbcType="DECIMAL" />
+    <result column="V12012_701" property="v12012701" jdbcType="DECIMAL" />
+    <result column="V12011" property="v12011" jdbcType="DECIMAL" />
+    <result column="V12011_057" property="v12011057" jdbcType="DECIMAL" />
+    <result column="V12011_058" property="v12011058" jdbcType="DECIMAL" />
+    <result column="V12011_060" property="v12011060" jdbcType="DECIMAL" />
+    <result column="V12012" property="v12012" jdbcType="DECIMAL" />
+    <result column="V12012_057" property="v12012057" jdbcType="DECIMAL" />
+    <result column="V12012_058" property="v12012058" jdbcType="DECIMAL" />
+    <result column="V12012_060" property="v12012060" jdbcType="DECIMAL" />
+    <result column="V12303_701" property="v12303701" jdbcType="DECIMAL" />
+    <result column="V12304" property="v12304" jdbcType="DECIMAL" />
+    <result column="V12304_057" property="v12304057" jdbcType="DECIMAL" />
+    <result column="V12304_058" property="v12304058" jdbcType="DECIMAL" />
+    <result column="V12304_060" property="v12304060" jdbcType="DECIMAL" />
+    <result column="V12305" property="v12305" jdbcType="DECIMAL" />
+    <result column="V12305_057" property="v12305057" jdbcType="DECIMAL" />
+    <result column="V12305_058" property="v12305058" jdbcType="DECIMAL" />
+    <result column="V12305_060" property="v12305060" jdbcType="DECIMAL" />
+    <result column="V12605_30_701" property="v1260530701" jdbcType="DECIMAL" />
+    <result column="V12710_30_701" property="v1271030701" jdbcType="DECIMAL" />
+    <result column="V12707_30" property="v1270730" jdbcType="DECIMAL" />
+    <result column="V12712_30" property="v1271230" jdbcType="DECIMAL" />
+    <result column="V12711_30" property="v1271130" jdbcType="DECIMAL" />
+    <result column="V12605_35_701" property="v1260535701" jdbcType="DECIMAL" />
+    <result column="V12710_35_701" property="v1271035701" jdbcType="DECIMAL" />
+    <result column="V12707_35" property="v1270735" jdbcType="DECIMAL" />
+    <result column="V12712_35" property="v1271235" jdbcType="DECIMAL" />
+    <result column="V12711_35" property="v1271135" jdbcType="DECIMAL" />
+    <result column="V12605_37_701" property="v1260537701" jdbcType="DECIMAL" />
+    <result column="V12710_37_701" property="v1271037701" jdbcType="DECIMAL" />
+    <result column="V12707_37" property="v1270737" jdbcType="DECIMAL" />
+    <result column="V12712_37" property="v1271237" jdbcType="DECIMAL" />
+    <result column="V12711_37" property="v1271137" jdbcType="DECIMAL" />
+    <result column="V12605_40_701" property="v1260540701" jdbcType="DECIMAL" />
+    <result column="V12710_40_701" property="v1271040701" jdbcType="DECIMAL" />
+    <result column="V12707_40" property="v1270740" jdbcType="DECIMAL" />
+    <result column="V12712_40" property="v1271240" jdbcType="DECIMAL" />
+    <result column="V12711_40" property="v1271140" jdbcType="DECIMAL" />
+    <result column="V12607_02_701" property="v1260702701" jdbcType="DECIMAL" />
+    <result column="V12713_02_701" property="v1271302701" jdbcType="DECIMAL" />
+    <result column="V12708_02" property="v1270802" jdbcType="DECIMAL" />
+    <result column="V12715_02" property="v1271502" jdbcType="DECIMAL" />
+    <result column="V12714_02" property="v1271402" jdbcType="DECIMAL" />
+    <result column="V12603_00_701" property="v1260300701" jdbcType="DECIMAL" />
+    <result column="V12713_00_701" property="v1271300701" jdbcType="DECIMAL" />
+    <result column="V12708_00" property="v1270800" jdbcType="DECIMAL" />
+    <result column="V12715_00" property="v1271500" jdbcType="DECIMAL" />
+    <result column="V12714_00" property="v1271400" jdbcType="DECIMAL" />
+    <result column="V12609_02_701" property="v1260902701" jdbcType="DECIMAL" />
+    <result column="V12716_02_701" property="v1271602701" jdbcType="DECIMAL" />
+    <result column="V12709_02" property="v1270902" jdbcType="DECIMAL" />
+    <result column="V12718_02" property="v1271802" jdbcType="DECIMAL" />
+    <result column="V12717_02" property="v1271702" jdbcType="DECIMAL" />
+    <result column="V12609_15_701" property="v1260915701" jdbcType="DECIMAL" />
+    <result column="V12716_15_701" property="v1271615701" jdbcType="DECIMAL" />
+    <result column="V12709_15" property="v1270915" jdbcType="DECIMAL" />
+    <result column="V12718_15" property="v1271815" jdbcType="DECIMAL" />
+    <result column="V12717_15" property="v1271715" jdbcType="DECIMAL" />
+    <result column="V12609_30_701" property="v1260930701" jdbcType="DECIMAL" />
+    <result column="V12716_30_701" property="v1271630701" jdbcType="DECIMAL" />
+    <result column="V12709_30" property="v1270930" jdbcType="DECIMAL" />
+    <result column="V12718_30" property="v1271830" jdbcType="DECIMAL" />
+    <result column="V12717_30" property="v1271730" jdbcType="DECIMAL" />
+    <result column="V12609_40_701" property="v1260940701" jdbcType="DECIMAL" />
+    <result column="V12716_40_701" property="v1271640701" jdbcType="DECIMAL" />
+    <result column="V12709_40" property="v1270940" jdbcType="DECIMAL" />
+    <result column="V12718_40" property="v1271840" jdbcType="DECIMAL" />
+    <result column="V12717_40" property="v1271740" jdbcType="DECIMAL" />
+    <result column="V12705_00" property="v1270500" jdbcType="DECIMAL" />
+    <result column="V12703_00" property="v1270300" jdbcType="DECIMAL" />
+    <result column="V12706_00" property="v1270600" jdbcType="DECIMAL" />
+    <result column="V12704_00" property="v1270400" jdbcType="DECIMAL" />
+    <result column="V12699_00_701" property="v1269900701" jdbcType="DECIMAL" />
+    <result column="V12700_00" property="v1270000" jdbcType="DECIMAL" />
+    <result column="V12701_00" property="v1270100" jdbcType="DECIMAL" />
+    <result column="V12702_00" property="v1270200" jdbcType="DECIMAL" />
+    <result column="V12705_05" property="v1270505" jdbcType="DECIMAL" />
+    <result column="V12703_05" property="v1270305" jdbcType="DECIMAL" />
+    <result column="V12706_05" property="v1270605" jdbcType="DECIMAL" />
+    <result column="V12704_05" property="v1270405" jdbcType="DECIMAL" />
+    <result column="V12699_05_701" property="v1269905701" jdbcType="DECIMAL" />
+    <result column="V12700_05" property="v1270005" jdbcType="DECIMAL" />
+    <result column="V12701_05" property="v1270105" jdbcType="DECIMAL" />
+    <result column="V12702_05" property="v1270205" jdbcType="DECIMAL" />
+    <result column="V12705_10" property="v1270510" jdbcType="DECIMAL" />
+    <result column="V12703_10" property="v1270310" jdbcType="DECIMAL" />
+    <result column="V12706_10" property="v1270610" jdbcType="DECIMAL" />
+    <result column="V12704_10" property="v1270410" jdbcType="DECIMAL" />
+    <result column="V12699_10_701" property="v1269910701" jdbcType="DECIMAL" />
+    <result column="V12700_10" property="v1270010" jdbcType="DECIMAL" />
+    <result column="V12701_10" property="v1270110" jdbcType="DECIMAL" />
+    <result column="V12702_10" property="v1270210" jdbcType="DECIMAL" />
+    <result column="V12705_12" property="v1270512" jdbcType="DECIMAL" />
+    <result column="V12703_12" property="v1270312" jdbcType="DECIMAL" />
+    <result column="V12706_12" property="v1270612" jdbcType="DECIMAL" />
+    <result column="V12704_12" property="v1270412" jdbcType="DECIMAL" />
+    <result column="V12699_12_701" property="v1269912701" jdbcType="DECIMAL" />
+    <result column="V12700_12" property="v1270012" jdbcType="DECIMAL" />
+    <result column="V12701_12" property="v1270112" jdbcType="DECIMAL" />
+    <result column="V12702_12" property="v1270212" jdbcType="DECIMAL" />
+    <result column="V12705_15" property="v1270515" jdbcType="DECIMAL" />
+    <result column="V12703_15" property="v1270315" jdbcType="DECIMAL" />
+    <result column="V12706_15" property="v1270615" jdbcType="DECIMAL" />
+    <result column="V12704_15" property="v1270415" jdbcType="DECIMAL" />
+    <result column="V12699_15_701" property="v1269915701" jdbcType="DECIMAL" />
+    <result column="V12700_15" property="v1270015" jdbcType="DECIMAL" />
+    <result column="V12701_15" property="v1270115" jdbcType="DECIMAL" />
+    <result column="V12702_15" property="v1270215" jdbcType="DECIMAL" />
+    <result column="V12705_20" property="v1270520" jdbcType="DECIMAL" />
+    <result column="V12703_20" property="v1270320" jdbcType="DECIMAL" />
+    <result column="V12706_20" property="v1270620" jdbcType="DECIMAL" />
+    <result column="V12704_20" property="v1270420" jdbcType="DECIMAL" />
+    <result column="V12699_20_701" property="v1269920701" jdbcType="DECIMAL" />
+    <result column="V12700_20" property="v1270020" jdbcType="DECIMAL" />
+    <result column="V12701_20" property="v1270120" jdbcType="DECIMAL" />
+    <result column="V12702_20" property="v1270220" jdbcType="DECIMAL" />
+    <result column="V12705_22" property="v1270522" jdbcType="DECIMAL" />
+    <result column="V12703_22" property="v1270322" jdbcType="DECIMAL" />
+    <result column="V12706_22" property="v1270622" jdbcType="DECIMAL" />
+    <result column="V12704_22" property="v1270422" jdbcType="DECIMAL" />
+    <result column="V12699_22_701" property="v1269922701" jdbcType="DECIMAL" />
+    <result column="V12700_22" property="v1270022" jdbcType="DECIMAL" />
+    <result column="V12701_22" property="v1270122" jdbcType="DECIMAL" />
+    <result column="V12702_22" property="v1270222" jdbcType="DECIMAL" />
+    <result column="V12610_26" property="v1261026" jdbcType="DECIMAL" />
+    <result column="V12611_18" property="v1261118" jdbcType="DECIMAL" />
+    <result column="V12001_008" property="v12001008" jdbcType="DECIMAL" />
+    <result column="V12001_004" property="v12001004" jdbcType="DECIMAL" />
+    <result column="V12001_021_POS" property="v12001021Pos" jdbcType="DECIMAL" />
+    <result column="V12001_021_MNU" property="v12001021Mnu" jdbcType="DECIMAL" />
+    <result column="V13004_701" property="v13004701" jdbcType="DECIMAL" />
+    <result column="V13004_008" property="v13004008" jdbcType="DECIMAL" />
+    <result column="V13004_004" property="v13004004" jdbcType="DECIMAL" />
+    <result column="V13004_021_POS" property="v13004021Pos" jdbcType="DECIMAL" />
+    <result column="V13004_021_MNU" property="v13004021Mnu" jdbcType="DECIMAL" />
+    <result column="V13003_701" property="v13003701" jdbcType="DECIMAL" />
+    <result column="V13003_008" property="v13003008" jdbcType="DECIMAL" />
+    <result column="V13003_004" property="v13003004" jdbcType="DECIMAL" />
+    <result column="V20010_701" property="v20010701" jdbcType="DECIMAL" />
+    <result column="V20051_701" property="v20051701" jdbcType="DECIMAL" />
+    <result column="V20501_02_701" property="v2050102701" jdbcType="DECIMAL" />
+    <result column="V20500_08_701" property="v2050008701" jdbcType="DECIMAL" />
+    <result column="V20503_02_701" property="v2050302701" jdbcType="DECIMAL" />
+    <result column="V20502_08_701" property="v2050208701" jdbcType="DECIMAL" />
+    <result column="V20501_02_061" property="v2050102061" jdbcType="DECIMAL" />
+    <result column="V20500_08_061" property="v2050008061" jdbcType="DECIMAL" />
+    <result column="V20503_02_061" property="v2050302061" jdbcType="DECIMAL" />
+    <result column="V20502_08_061" property="v2050208061" jdbcType="DECIMAL" />
+    <result column="V13011_701" property="v13011701" jdbcType="DECIMAL" />
+    <result column="V13060_MAX" property="v13060Max" jdbcType="DECIMAL" />
+    <result column="V13060_MAX_057" property="v13060Max057" jdbcType="DECIMAL" />
+    <result column="V13060_MIN" property="v13060Min" jdbcType="DECIMAL" />
+    <result column="V13060_MIN_057" property="v13060Min057" jdbcType="DECIMAL" />
+    <result column="V13052" property="v13052" jdbcType="DECIMAL" />
+    <result column="V13052_057" property="v13052057" jdbcType="DECIMAL" />
+    <result column="V13052_058" property="v13052058" jdbcType="DECIMAL" />
+    <result column="V13052_060" property="v13052060" jdbcType="DECIMAL" />
+    <result column="V13353_701" property="v13353701" jdbcType="DECIMAL" />
+    <result column="V13355_001_701" property="v13355001701" jdbcType="DECIMAL" />
+    <result column="V13355_005_701" property="v13355005701" jdbcType="DECIMAL" />
+    <result column="V13355_010_701" property="v13355010701" jdbcType="DECIMAL" />
+    <result column="V13355_025_701" property="v13355025701" jdbcType="DECIMAL" />
+    <result column="V13355_050_701" property="v13355050701" jdbcType="DECIMAL" />
+    <result column="V13355_100_701" property="v13355100701" jdbcType="DECIMAL" />
+    <result column="V13355_150_701" property="v13355150701" jdbcType="DECIMAL" />
+    <result column="V20430_701" property="v20430701" jdbcType="DECIMAL" />
+    <result column="V13380" property="v13380" jdbcType="DECIMAL" />
+    <result column="V20212" property="v20212" jdbcType="DECIMAL" />
+    <result column="V20438" property="v20438" jdbcType="DECIMAL" />
+    <result column="V20431" property="v20431" jdbcType="DECIMAL" />
+    <result column="V13381" property="v13381" jdbcType="DECIMAL" />
+    <result column="V20434_701" property="v20434701" jdbcType="DECIMAL" />
+    <result column="V20210" property="v20210" jdbcType="DECIMAL" />
+    <result column="V20436" property="v20436" jdbcType="DECIMAL" />
+    <result column="V20435" property="v20435" jdbcType="DECIMAL" />
+    <result column="V20432_701" property="v20432701" jdbcType="DECIMAL" />
+    <result column="V20211" property="v20211" jdbcType="DECIMAL" />
+    <result column="V20437" property="v20437" jdbcType="DECIMAL" />
+    <result column="V20433" property="v20433" jdbcType="DECIMAL" />
+    <result column="V13382_01" property="v1338201" jdbcType="DECIMAL" />
+    <result column="V13382_01_057" property="v1338201057" jdbcType="DECIMAL" />
+    <result column="V13382_01_058" property="v1338201058" jdbcType="DECIMAL" />
+    <result column="V13382_01_060" property="v1338201060" jdbcType="DECIMAL" />
+    <result column="V13011_008_REL" property="v13011008Rel" jdbcType="DECIMAL" />
+    <result column="V13011_008" property="v13011008" jdbcType="DECIMAL" />
+    <result column="V13011_004_REL" property="v13011004Rel" jdbcType="DECIMAL" />
+    <result column="V13011_004" property="v13011004" jdbcType="DECIMAL" />
+    <result column="V13011_023_POS" property="v13011023Pos" jdbcType="DECIMAL" />
+    <result column="V13011_023_MNU" property="v13011023Mnu" jdbcType="DECIMAL" />
+    <result column="V04330_089_701" property="v04330089701" jdbcType="DECIMAL" />
+    <result column="V04330_007_701" property="v04330007701" jdbcType="DECIMAL" />
+    <result column="V04330_006_701" property="v04330006701" jdbcType="DECIMAL" />
+    <result column="V04330_005_701" property="v04330005701" jdbcType="DECIMAL" />
+    <result column="V04330_008_701" property="v04330008701" jdbcType="DECIMAL" />
+    <result column="V04330_015_701" property="v04330015701" jdbcType="DECIMAL" />
+    <result column="V04330_015_MOS" property="v04330015Mos" jdbcType="DECIMAL" />
+    <result column="V04330_015_LEA" property="v04330015Lea" jdbcType="DECIMAL" />
+    <result column="V04330_031_701" property="v04330031701" jdbcType="DECIMAL" />
+    <result column="V04330_031_MOS" property="v04330031Mos" jdbcType="DECIMAL" />
+    <result column="V04330_031_LEA" property="v04330031Lea" jdbcType="DECIMAL" />
+    <result column="V04330_042_701" property="v04330042701" jdbcType="DECIMAL" />
+    <result column="V04330_042_MOS" property="v04330042Mos" jdbcType="DECIMAL" />
+    <result column="V04330_042_LEA" property="v04330042Lea" jdbcType="DECIMAL" />
+    <result column="V04330_017_701" property="v04330017701" jdbcType="DECIMAL" />
+    <result column="V04330_017_MOS" property="v04330017Mos" jdbcType="DECIMAL" />
+    <result column="V04330_017_LEA" property="v04330017Lea" jdbcType="DECIMAL" />
+    <result column="V04330_013_701" property="v04330013701" jdbcType="DECIMAL" />
+    <result column="V04330_013_MOS" property="v04330013Mos" jdbcType="DECIMAL" />
+    <result column="V04330_013_LEA" property="v04330013Lea" jdbcType="DECIMAL" />
+    <result column="V04330_002_701" property="v04330002701" jdbcType="DECIMAL" />
+    <result column="V04330_002_MOS" property="v04330002Mos" jdbcType="DECIMAL" />
+    <result column="V04330_002_LEA" property="v04330002Lea" jdbcType="DECIMAL" />
+    <result column="V04330_070_701" property="v04330070701" jdbcType="DECIMAL" />
+    <result column="V04330_070_MOS" property="v04330070Mos" jdbcType="DECIMAL" />
+    <result column="V04330_070_LEA" property="v04330070Lea" jdbcType="DECIMAL" />
+    <result column="V04330_016_701" property="v04330016701" jdbcType="DECIMAL" />
+    <result column="V04330_056_701" property="v04330056701" jdbcType="DECIMAL" />
+    <result column="V04330_048_701" property="v04330048701" jdbcType="DECIMAL" />
+    <result column="V20309_001" property="v20309001" jdbcType="DECIMAL" />
+    <result column="V20309_010" property="v20309010" jdbcType="DECIMAL" />
+    <result column="V13032" property="v13032" jdbcType="DECIMAL" />
+    <result column="V13033" property="v13033" jdbcType="DECIMAL" />
+    <result column="V13334" property="v13334" jdbcType="DECIMAL" />
+    <result column="V13334_057" property="v13334057" jdbcType="DECIMAL" />
+    <result column="V13334_058" property="v13334058" jdbcType="DECIMAL" />
+    <result column="V13334_060" property="v13334060" jdbcType="DECIMAL" />
+    <result column="V13356_001_701" property="v13356001701" jdbcType="DECIMAL" />
+    <result column="V13356_005_701" property="v13356005701" jdbcType="DECIMAL" />
+    <result column="V13356_010_701" property="v13356010701" jdbcType="DECIMAL" />
+    <result column="V13356_020_701" property="v13356020701" jdbcType="DECIMAL" />
+    <result column="V13356_030_701" property="v13356030701" jdbcType="DECIMAL" />
+    <result column="V04330_090" property="v04330090" jdbcType="DECIMAL" />
+    <result column="V20326_NS" property="v20326Ns" jdbcType="DECIMAL" />
+    <result column="V20306_NS" property="v20306Ns" jdbcType="DECIMAL" />
+    <result column="V20307_NS" property="v20307Ns" jdbcType="DECIMAL" />
+    <result column="V20326_NS_057" property="v20326Ns057" jdbcType="DECIMAL" />
+    <result column="V20306_NS_058" property="v20306Ns058" jdbcType="DECIMAL" />
+    <result column="V20307_NS_060" property="v20307Ns060" jdbcType="DECIMAL" />
+    <result column="V20326_WE" property="v20326We" jdbcType="DECIMAL" />
+    <result column="V20306_WE" property="v20306We" jdbcType="DECIMAL" />
+    <result column="V20307_WE" property="v20307We" jdbcType="DECIMAL" />
+    <result column="V20326_WE_057" property="v20326We057" jdbcType="DECIMAL" />
+    <result column="V20306_WE_058" property="v20306We058" jdbcType="DECIMAL" />
+    <result column="V20307_WE_060" property="v20307We060" jdbcType="DECIMAL" />
+    <result column="V11291_701" property="v11291701" jdbcType="DECIMAL" />
+    <result column="V11046" property="v11046" jdbcType="DECIMAL" />
+    <result column="V11211" property="v11211" jdbcType="DECIMAL" />
+    <result column="V11046_057" property="v11046057" jdbcType="DECIMAL" />
+    <result column="V11046_058" property="v11046058" jdbcType="DECIMAL" />
+    <result column="V11046_060" property="v11046060" jdbcType="DECIMAL" />
+    <result column="V11042_05_701" property="v1104205701" jdbcType="DECIMAL" />
+    <result column="V11042_10_701" property="v1104210701" jdbcType="DECIMAL" />
+    <result column="V11042_12_701" property="v1104212701" jdbcType="DECIMAL" />
+    <result column="V11042_15_701" property="v1104215701" jdbcType="DECIMAL" />
+    <result column="V11042_17_701" property="v1104217701" jdbcType="DECIMAL" />
+    <result column="V11314" property="v11314" jdbcType="VARCHAR" />
+    <result column="V11314_061" property="v11314061" jdbcType="DECIMAL" />
+    <result column="V11315" property="v11315" jdbcType="VARCHAR" />
+    <result column="V11315_061" property="v11315061" jdbcType="DECIMAL" />
+    <result column="V11350_N" property="v11350N" jdbcType="DECIMAL" />
+    <result column="V11350_NNE" property="v11350Nne" jdbcType="DECIMAL" />
+    <result column="V11350_NE" property="v11350Ne" jdbcType="DECIMAL" />
+    <result column="V11350_ENE" property="v11350Ene" jdbcType="DECIMAL" />
+    <result column="V11350_E" property="v11350E" jdbcType="DECIMAL" />
+    <result column="V11350_ESE" property="v11350Ese" jdbcType="DECIMAL" />
+    <result column="V11350_SE" property="v11350Se" jdbcType="DECIMAL" />
+    <result column="V11350_SSE" property="v11350Sse" jdbcType="DECIMAL" />
+    <result column="V11350_S" property="v11350S" jdbcType="DECIMAL" />
+    <result column="V11350_SSW" property="v11350Ssw" jdbcType="DECIMAL" />
+    <result column="V11350_SW" property="v11350Sw" jdbcType="DECIMAL" />
+    <result column="V11350_WSW" property="v11350Wsw" jdbcType="DECIMAL" />
+    <result column="V11350_W" property="v11350W" jdbcType="DECIMAL" />
+    <result column="V11350_WNW" property="v11350Wnw" jdbcType="DECIMAL" />
+    <result column="V11350_NW" property="v11350Nw" jdbcType="DECIMAL" />
+    <result column="V11350_NNW" property="v11350Nnw" jdbcType="DECIMAL" />
+    <result column="V11350_C" property="v11350C" jdbcType="DECIMAL" />
+    <result column="V11351_N" property="v11351N" jdbcType="DECIMAL" />
+    <result column="V11351_NNE" property="v11351Nne" jdbcType="DECIMAL" />
+    <result column="V11351_NE" property="v11351Ne" jdbcType="DECIMAL" />
+    <result column="V11351_ENE" property="v11351Ene" jdbcType="DECIMAL" />
+    <result column="V11351_E" property="v11351E" jdbcType="DECIMAL" />
+    <result column="V11351_ESE" property="v11351Ese" jdbcType="DECIMAL" />
+    <result column="V11351_SE" property="v11351Se" jdbcType="DECIMAL" />
+    <result column="V11351_SSE" property="v11351Sse" jdbcType="DECIMAL" />
+    <result column="V11351_S" property="v11351S" jdbcType="DECIMAL" />
+    <result column="V11351_SSW" property="v11351Ssw" jdbcType="DECIMAL" />
+    <result column="V11351_SW" property="v11351Sw" jdbcType="DECIMAL" />
+    <result column="V11351_WSW" property="v11351Wsw" jdbcType="DECIMAL" />
+    <result column="V11351_W" property="v11351W" jdbcType="DECIMAL" />
+    <result column="V11351_WNW" property="v11351Wnw" jdbcType="DECIMAL" />
+    <result column="V11351_NW" property="v11351Nw" jdbcType="DECIMAL" />
+    <result column="V11351_NNW" property="v11351Nnw" jdbcType="DECIMAL" />
+    <result column="V11042_N" property="v11042N" jdbcType="DECIMAL" />
+    <result column="V11042_NNE" property="v11042Nne" jdbcType="DECIMAL" />
+    <result column="V11042_NE" property="v11042Ne" jdbcType="DECIMAL" />
+    <result column="V11042_ENE" property="v11042Ene" jdbcType="DECIMAL" />
+    <result column="V11042_E" property="v11042E" jdbcType="DECIMAL" />
+    <result column="V11042_ESE" property="v11042Ese" jdbcType="DECIMAL" />
+    <result column="V11042_SE" property="v11042Se" jdbcType="DECIMAL" />
+    <result column="V11042_SSE" property="v11042Sse" jdbcType="DECIMAL" />
+    <result column="V11042_S" property="v11042S" jdbcType="DECIMAL" />
+    <result column="V11042_SSW" property="v11042Ssw" jdbcType="DECIMAL" />
+    <result column="V11042_SW" property="v11042Sw" jdbcType="DECIMAL" />
+    <result column="V11042_WSW" property="v11042Wsw" jdbcType="DECIMAL" />
+    <result column="V11042_W" property="v11042W" jdbcType="DECIMAL" />
+    <result column="V11042_WNW" property="v11042Wnw" jdbcType="DECIMAL" />
+    <result column="V11042_NW" property="v11042Nw" jdbcType="DECIMAL" />
+    <result column="V11042_NNW" property="v11042Nnw" jdbcType="DECIMAL" />
+    <result column="V12120_701" property="v12120701" jdbcType="DECIMAL" />
+    <result column="V12311_701" property="v12311701" jdbcType="DECIMAL" />
+    <result column="V12121_701" property="v12121701" jdbcType="DECIMAL" />
+    <result column="V12311_009" property="v12311009" jdbcType="DECIMAL" />
+    <result column="V12311_057" property="v12311057" jdbcType="DECIMAL" />
+    <result column="V12311_058" property="v12311058" jdbcType="DECIMAL" />
+    <result column="V12311_060" property="v12311060" jdbcType="DECIMAL" />
+    <result column="V12121" property="v12121" jdbcType="DECIMAL" />
+    <result column="V12121_057" property="v12121057" jdbcType="DECIMAL" />
+    <result column="V12121_058" property="v12121058" jdbcType="DECIMAL" />
+    <result column="V12121_060" property="v12121060" jdbcType="DECIMAL" />
+    <result column="V12030_701_005" property="v12030701005" jdbcType="DECIMAL" />
+    <result column="V12030_701_010" property="v12030701010" jdbcType="DECIMAL" />
+    <result column="V12030_701_015" property="v12030701015" jdbcType="DECIMAL" />
+    <result column="V12030_701_020" property="v12030701020" jdbcType="DECIMAL" />
+    <result column="V12030_701_040" property="v12030701040" jdbcType="DECIMAL" />
+    <result column="V12030_701_080" property="v12030701080" jdbcType="DECIMAL" />
+    <result column="V12030_701_160" property="v12030701160" jdbcType="DECIMAL" />
+    <result column="V12030_701_320" property="v12030701320" jdbcType="DECIMAL" />
+    <result column="V12620_701" property="v12620701" jdbcType="DECIMAL" />
+    <result column="V20334" property="v20334" jdbcType="DECIMAL" />
+    <result column="V20334_057" property="v20334057" jdbcType="DECIMAL" />
+    <result column="V20334_058" property="v20334058" jdbcType="DECIMAL" />
+    <result column="V20334_060" property="v20334060" jdbcType="DECIMAL" />
+    <result column="V14032" property="v14032" jdbcType="DECIMAL" />
+    <result column="V14033" property="v14033" jdbcType="DECIMAL" />
+    <result column="V20302_171_701" property="v20302171701" jdbcType="DECIMAL" />
+    <result column="V20302_172_701" property="v20302172701" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    D_RECORD_ID, D_DATA_ID, V04298, D_IYMDHM, D_RYMDHM, D_UPDATE_TIME, V01300, V05001, 
+    V06001, V07001, V07031, V07311, V07032_04, V_TIME_AVAILA, V10051_701, V10004_701, 
+    V10301, V10301_057, V10301_058, V10301_060, V10302, V10302_057, V10302_058, V10302_060, 
+    V10384, V10386, V10389, V10390, V12001_701, V12306, V12011_701, V12012_701, V12011, 
+    V12011_057, V12011_058, V12011_060, V12012, V12012_057, V12012_058, V12012_060, V12303_701, 
+    V12304, V12304_057, V12304_058, V12304_060, V12305, V12305_057, V12305_058, V12305_060, 
+    V12605_30_701, V12710_30_701, V12707_30, V12712_30, V12711_30, V12605_35_701, V12710_35_701, 
+    V12707_35, V12712_35, V12711_35, V12605_37_701, V12710_37_701, V12707_37, V12712_37, 
+    V12711_37, V12605_40_701, V12710_40_701, V12707_40, V12712_40, V12711_40, V12607_02_701, 
+    V12713_02_701, V12708_02, V12715_02, V12714_02, V12603_00_701, V12713_00_701, V12708_00, 
+    V12715_00, V12714_00, V12609_02_701, V12716_02_701, V12709_02, V12718_02, V12717_02, 
+    V12609_15_701, V12716_15_701, V12709_15, V12718_15, V12717_15, V12609_30_701, V12716_30_701, 
+    V12709_30, V12718_30, V12717_30, V12609_40_701, V12716_40_701, V12709_40, V12718_40, 
+    V12717_40, V12705_00, V12703_00, V12706_00, V12704_00, V12699_00_701, V12700_00, 
+    V12701_00, V12702_00, V12705_05, V12703_05, V12706_05, V12704_05, V12699_05_701, 
+    V12700_05, V12701_05, V12702_05, V12705_10, V12703_10, V12706_10, V12704_10, V12699_10_701, 
+    V12700_10, V12701_10, V12702_10, V12705_12, V12703_12, V12706_12, V12704_12, V12699_12_701, 
+    V12700_12, V12701_12, V12702_12, V12705_15, V12703_15, V12706_15, V12704_15, V12699_15_701, 
+    V12700_15, V12701_15, V12702_15, V12705_20, V12703_20, V12706_20, V12704_20, V12699_20_701, 
+    V12700_20, V12701_20, V12702_20, V12705_22, V12703_22, V12706_22, V12704_22, V12699_22_701, 
+    V12700_22, V12701_22, V12702_22, V12610_26, V12611_18, V12001_008, V12001_004, V12001_021_POS, 
+    V12001_021_MNU, V13004_701, V13004_008, V13004_004, V13004_021_POS, V13004_021_MNU, 
+    V13003_701, V13003_008, V13003_004, V20010_701, V20051_701, V20501_02_701, V20500_08_701, 
+    V20503_02_701, V20502_08_701, V20501_02_061, V20500_08_061, V20503_02_061, V20502_08_061, 
+    V13011_701, V13060_MAX, V13060_MAX_057, V13060_MIN, V13060_MIN_057, V13052, V13052_057, 
+    V13052_058, V13052_060, V13353_701, V13355_001_701, V13355_005_701, V13355_010_701, 
+    V13355_025_701, V13355_050_701, V13355_100_701, V13355_150_701, V20430_701, V13380, 
+    V20212, V20438, V20431, V13381, V20434_701, V20210, V20436, V20435, V20432_701, V20211, 
+    V20437, V20433, V13382_01, V13382_01_057, V13382_01_058, V13382_01_060, V13011_008_REL, 
+    V13011_008, V13011_004_REL, V13011_004, V13011_023_POS, V13011_023_MNU, V04330_089_701, 
+    V04330_007_701, V04330_006_701, V04330_005_701, V04330_008_701, V04330_015_701, V04330_015_MOS, 
+    V04330_015_LEA, V04330_031_701, V04330_031_MOS, V04330_031_LEA, V04330_042_701, V04330_042_MOS, 
+    V04330_042_LEA, V04330_017_701, V04330_017_MOS, V04330_017_LEA, V04330_013_701, V04330_013_MOS, 
+    V04330_013_LEA, V04330_002_701, V04330_002_MOS, V04330_002_LEA, V04330_070_701, V04330_070_MOS, 
+    V04330_070_LEA, V04330_016_701, V04330_056_701, V04330_048_701, V20309_001, V20309_010, 
+    V13032, V13033, V13334, V13334_057, V13334_058, V13334_060, V13356_001_701, V13356_005_701, 
+    V13356_010_701, V13356_020_701, V13356_030_701, V04330_090, V20326_NS, V20306_NS, 
+    V20307_NS, V20326_NS_057, V20306_NS_058, V20307_NS_060, V20326_WE, V20306_WE, V20307_WE, 
+    V20326_WE_057, V20306_WE_058, V20307_WE_060, V11291_701, V11046, V11211, V11046_057, 
+    V11046_058, V11046_060, V11042_05_701, V11042_10_701, V11042_12_701, V11042_15_701, 
+    V11042_17_701, V11314, V11314_061, V11315, V11315_061, V11350_N, V11350_NNE, V11350_NE, 
+    V11350_ENE, V11350_E, V11350_ESE, V11350_SE, V11350_SSE, V11350_S, V11350_SSW, V11350_SW, 
+    V11350_WSW, V11350_W, V11350_WNW, V11350_NW, V11350_NNW, V11350_C, V11351_N, V11351_NNE, 
+    V11351_NE, V11351_ENE, V11351_E, V11351_ESE, V11351_SE, V11351_SSE, V11351_S, V11351_SSW, 
+    V11351_SW, V11351_WSW, V11351_W, V11351_WNW, V11351_NW, V11351_NNW, V11042_N, V11042_NNE, 
+    V11042_NE, V11042_ENE, V11042_E, V11042_ESE, V11042_SE, V11042_SSE, V11042_S, V11042_SSW, 
+    V11042_SW, V11042_WSW, V11042_W, V11042_WNW, V11042_NW, V11042_NNW, V12120_701, V12311_701, 
+    V12121_701, V12311_009, V12311_057, V12311_058, V12311_060, V12121, V12121_057, V12121_058, 
+    V12121_060, V12030_701_005, V12030_701_010, V12030_701_015, V12030_701_020, V12030_701_040, 
+    V12030_701_080, V12030_701_160, V12030_701_320, V12620_701, V20334, V20334_057, V20334_058, 
+    V20334_060, V14032, V14033, V20302_171_701, V20302_172_701
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.math.BigDecimal" >
+    select 
+    <include refid="Base_Column_List" />
+    from SURF_CLI_CHN_MYER
+    where D_RECORD_ID = #{dRecordId,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.math.BigDecimal" >
+    delete from SURF_CLI_CHN_MYER
+    where D_RECORD_ID = #{dRecordId,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.suse.edu.bean.Myer" >
+    insert into SURF_CLI_CHN_MYER (D_RECORD_ID, D_DATA_ID, V04298, 
+      D_IYMDHM, D_RYMDHM, D_UPDATE_TIME, 
+      V01300, V05001, V06001, 
+      V07001, V07031, V07311, 
+      V07032_04, V_TIME_AVAILA, V10051_701, 
+      V10004_701, V10301, V10301_057, 
+      V10301_058, V10301_060, V10302, 
+      V10302_057, V10302_058, V10302_060, 
+      V10384, V10386, V10389, 
+      V10390, V12001_701, V12306, 
+      V12011_701, V12012_701, V12011, 
+      V12011_057, V12011_058, V12011_060, 
+      V12012, V12012_057, V12012_058, 
+      V12012_060, V12303_701, V12304, 
+      V12304_057, V12304_058, V12304_060, 
+      V12305, V12305_057, V12305_058, 
+      V12305_060, V12605_30_701, V12710_30_701, 
+      V12707_30, V12712_30, V12711_30, 
+      V12605_35_701, V12710_35_701, V12707_35, 
+      V12712_35, V12711_35, V12605_37_701, 
+      V12710_37_701, V12707_37, V12712_37, 
+      V12711_37, V12605_40_701, V12710_40_701, 
+      V12707_40, V12712_40, V12711_40, 
+      V12607_02_701, V12713_02_701, V12708_02, 
+      V12715_02, V12714_02, V12603_00_701, 
+      V12713_00_701, V12708_00, V12715_00, 
+      V12714_00, V12609_02_701, V12716_02_701, 
+      V12709_02, V12718_02, V12717_02, 
+      V12609_15_701, V12716_15_701, V12709_15, 
+      V12718_15, V12717_15, V12609_30_701, 
+      V12716_30_701, V12709_30, V12718_30, 
+      V12717_30, V12609_40_701, V12716_40_701, 
+      V12709_40, V12718_40, V12717_40, 
+      V12705_00, V12703_00, V12706_00, 
+      V12704_00, V12699_00_701, V12700_00, 
+      V12701_00, V12702_00, V12705_05, 
+      V12703_05, V12706_05, V12704_05, 
+      V12699_05_701, V12700_05, V12701_05, 
+      V12702_05, V12705_10, V12703_10, 
+      V12706_10, V12704_10, V12699_10_701, 
+      V12700_10, V12701_10, V12702_10, 
+      V12705_12, V12703_12, V12706_12, 
+      V12704_12, V12699_12_701, V12700_12, 
+      V12701_12, V12702_12, V12705_15, 
+      V12703_15, V12706_15, V12704_15, 
+      V12699_15_701, V12700_15, V12701_15, 
+      V12702_15, V12705_20, V12703_20, 
+      V12706_20, V12704_20, V12699_20_701, 
+      V12700_20, V12701_20, V12702_20, 
+      V12705_22, V12703_22, V12706_22, 
+      V12704_22, V12699_22_701, V12700_22, 
+      V12701_22, V12702_22, V12610_26, 
+      V12611_18, V12001_008, V12001_004, 
+      V12001_021_POS, V12001_021_MNU, V13004_701, 
+      V13004_008, V13004_004, V13004_021_POS, 
+      V13004_021_MNU, V13003_701, V13003_008, 
+      V13003_004, V20010_701, V20051_701, 
+      V20501_02_701, V20500_08_701, V20503_02_701, 
+      V20502_08_701, V20501_02_061, V20500_08_061, 
+      V20503_02_061, V20502_08_061, V13011_701, 
+      V13060_MAX, V13060_MAX_057, V13060_MIN, 
+      V13060_MIN_057, V13052, V13052_057, 
+      V13052_058, V13052_060, V13353_701, 
+      V13355_001_701, V13355_005_701, V13355_010_701, 
+      V13355_025_701, V13355_050_701, V13355_100_701, 
+      V13355_150_701, V20430_701, V13380, 
+      V20212, V20438, V20431, 
+      V13381, V20434_701, V20210, 
+      V20436, V20435, V20432_701, 
+      V20211, V20437, V20433, 
+      V13382_01, V13382_01_057, V13382_01_058, 
+      V13382_01_060, V13011_008_REL, V13011_008, 
+      V13011_004_REL, V13011_004, V13011_023_POS, 
+      V13011_023_MNU, V04330_089_701, V04330_007_701, 
+      V04330_006_701, V04330_005_701, V04330_008_701, 
+      V04330_015_701, V04330_015_MOS, V04330_015_LEA, 
+      V04330_031_701, V04330_031_MOS, V04330_031_LEA, 
+      V04330_042_701, V04330_042_MOS, V04330_042_LEA, 
+      V04330_017_701, V04330_017_MOS, V04330_017_LEA, 
+      V04330_013_701, V04330_013_MOS, V04330_013_LEA, 
+      V04330_002_701, V04330_002_MOS, V04330_002_LEA, 
+      V04330_070_701, V04330_070_MOS, V04330_070_LEA, 
+      V04330_016_701, V04330_056_701, V04330_048_701, 
+      V20309_001, V20309_010, V13032, 
+      V13033, V13334, V13334_057, 
+      V13334_058, V13334_060, V13356_001_701, 
+      V13356_005_701, V13356_010_701, V13356_020_701, 
+      V13356_030_701, V04330_090, V20326_NS, 
+      V20306_NS, V20307_NS, V20326_NS_057, 
+      V20306_NS_058, V20307_NS_060, V20326_WE, 
+      V20306_WE, V20307_WE, V20326_WE_057, 
+      V20306_WE_058, V20307_WE_060, V11291_701, 
+      V11046, V11211, V11046_057, 
+      V11046_058, V11046_060, V11042_05_701, 
+      V11042_10_701, V11042_12_701, V11042_15_701, 
+      V11042_17_701, V11314, V11314_061, 
+      V11315, V11315_061, V11350_N, 
+      V11350_NNE, V11350_NE, V11350_ENE, 
+      V11350_E, V11350_ESE, V11350_SE, 
+      V11350_SSE, V11350_S, V11350_SSW, 
+      V11350_SW, V11350_WSW, V11350_W, 
+      V11350_WNW, V11350_NW, V11350_NNW, 
+      V11350_C, V11351_N, V11351_NNE, 
+      V11351_NE, V11351_ENE, V11351_E, 
+      V11351_ESE, V11351_SE, V11351_SSE, 
+      V11351_S, V11351_SSW, V11351_SW, 
+      V11351_WSW, V11351_W, V11351_WNW, 
+      V11351_NW, V11351_NNW, V11042_N, 
+      V11042_NNE, V11042_NE, V11042_ENE, 
+      V11042_E, V11042_ESE, V11042_SE, 
+      V11042_SSE, V11042_S, V11042_SSW, 
+      V11042_SW, V11042_WSW, V11042_W, 
+      V11042_WNW, V11042_NW, V11042_NNW, 
+      V12120_701, V12311_701, V12121_701, 
+      V12311_009, V12311_057, V12311_058, 
+      V12311_060, V12121, V12121_057, 
+      V12121_058, V12121_060, V12030_701_005, 
+      V12030_701_010, V12030_701_015, V12030_701_020, 
+      V12030_701_040, V12030_701_080, V12030_701_160, 
+      V12030_701_320, V12620_701, V20334, 
+      V20334_057, V20334_058, V20334_060, 
+      V14032, V14033, V20302_171_701, 
+      V20302_172_701)
+    values (#{dRecordId,jdbcType=DECIMAL}, #{dDataId,jdbcType=VARCHAR}, #{v04298,jdbcType=DECIMAL}, 
+      #{dIymdhm,jdbcType=TIMESTAMP}, #{dRymdhm,jdbcType=TIMESTAMP}, #{dUpdateTime,jdbcType=TIMESTAMP}, 
+      #{v01300,jdbcType=VARCHAR}, #{v05001,jdbcType=DECIMAL}, #{v06001,jdbcType=DECIMAL}, 
+      #{v07001,jdbcType=DECIMAL}, #{v07031,jdbcType=DECIMAL}, #{v07311,jdbcType=DECIMAL}, 
+      #{v0703204,jdbcType=DECIMAL}, #{vTimeAvaila,jdbcType=VARCHAR}, #{v10051701,jdbcType=DECIMAL}, 
+      #{v10004701,jdbcType=DECIMAL}, #{v10301,jdbcType=DECIMAL}, #{v10301057,jdbcType=DECIMAL}, 
+      #{v10301058,jdbcType=DECIMAL}, #{v10301060,jdbcType=DECIMAL}, #{v10302,jdbcType=DECIMAL}, 
+      #{v10302057,jdbcType=DECIMAL}, #{v10302058,jdbcType=DECIMAL}, #{v10302060,jdbcType=DECIMAL}, 
+      #{v10384,jdbcType=DECIMAL}, #{v10386,jdbcType=DECIMAL}, #{v10389,jdbcType=DECIMAL}, 
+      #{v10390,jdbcType=DECIMAL}, #{v12001701,jdbcType=DECIMAL}, #{v12306,jdbcType=DECIMAL}, 
+      #{v12011701,jdbcType=DECIMAL}, #{v12012701,jdbcType=DECIMAL}, #{v12011,jdbcType=DECIMAL}, 
+      #{v12011057,jdbcType=DECIMAL}, #{v12011058,jdbcType=DECIMAL}, #{v12011060,jdbcType=DECIMAL}, 
+      #{v12012,jdbcType=DECIMAL}, #{v12012057,jdbcType=DECIMAL}, #{v12012058,jdbcType=DECIMAL}, 
+      #{v12012060,jdbcType=DECIMAL}, #{v12303701,jdbcType=DECIMAL}, #{v12304,jdbcType=DECIMAL}, 
+      #{v12304057,jdbcType=DECIMAL}, #{v12304058,jdbcType=DECIMAL}, #{v12304060,jdbcType=DECIMAL}, 
+      #{v12305,jdbcType=DECIMAL}, #{v12305057,jdbcType=DECIMAL}, #{v12305058,jdbcType=DECIMAL}, 
+      #{v12305060,jdbcType=DECIMAL}, #{v1260530701,jdbcType=DECIMAL}, #{v1271030701,jdbcType=DECIMAL}, 
+      #{v1270730,jdbcType=DECIMAL}, #{v1271230,jdbcType=DECIMAL}, #{v1271130,jdbcType=DECIMAL}, 
+      #{v1260535701,jdbcType=DECIMAL}, #{v1271035701,jdbcType=DECIMAL}, #{v1270735,jdbcType=DECIMAL}, 
+      #{v1271235,jdbcType=DECIMAL}, #{v1271135,jdbcType=DECIMAL}, #{v1260537701,jdbcType=DECIMAL}, 
+      #{v1271037701,jdbcType=DECIMAL}, #{v1270737,jdbcType=DECIMAL}, #{v1271237,jdbcType=DECIMAL}, 
+      #{v1271137,jdbcType=DECIMAL}, #{v1260540701,jdbcType=DECIMAL}, #{v1271040701,jdbcType=DECIMAL}, 
+      #{v1270740,jdbcType=DECIMAL}, #{v1271240,jdbcType=DECIMAL}, #{v1271140,jdbcType=DECIMAL}, 
+      #{v1260702701,jdbcType=DECIMAL}, #{v1271302701,jdbcType=DECIMAL}, #{v1270802,jdbcType=DECIMAL}, 
+      #{v1271502,jdbcType=DECIMAL}, #{v1271402,jdbcType=DECIMAL}, #{v1260300701,jdbcType=DECIMAL}, 
+      #{v1271300701,jdbcType=DECIMAL}, #{v1270800,jdbcType=DECIMAL}, #{v1271500,jdbcType=DECIMAL}, 
+      #{v1271400,jdbcType=DECIMAL}, #{v1260902701,jdbcType=DECIMAL}, #{v1271602701,jdbcType=DECIMAL}, 
+      #{v1270902,jdbcType=DECIMAL}, #{v1271802,jdbcType=DECIMAL}, #{v1271702,jdbcType=DECIMAL}, 
+      #{v1260915701,jdbcType=DECIMAL}, #{v1271615701,jdbcType=DECIMAL}, #{v1270915,jdbcType=DECIMAL}, 
+      #{v1271815,jdbcType=DECIMAL}, #{v1271715,jdbcType=DECIMAL}, #{v1260930701,jdbcType=DECIMAL}, 
+      #{v1271630701,jdbcType=DECIMAL}, #{v1270930,jdbcType=DECIMAL}, #{v1271830,jdbcType=DECIMAL}, 
+      #{v1271730,jdbcType=DECIMAL}, #{v1260940701,jdbcType=DECIMAL}, #{v1271640701,jdbcType=DECIMAL}, 
+      #{v1270940,jdbcType=DECIMAL}, #{v1271840,jdbcType=DECIMAL}, #{v1271740,jdbcType=DECIMAL}, 
+      #{v1270500,jdbcType=DECIMAL}, #{v1270300,jdbcType=DECIMAL}, #{v1270600,jdbcType=DECIMAL}, 
+      #{v1270400,jdbcType=DECIMAL}, #{v1269900701,jdbcType=DECIMAL}, #{v1270000,jdbcType=DECIMAL}, 
+      #{v1270100,jdbcType=DECIMAL}, #{v1270200,jdbcType=DECIMAL}, #{v1270505,jdbcType=DECIMAL}, 
+      #{v1270305,jdbcType=DECIMAL}, #{v1270605,jdbcType=DECIMAL}, #{v1270405,jdbcType=DECIMAL}, 
+      #{v1269905701,jdbcType=DECIMAL}, #{v1270005,jdbcType=DECIMAL}, #{v1270105,jdbcType=DECIMAL}, 
+      #{v1270205,jdbcType=DECIMAL}, #{v1270510,jdbcType=DECIMAL}, #{v1270310,jdbcType=DECIMAL}, 
+      #{v1270610,jdbcType=DECIMAL}, #{v1270410,jdbcType=DECIMAL}, #{v1269910701,jdbcType=DECIMAL}, 
+      #{v1270010,jdbcType=DECIMAL}, #{v1270110,jdbcType=DECIMAL}, #{v1270210,jdbcType=DECIMAL}, 
+      #{v1270512,jdbcType=DECIMAL}, #{v1270312,jdbcType=DECIMAL}, #{v1270612,jdbcType=DECIMAL}, 
+      #{v1270412,jdbcType=DECIMAL}, #{v1269912701,jdbcType=DECIMAL}, #{v1270012,jdbcType=DECIMAL}, 
+      #{v1270112,jdbcType=DECIMAL}, #{v1270212,jdbcType=DECIMAL}, #{v1270515,jdbcType=DECIMAL}, 
+      #{v1270315,jdbcType=DECIMAL}, #{v1270615,jdbcType=DECIMAL}, #{v1270415,jdbcType=DECIMAL}, 
+      #{v1269915701,jdbcType=DECIMAL}, #{v1270015,jdbcType=DECIMAL}, #{v1270115,jdbcType=DECIMAL}, 
+      #{v1270215,jdbcType=DECIMAL}, #{v1270520,jdbcType=DECIMAL}, #{v1270320,jdbcType=DECIMAL}, 
+      #{v1270620,jdbcType=DECIMAL}, #{v1270420,jdbcType=DECIMAL}, #{v1269920701,jdbcType=DECIMAL}, 
+      #{v1270020,jdbcType=DECIMAL}, #{v1270120,jdbcType=DECIMAL}, #{v1270220,jdbcType=DECIMAL}, 
+      #{v1270522,jdbcType=DECIMAL}, #{v1270322,jdbcType=DECIMAL}, #{v1270622,jdbcType=DECIMAL}, 
+      #{v1270422,jdbcType=DECIMAL}, #{v1269922701,jdbcType=DECIMAL}, #{v1270022,jdbcType=DECIMAL}, 
+      #{v1270122,jdbcType=DECIMAL}, #{v1270222,jdbcType=DECIMAL}, #{v1261026,jdbcType=DECIMAL}, 
+      #{v1261118,jdbcType=DECIMAL}, #{v12001008,jdbcType=DECIMAL}, #{v12001004,jdbcType=DECIMAL}, 
+      #{v12001021Pos,jdbcType=DECIMAL}, #{v12001021Mnu,jdbcType=DECIMAL}, #{v13004701,jdbcType=DECIMAL}, 
+      #{v13004008,jdbcType=DECIMAL}, #{v13004004,jdbcType=DECIMAL}, #{v13004021Pos,jdbcType=DECIMAL}, 
+      #{v13004021Mnu,jdbcType=DECIMAL}, #{v13003701,jdbcType=DECIMAL}, #{v13003008,jdbcType=DECIMAL}, 
+      #{v13003004,jdbcType=DECIMAL}, #{v20010701,jdbcType=DECIMAL}, #{v20051701,jdbcType=DECIMAL}, 
+      #{v2050102701,jdbcType=DECIMAL}, #{v2050008701,jdbcType=DECIMAL}, #{v2050302701,jdbcType=DECIMAL}, 
+      #{v2050208701,jdbcType=DECIMAL}, #{v2050102061,jdbcType=DECIMAL}, #{v2050008061,jdbcType=DECIMAL}, 
+      #{v2050302061,jdbcType=DECIMAL}, #{v2050208061,jdbcType=DECIMAL}, #{v13011701,jdbcType=DECIMAL}, 
+      #{v13060Max,jdbcType=DECIMAL}, #{v13060Max057,jdbcType=DECIMAL}, #{v13060Min,jdbcType=DECIMAL}, 
+      #{v13060Min057,jdbcType=DECIMAL}, #{v13052,jdbcType=DECIMAL}, #{v13052057,jdbcType=DECIMAL}, 
+      #{v13052058,jdbcType=DECIMAL}, #{v13052060,jdbcType=DECIMAL}, #{v13353701,jdbcType=DECIMAL}, 
+      #{v13355001701,jdbcType=DECIMAL}, #{v13355005701,jdbcType=DECIMAL}, #{v13355010701,jdbcType=DECIMAL}, 
+      #{v13355025701,jdbcType=DECIMAL}, #{v13355050701,jdbcType=DECIMAL}, #{v13355100701,jdbcType=DECIMAL}, 
+      #{v13355150701,jdbcType=DECIMAL}, #{v20430701,jdbcType=DECIMAL}, #{v13380,jdbcType=DECIMAL}, 
+      #{v20212,jdbcType=DECIMAL}, #{v20438,jdbcType=DECIMAL}, #{v20431,jdbcType=DECIMAL}, 
+      #{v13381,jdbcType=DECIMAL}, #{v20434701,jdbcType=DECIMAL}, #{v20210,jdbcType=DECIMAL}, 
+      #{v20436,jdbcType=DECIMAL}, #{v20435,jdbcType=DECIMAL}, #{v20432701,jdbcType=DECIMAL}, 
+      #{v20211,jdbcType=DECIMAL}, #{v20437,jdbcType=DECIMAL}, #{v20433,jdbcType=DECIMAL}, 
+      #{v1338201,jdbcType=DECIMAL}, #{v1338201057,jdbcType=DECIMAL}, #{v1338201058,jdbcType=DECIMAL}, 
+      #{v1338201060,jdbcType=DECIMAL}, #{v13011008Rel,jdbcType=DECIMAL}, #{v13011008,jdbcType=DECIMAL}, 
+      #{v13011004Rel,jdbcType=DECIMAL}, #{v13011004,jdbcType=DECIMAL}, #{v13011023Pos,jdbcType=DECIMAL}, 
+      #{v13011023Mnu,jdbcType=DECIMAL}, #{v04330089701,jdbcType=DECIMAL}, #{v04330007701,jdbcType=DECIMAL}, 
+      #{v04330006701,jdbcType=DECIMAL}, #{v04330005701,jdbcType=DECIMAL}, #{v04330008701,jdbcType=DECIMAL}, 
+      #{v04330015701,jdbcType=DECIMAL}, #{v04330015Mos,jdbcType=DECIMAL}, #{v04330015Lea,jdbcType=DECIMAL}, 
+      #{v04330031701,jdbcType=DECIMAL}, #{v04330031Mos,jdbcType=DECIMAL}, #{v04330031Lea,jdbcType=DECIMAL}, 
+      #{v04330042701,jdbcType=DECIMAL}, #{v04330042Mos,jdbcType=DECIMAL}, #{v04330042Lea,jdbcType=DECIMAL}, 
+      #{v04330017701,jdbcType=DECIMAL}, #{v04330017Mos,jdbcType=DECIMAL}, #{v04330017Lea,jdbcType=DECIMAL}, 
+      #{v04330013701,jdbcType=DECIMAL}, #{v04330013Mos,jdbcType=DECIMAL}, #{v04330013Lea,jdbcType=DECIMAL}, 
+      #{v04330002701,jdbcType=DECIMAL}, #{v04330002Mos,jdbcType=DECIMAL}, #{v04330002Lea,jdbcType=DECIMAL}, 
+      #{v04330070701,jdbcType=DECIMAL}, #{v04330070Mos,jdbcType=DECIMAL}, #{v04330070Lea,jdbcType=DECIMAL}, 
+      #{v04330016701,jdbcType=DECIMAL}, #{v04330056701,jdbcType=DECIMAL}, #{v04330048701,jdbcType=DECIMAL}, 
+      #{v20309001,jdbcType=DECIMAL}, #{v20309010,jdbcType=DECIMAL}, #{v13032,jdbcType=DECIMAL}, 
+      #{v13033,jdbcType=DECIMAL}, #{v13334,jdbcType=DECIMAL}, #{v13334057,jdbcType=DECIMAL}, 
+      #{v13334058,jdbcType=DECIMAL}, #{v13334060,jdbcType=DECIMAL}, #{v13356001701,jdbcType=DECIMAL}, 
+      #{v13356005701,jdbcType=DECIMAL}, #{v13356010701,jdbcType=DECIMAL}, #{v13356020701,jdbcType=DECIMAL}, 
+      #{v13356030701,jdbcType=DECIMAL}, #{v04330090,jdbcType=DECIMAL}, #{v20326Ns,jdbcType=DECIMAL}, 
+      #{v20306Ns,jdbcType=DECIMAL}, #{v20307Ns,jdbcType=DECIMAL}, #{v20326Ns057,jdbcType=DECIMAL}, 
+      #{v20306Ns058,jdbcType=DECIMAL}, #{v20307Ns060,jdbcType=DECIMAL}, #{v20326We,jdbcType=DECIMAL}, 
+      #{v20306We,jdbcType=DECIMAL}, #{v20307We,jdbcType=DECIMAL}, #{v20326We057,jdbcType=DECIMAL}, 
+      #{v20306We058,jdbcType=DECIMAL}, #{v20307We060,jdbcType=DECIMAL}, #{v11291701,jdbcType=DECIMAL}, 
+      #{v11046,jdbcType=DECIMAL}, #{v11211,jdbcType=DECIMAL}, #{v11046057,jdbcType=DECIMAL}, 
+      #{v11046058,jdbcType=DECIMAL}, #{v11046060,jdbcType=DECIMAL}, #{v1104205701,jdbcType=DECIMAL}, 
+      #{v1104210701,jdbcType=DECIMAL}, #{v1104212701,jdbcType=DECIMAL}, #{v1104215701,jdbcType=DECIMAL}, 
+      #{v1104217701,jdbcType=DECIMAL}, #{v11314,jdbcType=VARCHAR}, #{v11314061,jdbcType=DECIMAL}, 
+      #{v11315,jdbcType=VARCHAR}, #{v11315061,jdbcType=DECIMAL}, #{v11350N,jdbcType=DECIMAL}, 
+      #{v11350Nne,jdbcType=DECIMAL}, #{v11350Ne,jdbcType=DECIMAL}, #{v11350Ene,jdbcType=DECIMAL}, 
+      #{v11350E,jdbcType=DECIMAL}, #{v11350Ese,jdbcType=DECIMAL}, #{v11350Se,jdbcType=DECIMAL}, 
+      #{v11350Sse,jdbcType=DECIMAL}, #{v11350S,jdbcType=DECIMAL}, #{v11350Ssw,jdbcType=DECIMAL}, 
+      #{v11350Sw,jdbcType=DECIMAL}, #{v11350Wsw,jdbcType=DECIMAL}, #{v11350W,jdbcType=DECIMAL}, 
+      #{v11350Wnw,jdbcType=DECIMAL}, #{v11350Nw,jdbcType=DECIMAL}, #{v11350Nnw,jdbcType=DECIMAL}, 
+      #{v11350C,jdbcType=DECIMAL}, #{v11351N,jdbcType=DECIMAL}, #{v11351Nne,jdbcType=DECIMAL}, 
+      #{v11351Ne,jdbcType=DECIMAL}, #{v11351Ene,jdbcType=DECIMAL}, #{v11351E,jdbcType=DECIMAL}, 
+      #{v11351Ese,jdbcType=DECIMAL}, #{v11351Se,jdbcType=DECIMAL}, #{v11351Sse,jdbcType=DECIMAL}, 
+      #{v11351S,jdbcType=DECIMAL}, #{v11351Ssw,jdbcType=DECIMAL}, #{v11351Sw,jdbcType=DECIMAL}, 
+      #{v11351Wsw,jdbcType=DECIMAL}, #{v11351W,jdbcType=DECIMAL}, #{v11351Wnw,jdbcType=DECIMAL}, 
+      #{v11351Nw,jdbcType=DECIMAL}, #{v11351Nnw,jdbcType=DECIMAL}, #{v11042N,jdbcType=DECIMAL}, 
+      #{v11042Nne,jdbcType=DECIMAL}, #{v11042Ne,jdbcType=DECIMAL}, #{v11042Ene,jdbcType=DECIMAL}, 
+      #{v11042E,jdbcType=DECIMAL}, #{v11042Ese,jdbcType=DECIMAL}, #{v11042Se,jdbcType=DECIMAL}, 
+      #{v11042Sse,jdbcType=DECIMAL}, #{v11042S,jdbcType=DECIMAL}, #{v11042Ssw,jdbcType=DECIMAL}, 
+      #{v11042Sw,jdbcType=DECIMAL}, #{v11042Wsw,jdbcType=DECIMAL}, #{v11042W,jdbcType=DECIMAL}, 
+      #{v11042Wnw,jdbcType=DECIMAL}, #{v11042Nw,jdbcType=DECIMAL}, #{v11042Nnw,jdbcType=DECIMAL}, 
+      #{v12120701,jdbcType=DECIMAL}, #{v12311701,jdbcType=DECIMAL}, #{v12121701,jdbcType=DECIMAL}, 
+      #{v12311009,jdbcType=DECIMAL}, #{v12311057,jdbcType=DECIMAL}, #{v12311058,jdbcType=DECIMAL}, 
+      #{v12311060,jdbcType=DECIMAL}, #{v12121,jdbcType=DECIMAL}, #{v12121057,jdbcType=DECIMAL}, 
+      #{v12121058,jdbcType=DECIMAL}, #{v12121060,jdbcType=DECIMAL}, #{v12030701005,jdbcType=DECIMAL}, 
+      #{v12030701010,jdbcType=DECIMAL}, #{v12030701015,jdbcType=DECIMAL}, #{v12030701020,jdbcType=DECIMAL}, 
+      #{v12030701040,jdbcType=DECIMAL}, #{v12030701080,jdbcType=DECIMAL}, #{v12030701160,jdbcType=DECIMAL}, 
+      #{v12030701320,jdbcType=DECIMAL}, #{v12620701,jdbcType=DECIMAL}, #{v20334,jdbcType=DECIMAL}, 
+      #{v20334057,jdbcType=DECIMAL}, #{v20334058,jdbcType=DECIMAL}, #{v20334060,jdbcType=DECIMAL}, 
+      #{v14032,jdbcType=DECIMAL}, #{v14033,jdbcType=DECIMAL}, #{v20302171701,jdbcType=DECIMAL}, 
+      #{v20302172701,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suse.edu.bean.Myer" >
+    insert into SURF_CLI_CHN_MYER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="dRecordId != null" >
+        D_RECORD_ID,
+      </if>
+      <if test="dDataId != null" >
+        D_DATA_ID,
+      </if>
+      <if test="v04298 != null" >
+        V04298,
+      </if>
+      <if test="dIymdhm != null" >
+        D_IYMDHM,
+      </if>
+      <if test="dRymdhm != null" >
+        D_RYMDHM,
+      </if>
+      <if test="dUpdateTime != null" >
+        D_UPDATE_TIME,
+      </if>
+      <if test="v01300 != null" >
+        V01300,
+      </if>
+      <if test="v05001 != null" >
+        V05001,
+      </if>
+      <if test="v06001 != null" >
+        V06001,
+      </if>
+      <if test="v07001 != null" >
+        V07001,
+      </if>
+      <if test="v07031 != null" >
+        V07031,
+      </if>
+      <if test="v07311 != null" >
+        V07311,
+      </if>
+      <if test="v0703204 != null" >
+        V07032_04,
+      </if>
+      <if test="vTimeAvaila != null" >
+        V_TIME_AVAILA,
+      </if>
+      <if test="v10051701 != null" >
+        V10051_701,
+      </if>
+      <if test="v10004701 != null" >
+        V10004_701,
+      </if>
+      <if test="v10301 != null" >
+        V10301,
+      </if>
+      <if test="v10301057 != null" >
+        V10301_057,
+      </if>
+      <if test="v10301058 != null" >
+        V10301_058,
+      </if>
+      <if test="v10301060 != null" >
+        V10301_060,
+      </if>
+      <if test="v10302 != null" >
+        V10302,
+      </if>
+      <if test="v10302057 != null" >
+        V10302_057,
+      </if>
+      <if test="v10302058 != null" >
+        V10302_058,
+      </if>
+      <if test="v10302060 != null" >
+        V10302_060,
+      </if>
+      <if test="v10384 != null" >
+        V10384,
+      </if>
+      <if test="v10386 != null" >
+        V10386,
+      </if>
+      <if test="v10389 != null" >
+        V10389,
+      </if>
+      <if test="v10390 != null" >
+        V10390,
+      </if>
+      <if test="v12001701 != null" >
+        V12001_701,
+      </if>
+      <if test="v12306 != null" >
+        V12306,
+      </if>
+      <if test="v12011701 != null" >
+        V12011_701,
+      </if>
+      <if test="v12012701 != null" >
+        V12012_701,
+      </if>
+      <if test="v12011 != null" >
+        V12011,
+      </if>
+      <if test="v12011057 != null" >
+        V12011_057,
+      </if>
+      <if test="v12011058 != null" >
+        V12011_058,
+      </if>
+      <if test="v12011060 != null" >
+        V12011_060,
+      </if>
+      <if test="v12012 != null" >
+        V12012,
+      </if>
+      <if test="v12012057 != null" >
+        V12012_057,
+      </if>
+      <if test="v12012058 != null" >
+        V12012_058,
+      </if>
+      <if test="v12012060 != null" >
+        V12012_060,
+      </if>
+      <if test="v12303701 != null" >
+        V12303_701,
+      </if>
+      <if test="v12304 != null" >
+        V12304,
+      </if>
+      <if test="v12304057 != null" >
+        V12304_057,
+      </if>
+      <if test="v12304058 != null" >
+        V12304_058,
+      </if>
+      <if test="v12304060 != null" >
+        V12304_060,
+      </if>
+      <if test="v12305 != null" >
+        V12305,
+      </if>
+      <if test="v12305057 != null" >
+        V12305_057,
+      </if>
+      <if test="v12305058 != null" >
+        V12305_058,
+      </if>
+      <if test="v12305060 != null" >
+        V12305_060,
+      </if>
+      <if test="v1260530701 != null" >
+        V12605_30_701,
+      </if>
+      <if test="v1271030701 != null" >
+        V12710_30_701,
+      </if>
+      <if test="v1270730 != null" >
+        V12707_30,
+      </if>
+      <if test="v1271230 != null" >
+        V12712_30,
+      </if>
+      <if test="v1271130 != null" >
+        V12711_30,
+      </if>
+      <if test="v1260535701 != null" >
+        V12605_35_701,
+      </if>
+      <if test="v1271035701 != null" >
+        V12710_35_701,
+      </if>
+      <if test="v1270735 != null" >
+        V12707_35,
+      </if>
+      <if test="v1271235 != null" >
+        V12712_35,
+      </if>
+      <if test="v1271135 != null" >
+        V12711_35,
+      </if>
+      <if test="v1260537701 != null" >
+        V12605_37_701,
+      </if>
+      <if test="v1271037701 != null" >
+        V12710_37_701,
+      </if>
+      <if test="v1270737 != null" >
+        V12707_37,
+      </if>
+      <if test="v1271237 != null" >
+        V12712_37,
+      </if>
+      <if test="v1271137 != null" >
+        V12711_37,
+      </if>
+      <if test="v1260540701 != null" >
+        V12605_40_701,
+      </if>
+      <if test="v1271040701 != null" >
+        V12710_40_701,
+      </if>
+      <if test="v1270740 != null" >
+        V12707_40,
+      </if>
+      <if test="v1271240 != null" >
+        V12712_40,
+      </if>
+      <if test="v1271140 != null" >
+        V12711_40,
+      </if>
+      <if test="v1260702701 != null" >
+        V12607_02_701,
+      </if>
+      <if test="v1271302701 != null" >
+        V12713_02_701,
+      </if>
+      <if test="v1270802 != null" >
+        V12708_02,
+      </if>
+      <if test="v1271502 != null" >
+        V12715_02,
+      </if>
+      <if test="v1271402 != null" >
+        V12714_02,
+      </if>
+      <if test="v1260300701 != null" >
+        V12603_00_701,
+      </if>
+      <if test="v1271300701 != null" >
+        V12713_00_701,
+      </if>
+      <if test="v1270800 != null" >
+        V12708_00,
+      </if>
+      <if test="v1271500 != null" >
+        V12715_00,
+      </if>
+      <if test="v1271400 != null" >
+        V12714_00,
+      </if>
+      <if test="v1260902701 != null" >
+        V12609_02_701,
+      </if>
+      <if test="v1271602701 != null" >
+        V12716_02_701,
+      </if>
+      <if test="v1270902 != null" >
+        V12709_02,
+      </if>
+      <if test="v1271802 != null" >
+        V12718_02,
+      </if>
+      <if test="v1271702 != null" >
+        V12717_02,
+      </if>
+      <if test="v1260915701 != null" >
+        V12609_15_701,
+      </if>
+      <if test="v1271615701 != null" >
+        V12716_15_701,
+      </if>
+      <if test="v1270915 != null" >
+        V12709_15,
+      </if>
+      <if test="v1271815 != null" >
+        V12718_15,
+      </if>
+      <if test="v1271715 != null" >
+        V12717_15,
+      </if>
+      <if test="v1260930701 != null" >
+        V12609_30_701,
+      </if>
+      <if test="v1271630701 != null" >
+        V12716_30_701,
+      </if>
+      <if test="v1270930 != null" >
+        V12709_30,
+      </if>
+      <if test="v1271830 != null" >
+        V12718_30,
+      </if>
+      <if test="v1271730 != null" >
+        V12717_30,
+      </if>
+      <if test="v1260940701 != null" >
+        V12609_40_701,
+      </if>
+      <if test="v1271640701 != null" >
+        V12716_40_701,
+      </if>
+      <if test="v1270940 != null" >
+        V12709_40,
+      </if>
+      <if test="v1271840 != null" >
+        V12718_40,
+      </if>
+      <if test="v1271740 != null" >
+        V12717_40,
+      </if>
+      <if test="v1270500 != null" >
+        V12705_00,
+      </if>
+      <if test="v1270300 != null" >
+        V12703_00,
+      </if>
+      <if test="v1270600 != null" >
+        V12706_00,
+      </if>
+      <if test="v1270400 != null" >
+        V12704_00,
+      </if>
+      <if test="v1269900701 != null" >
+        V12699_00_701,
+      </if>
+      <if test="v1270000 != null" >
+        V12700_00,
+      </if>
+      <if test="v1270100 != null" >
+        V12701_00,
+      </if>
+      <if test="v1270200 != null" >
+        V12702_00,
+      </if>
+      <if test="v1270505 != null" >
+        V12705_05,
+      </if>
+      <if test="v1270305 != null" >
+        V12703_05,
+      </if>
+      <if test="v1270605 != null" >
+        V12706_05,
+      </if>
+      <if test="v1270405 != null" >
+        V12704_05,
+      </if>
+      <if test="v1269905701 != null" >
+        V12699_05_701,
+      </if>
+      <if test="v1270005 != null" >
+        V12700_05,
+      </if>
+      <if test="v1270105 != null" >
+        V12701_05,
+      </if>
+      <if test="v1270205 != null" >
+        V12702_05,
+      </if>
+      <if test="v1270510 != null" >
+        V12705_10,
+      </if>
+      <if test="v1270310 != null" >
+        V12703_10,
+      </if>
+      <if test="v1270610 != null" >
+        V12706_10,
+      </if>
+      <if test="v1270410 != null" >
+        V12704_10,
+      </if>
+      <if test="v1269910701 != null" >
+        V12699_10_701,
+      </if>
+      <if test="v1270010 != null" >
+        V12700_10,
+      </if>
+      <if test="v1270110 != null" >
+        V12701_10,
+      </if>
+      <if test="v1270210 != null" >
+        V12702_10,
+      </if>
+      <if test="v1270512 != null" >
+        V12705_12,
+      </if>
+      <if test="v1270312 != null" >
+        V12703_12,
+      </if>
+      <if test="v1270612 != null" >
+        V12706_12,
+      </if>
+      <if test="v1270412 != null" >
+        V12704_12,
+      </if>
+      <if test="v1269912701 != null" >
+        V12699_12_701,
+      </if>
+      <if test="v1270012 != null" >
+        V12700_12,
+      </if>
+      <if test="v1270112 != null" >
+        V12701_12,
+      </if>
+      <if test="v1270212 != null" >
+        V12702_12,
+      </if>
+      <if test="v1270515 != null" >
+        V12705_15,
+      </if>
+      <if test="v1270315 != null" >
+        V12703_15,
+      </if>
+      <if test="v1270615 != null" >
+        V12706_15,
+      </if>
+      <if test="v1270415 != null" >
+        V12704_15,
+      </if>
+      <if test="v1269915701 != null" >
+        V12699_15_701,
+      </if>
+      <if test="v1270015 != null" >
+        V12700_15,
+      </if>
+      <if test="v1270115 != null" >
+        V12701_15,
+      </if>
+      <if test="v1270215 != null" >
+        V12702_15,
+      </if>
+      <if test="v1270520 != null" >
+        V12705_20,
+      </if>
+      <if test="v1270320 != null" >
+        V12703_20,
+      </if>
+      <if test="v1270620 != null" >
+        V12706_20,
+      </if>
+      <if test="v1270420 != null" >
+        V12704_20,
+      </if>
+      <if test="v1269920701 != null" >
+        V12699_20_701,
+      </if>
+      <if test="v1270020 != null" >
+        V12700_20,
+      </if>
+      <if test="v1270120 != null" >
+        V12701_20,
+      </if>
+      <if test="v1270220 != null" >
+        V12702_20,
+      </if>
+      <if test="v1270522 != null" >
+        V12705_22,
+      </if>
+      <if test="v1270322 != null" >
+        V12703_22,
+      </if>
+      <if test="v1270622 != null" >
+        V12706_22,
+      </if>
+      <if test="v1270422 != null" >
+        V12704_22,
+      </if>
+      <if test="v1269922701 != null" >
+        V12699_22_701,
+      </if>
+      <if test="v1270022 != null" >
+        V12700_22,
+      </if>
+      <if test="v1270122 != null" >
+        V12701_22,
+      </if>
+      <if test="v1270222 != null" >
+        V12702_22,
+      </if>
+      <if test="v1261026 != null" >
+        V12610_26,
+      </if>
+      <if test="v1261118 != null" >
+        V12611_18,
+      </if>
+      <if test="v12001008 != null" >
+        V12001_008,
+      </if>
+      <if test="v12001004 != null" >
+        V12001_004,
+      </if>
+      <if test="v12001021Pos != null" >
+        V12001_021_POS,
+      </if>
+      <if test="v12001021Mnu != null" >
+        V12001_021_MNU,
+      </if>
+      <if test="v13004701 != null" >
+        V13004_701,
+      </if>
+      <if test="v13004008 != null" >
+        V13004_008,
+      </if>
+      <if test="v13004004 != null" >
+        V13004_004,
+      </if>
+      <if test="v13004021Pos != null" >
+        V13004_021_POS,
+      </if>
+      <if test="v13004021Mnu != null" >
+        V13004_021_MNU,
+      </if>
+      <if test="v13003701 != null" >
+        V13003_701,
+      </if>
+      <if test="v13003008 != null" >
+        V13003_008,
+      </if>
+      <if test="v13003004 != null" >
+        V13003_004,
+      </if>
+      <if test="v20010701 != null" >
+        V20010_701,
+      </if>
+      <if test="v20051701 != null" >
+        V20051_701,
+      </if>
+      <if test="v2050102701 != null" >
+        V20501_02_701,
+      </if>
+      <if test="v2050008701 != null" >
+        V20500_08_701,
+      </if>
+      <if test="v2050302701 != null" >
+        V20503_02_701,
+      </if>
+      <if test="v2050208701 != null" >
+        V20502_08_701,
+      </if>
+      <if test="v2050102061 != null" >
+        V20501_02_061,
+      </if>
+      <if test="v2050008061 != null" >
+        V20500_08_061,
+      </if>
+      <if test="v2050302061 != null" >
+        V20503_02_061,
+      </if>
+      <if test="v2050208061 != null" >
+        V20502_08_061,
+      </if>
+      <if test="v13011701 != null" >
+        V13011_701,
+      </if>
+      <if test="v13060Max != null" >
+        V13060_MAX,
+      </if>
+      <if test="v13060Max057 != null" >
+        V13060_MAX_057,
+      </if>
+      <if test="v13060Min != null" >
+        V13060_MIN,
+      </if>
+      <if test="v13060Min057 != null" >
+        V13060_MIN_057,
+      </if>
+      <if test="v13052 != null" >
+        V13052,
+      </if>
+      <if test="v13052057 != null" >
+        V13052_057,
+      </if>
+      <if test="v13052058 != null" >
+        V13052_058,
+      </if>
+      <if test="v13052060 != null" >
+        V13052_060,
+      </if>
+      <if test="v13353701 != null" >
+        V13353_701,
+      </if>
+      <if test="v13355001701 != null" >
+        V13355_001_701,
+      </if>
+      <if test="v13355005701 != null" >
+        V13355_005_701,
+      </if>
+      <if test="v13355010701 != null" >
+        V13355_010_701,
+      </if>
+      <if test="v13355025701 != null" >
+        V13355_025_701,
+      </if>
+      <if test="v13355050701 != null" >
+        V13355_050_701,
+      </if>
+      <if test="v13355100701 != null" >
+        V13355_100_701,
+      </if>
+      <if test="v13355150701 != null" >
+        V13355_150_701,
+      </if>
+      <if test="v20430701 != null" >
+        V20430_701,
+      </if>
+      <if test="v13380 != null" >
+        V13380,
+      </if>
+      <if test="v20212 != null" >
+        V20212,
+      </if>
+      <if test="v20438 != null" >
+        V20438,
+      </if>
+      <if test="v20431 != null" >
+        V20431,
+      </if>
+      <if test="v13381 != null" >
+        V13381,
+      </if>
+      <if test="v20434701 != null" >
+        V20434_701,
+      </if>
+      <if test="v20210 != null" >
+        V20210,
+      </if>
+      <if test="v20436 != null" >
+        V20436,
+      </if>
+      <if test="v20435 != null" >
+        V20435,
+      </if>
+      <if test="v20432701 != null" >
+        V20432_701,
+      </if>
+      <if test="v20211 != null" >
+        V20211,
+      </if>
+      <if test="v20437 != null" >
+        V20437,
+      </if>
+      <if test="v20433 != null" >
+        V20433,
+      </if>
+      <if test="v1338201 != null" >
+        V13382_01,
+      </if>
+      <if test="v1338201057 != null" >
+        V13382_01_057,
+      </if>
+      <if test="v1338201058 != null" >
+        V13382_01_058,
+      </if>
+      <if test="v1338201060 != null" >
+        V13382_01_060,
+      </if>
+      <if test="v13011008Rel != null" >
+        V13011_008_REL,
+      </if>
+      <if test="v13011008 != null" >
+        V13011_008,
+      </if>
+      <if test="v13011004Rel != null" >
+        V13011_004_REL,
+      </if>
+      <if test="v13011004 != null" >
+        V13011_004,
+      </if>
+      <if test="v13011023Pos != null" >
+        V13011_023_POS,
+      </if>
+      <if test="v13011023Mnu != null" >
+        V13011_023_MNU,
+      </if>
+      <if test="v04330089701 != null" >
+        V04330_089_701,
+      </if>
+      <if test="v04330007701 != null" >
+        V04330_007_701,
+      </if>
+      <if test="v04330006701 != null" >
+        V04330_006_701,
+      </if>
+      <if test="v04330005701 != null" >
+        V04330_005_701,
+      </if>
+      <if test="v04330008701 != null" >
+        V04330_008_701,
+      </if>
+      <if test="v04330015701 != null" >
+        V04330_015_701,
+      </if>
+      <if test="v04330015Mos != null" >
+        V04330_015_MOS,
+      </if>
+      <if test="v04330015Lea != null" >
+        V04330_015_LEA,
+      </if>
+      <if test="v04330031701 != null" >
+        V04330_031_701,
+      </if>
+      <if test="v04330031Mos != null" >
+        V04330_031_MOS,
+      </if>
+      <if test="v04330031Lea != null" >
+        V04330_031_LEA,
+      </if>
+      <if test="v04330042701 != null" >
+        V04330_042_701,
+      </if>
+      <if test="v04330042Mos != null" >
+        V04330_042_MOS,
+      </if>
+      <if test="v04330042Lea != null" >
+        V04330_042_LEA,
+      </if>
+      <if test="v04330017701 != null" >
+        V04330_017_701,
+      </if>
+      <if test="v04330017Mos != null" >
+        V04330_017_MOS,
+      </if>
+      <if test="v04330017Lea != null" >
+        V04330_017_LEA,
+      </if>
+      <if test="v04330013701 != null" >
+        V04330_013_701,
+      </if>
+      <if test="v04330013Mos != null" >
+        V04330_013_MOS,
+      </if>
+      <if test="v04330013Lea != null" >
+        V04330_013_LEA,
+      </if>
+      <if test="v04330002701 != null" >
+        V04330_002_701,
+      </if>
+      <if test="v04330002Mos != null" >
+        V04330_002_MOS,
+      </if>
+      <if test="v04330002Lea != null" >
+        V04330_002_LEA,
+      </if>
+      <if test="v04330070701 != null" >
+        V04330_070_701,
+      </if>
+      <if test="v04330070Mos != null" >
+        V04330_070_MOS,
+      </if>
+      <if test="v04330070Lea != null" >
+        V04330_070_LEA,
+      </if>
+      <if test="v04330016701 != null" >
+        V04330_016_701,
+      </if>
+      <if test="v04330056701 != null" >
+        V04330_056_701,
+      </if>
+      <if test="v04330048701 != null" >
+        V04330_048_701,
+      </if>
+      <if test="v20309001 != null" >
+        V20309_001,
+      </if>
+      <if test="v20309010 != null" >
+        V20309_010,
+      </if>
+      <if test="v13032 != null" >
+        V13032,
+      </if>
+      <if test="v13033 != null" >
+        V13033,
+      </if>
+      <if test="v13334 != null" >
+        V13334,
+      </if>
+      <if test="v13334057 != null" >
+        V13334_057,
+      </if>
+      <if test="v13334058 != null" >
+        V13334_058,
+      </if>
+      <if test="v13334060 != null" >
+        V13334_060,
+      </if>
+      <if test="v13356001701 != null" >
+        V13356_001_701,
+      </if>
+      <if test="v13356005701 != null" >
+        V13356_005_701,
+      </if>
+      <if test="v13356010701 != null" >
+        V13356_010_701,
+      </if>
+      <if test="v13356020701 != null" >
+        V13356_020_701,
+      </if>
+      <if test="v13356030701 != null" >
+        V13356_030_701,
+      </if>
+      <if test="v04330090 != null" >
+        V04330_090,
+      </if>
+      <if test="v20326Ns != null" >
+        V20326_NS,
+      </if>
+      <if test="v20306Ns != null" >
+        V20306_NS,
+      </if>
+      <if test="v20307Ns != null" >
+        V20307_NS,
+      </if>
+      <if test="v20326Ns057 != null" >
+        V20326_NS_057,
+      </if>
+      <if test="v20306Ns058 != null" >
+        V20306_NS_058,
+      </if>
+      <if test="v20307Ns060 != null" >
+        V20307_NS_060,
+      </if>
+      <if test="v20326We != null" >
+        V20326_WE,
+      </if>
+      <if test="v20306We != null" >
+        V20306_WE,
+      </if>
+      <if test="v20307We != null" >
+        V20307_WE,
+      </if>
+      <if test="v20326We057 != null" >
+        V20326_WE_057,
+      </if>
+      <if test="v20306We058 != null" >
+        V20306_WE_058,
+      </if>
+      <if test="v20307We060 != null" >
+        V20307_WE_060,
+      </if>
+      <if test="v11291701 != null" >
+        V11291_701,
+      </if>
+      <if test="v11046 != null" >
+        V11046,
+      </if>
+      <if test="v11211 != null" >
+        V11211,
+      </if>
+      <if test="v11046057 != null" >
+        V11046_057,
+      </if>
+      <if test="v11046058 != null" >
+        V11046_058,
+      </if>
+      <if test="v11046060 != null" >
+        V11046_060,
+      </if>
+      <if test="v1104205701 != null" >
+        V11042_05_701,
+      </if>
+      <if test="v1104210701 != null" >
+        V11042_10_701,
+      </if>
+      <if test="v1104212701 != null" >
+        V11042_12_701,
+      </if>
+      <if test="v1104215701 != null" >
+        V11042_15_701,
+      </if>
+      <if test="v1104217701 != null" >
+        V11042_17_701,
+      </if>
+      <if test="v11314 != null" >
+        V11314,
+      </if>
+      <if test="v11314061 != null" >
+        V11314_061,
+      </if>
+      <if test="v11315 != null" >
+        V11315,
+      </if>
+      <if test="v11315061 != null" >
+        V11315_061,
+      </if>
+      <if test="v11350N != null" >
+        V11350_N,
+      </if>
+      <if test="v11350Nne != null" >
+        V11350_NNE,
+      </if>
+      <if test="v11350Ne != null" >
+        V11350_NE,
+      </if>
+      <if test="v11350Ene != null" >
+        V11350_ENE,
+      </if>
+      <if test="v11350E != null" >
+        V11350_E,
+      </if>
+      <if test="v11350Ese != null" >
+        V11350_ESE,
+      </if>
+      <if test="v11350Se != null" >
+        V11350_SE,
+      </if>
+      <if test="v11350Sse != null" >
+        V11350_SSE,
+      </if>
+      <if test="v11350S != null" >
+        V11350_S,
+      </if>
+      <if test="v11350Ssw != null" >
+        V11350_SSW,
+      </if>
+      <if test="v11350Sw != null" >
+        V11350_SW,
+      </if>
+      <if test="v11350Wsw != null" >
+        V11350_WSW,
+      </if>
+      <if test="v11350W != null" >
+        V11350_W,
+      </if>
+      <if test="v11350Wnw != null" >
+        V11350_WNW,
+      </if>
+      <if test="v11350Nw != null" >
+        V11350_NW,
+      </if>
+      <if test="v11350Nnw != null" >
+        V11350_NNW,
+      </if>
+      <if test="v11350C != null" >
+        V11350_C,
+      </if>
+      <if test="v11351N != null" >
+        V11351_N,
+      </if>
+      <if test="v11351Nne != null" >
+        V11351_NNE,
+      </if>
+      <if test="v11351Ne != null" >
+        V11351_NE,
+      </if>
+      <if test="v11351Ene != null" >
+        V11351_ENE,
+      </if>
+      <if test="v11351E != null" >
+        V11351_E,
+      </if>
+      <if test="v11351Ese != null" >
+        V11351_ESE,
+      </if>
+      <if test="v11351Se != null" >
+        V11351_SE,
+      </if>
+      <if test="v11351Sse != null" >
+        V11351_SSE,
+      </if>
+      <if test="v11351S != null" >
+        V11351_S,
+      </if>
+      <if test="v11351Ssw != null" >
+        V11351_SSW,
+      </if>
+      <if test="v11351Sw != null" >
+        V11351_SW,
+      </if>
+      <if test="v11351Wsw != null" >
+        V11351_WSW,
+      </if>
+      <if test="v11351W != null" >
+        V11351_W,
+      </if>
+      <if test="v11351Wnw != null" >
+        V11351_WNW,
+      </if>
+      <if test="v11351Nw != null" >
+        V11351_NW,
+      </if>
+      <if test="v11351Nnw != null" >
+        V11351_NNW,
+      </if>
+      <if test="v11042N != null" >
+        V11042_N,
+      </if>
+      <if test="v11042Nne != null" >
+        V11042_NNE,
+      </if>
+      <if test="v11042Ne != null" >
+        V11042_NE,
+      </if>
+      <if test="v11042Ene != null" >
+        V11042_ENE,
+      </if>
+      <if test="v11042E != null" >
+        V11042_E,
+      </if>
+      <if test="v11042Ese != null" >
+        V11042_ESE,
+      </if>
+      <if test="v11042Se != null" >
+        V11042_SE,
+      </if>
+      <if test="v11042Sse != null" >
+        V11042_SSE,
+      </if>
+      <if test="v11042S != null" >
+        V11042_S,
+      </if>
+      <if test="v11042Ssw != null" >
+        V11042_SSW,
+      </if>
+      <if test="v11042Sw != null" >
+        V11042_SW,
+      </if>
+      <if test="v11042Wsw != null" >
+        V11042_WSW,
+      </if>
+      <if test="v11042W != null" >
+        V11042_W,
+      </if>
+      <if test="v11042Wnw != null" >
+        V11042_WNW,
+      </if>
+      <if test="v11042Nw != null" >
+        V11042_NW,
+      </if>
+      <if test="v11042Nnw != null" >
+        V11042_NNW,
+      </if>
+      <if test="v12120701 != null" >
+        V12120_701,
+      </if>
+      <if test="v12311701 != null" >
+        V12311_701,
+      </if>
+      <if test="v12121701 != null" >
+        V12121_701,
+      </if>
+      <if test="v12311009 != null" >
+        V12311_009,
+      </if>
+      <if test="v12311057 != null" >
+        V12311_057,
+      </if>
+      <if test="v12311058 != null" >
+        V12311_058,
+      </if>
+      <if test="v12311060 != null" >
+        V12311_060,
+      </if>
+      <if test="v12121 != null" >
+        V12121,
+      </if>
+      <if test="v12121057 != null" >
+        V12121_057,
+      </if>
+      <if test="v12121058 != null" >
+        V12121_058,
+      </if>
+      <if test="v12121060 != null" >
+        V12121_060,
+      </if>
+      <if test="v12030701005 != null" >
+        V12030_701_005,
+      </if>
+      <if test="v12030701010 != null" >
+        V12030_701_010,
+      </if>
+      <if test="v12030701015 != null" >
+        V12030_701_015,
+      </if>
+      <if test="v12030701020 != null" >
+        V12030_701_020,
+      </if>
+      <if test="v12030701040 != null" >
+        V12030_701_040,
+      </if>
+      <if test="v12030701080 != null" >
+        V12030_701_080,
+      </if>
+      <if test="v12030701160 != null" >
+        V12030_701_160,
+      </if>
+      <if test="v12030701320 != null" >
+        V12030_701_320,
+      </if>
+      <if test="v12620701 != null" >
+        V12620_701,
+      </if>
+      <if test="v20334 != null" >
+        V20334,
+      </if>
+      <if test="v20334057 != null" >
+        V20334_057,
+      </if>
+      <if test="v20334058 != null" >
+        V20334_058,
+      </if>
+      <if test="v20334060 != null" >
+        V20334_060,
+      </if>
+      <if test="v14032 != null" >
+        V14032,
+      </if>
+      <if test="v14033 != null" >
+        V14033,
+      </if>
+      <if test="v20302171701 != null" >
+        V20302_171_701,
+      </if>
+      <if test="v20302172701 != null" >
+        V20302_172_701,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="dRecordId != null" >
+        #{dRecordId,jdbcType=DECIMAL},
+      </if>
+      <if test="dDataId != null" >
+        #{dDataId,jdbcType=VARCHAR},
+      </if>
+      <if test="v04298 != null" >
+        #{v04298,jdbcType=DECIMAL},
+      </if>
+      <if test="dIymdhm != null" >
+        #{dIymdhm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dRymdhm != null" >
+        #{dRymdhm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dUpdateTime != null" >
+        #{dUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="v01300 != null" >
+        #{v01300,jdbcType=VARCHAR},
+      </if>
+      <if test="v05001 != null" >
+        #{v05001,jdbcType=DECIMAL},
+      </if>
+      <if test="v06001 != null" >
+        #{v06001,jdbcType=DECIMAL},
+      </if>
+      <if test="v07001 != null" >
+        #{v07001,jdbcType=DECIMAL},
+      </if>
+      <if test="v07031 != null" >
+        #{v07031,jdbcType=DECIMAL},
+      </if>
+      <if test="v07311 != null" >
+        #{v07311,jdbcType=DECIMAL},
+      </if>
+      <if test="v0703204 != null" >
+        #{v0703204,jdbcType=DECIMAL},
+      </if>
+      <if test="vTimeAvaila != null" >
+        #{vTimeAvaila,jdbcType=VARCHAR},
+      </if>
+      <if test="v10051701 != null" >
+        #{v10051701,jdbcType=DECIMAL},
+      </if>
+      <if test="v10004701 != null" >
+        #{v10004701,jdbcType=DECIMAL},
+      </if>
+      <if test="v10301 != null" >
+        #{v10301,jdbcType=DECIMAL},
+      </if>
+      <if test="v10301057 != null" >
+        #{v10301057,jdbcType=DECIMAL},
+      </if>
+      <if test="v10301058 != null" >
+        #{v10301058,jdbcType=DECIMAL},
+      </if>
+      <if test="v10301060 != null" >
+        #{v10301060,jdbcType=DECIMAL},
+      </if>
+      <if test="v10302 != null" >
+        #{v10302,jdbcType=DECIMAL},
+      </if>
+      <if test="v10302057 != null" >
+        #{v10302057,jdbcType=DECIMAL},
+      </if>
+      <if test="v10302058 != null" >
+        #{v10302058,jdbcType=DECIMAL},
+      </if>
+      <if test="v10302060 != null" >
+        #{v10302060,jdbcType=DECIMAL},
+      </if>
+      <if test="v10384 != null" >
+        #{v10384,jdbcType=DECIMAL},
+      </if>
+      <if test="v10386 != null" >
+        #{v10386,jdbcType=DECIMAL},
+      </if>
+      <if test="v10389 != null" >
+        #{v10389,jdbcType=DECIMAL},
+      </if>
+      <if test="v10390 != null" >
+        #{v10390,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001701 != null" >
+        #{v12001701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12306 != null" >
+        #{v12306,jdbcType=DECIMAL},
+      </if>
+      <if test="v12011701 != null" >
+        #{v12011701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12012701 != null" >
+        #{v12012701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12011 != null" >
+        #{v12011,jdbcType=DECIMAL},
+      </if>
+      <if test="v12011057 != null" >
+        #{v12011057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12011058 != null" >
+        #{v12011058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12011060 != null" >
+        #{v12011060,jdbcType=DECIMAL},
+      </if>
+      <if test="v12012 != null" >
+        #{v12012,jdbcType=DECIMAL},
+      </if>
+      <if test="v12012057 != null" >
+        #{v12012057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12012058 != null" >
+        #{v12012058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12012060 != null" >
+        #{v12012060,jdbcType=DECIMAL},
+      </if>
+      <if test="v12303701 != null" >
+        #{v12303701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12304 != null" >
+        #{v12304,jdbcType=DECIMAL},
+      </if>
+      <if test="v12304057 != null" >
+        #{v12304057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12304058 != null" >
+        #{v12304058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12304060 != null" >
+        #{v12304060,jdbcType=DECIMAL},
+      </if>
+      <if test="v12305 != null" >
+        #{v12305,jdbcType=DECIMAL},
+      </if>
+      <if test="v12305057 != null" >
+        #{v12305057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12305058 != null" >
+        #{v12305058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12305060 != null" >
+        #{v12305060,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260530701 != null" >
+        #{v1260530701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271030701 != null" >
+        #{v1271030701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270730 != null" >
+        #{v1270730,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271230 != null" >
+        #{v1271230,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271130 != null" >
+        #{v1271130,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260535701 != null" >
+        #{v1260535701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271035701 != null" >
+        #{v1271035701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270735 != null" >
+        #{v1270735,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271235 != null" >
+        #{v1271235,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271135 != null" >
+        #{v1271135,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260537701 != null" >
+        #{v1260537701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271037701 != null" >
+        #{v1271037701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270737 != null" >
+        #{v1270737,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271237 != null" >
+        #{v1271237,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271137 != null" >
+        #{v1271137,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260540701 != null" >
+        #{v1260540701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271040701 != null" >
+        #{v1271040701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270740 != null" >
+        #{v1270740,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271240 != null" >
+        #{v1271240,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271140 != null" >
+        #{v1271140,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260702701 != null" >
+        #{v1260702701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271302701 != null" >
+        #{v1271302701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270802 != null" >
+        #{v1270802,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271502 != null" >
+        #{v1271502,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271402 != null" >
+        #{v1271402,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260300701 != null" >
+        #{v1260300701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271300701 != null" >
+        #{v1271300701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270800 != null" >
+        #{v1270800,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271500 != null" >
+        #{v1271500,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271400 != null" >
+        #{v1271400,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260902701 != null" >
+        #{v1260902701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271602701 != null" >
+        #{v1271602701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270902 != null" >
+        #{v1270902,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271802 != null" >
+        #{v1271802,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271702 != null" >
+        #{v1271702,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260915701 != null" >
+        #{v1260915701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271615701 != null" >
+        #{v1271615701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270915 != null" >
+        #{v1270915,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271815 != null" >
+        #{v1271815,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271715 != null" >
+        #{v1271715,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260930701 != null" >
+        #{v1260930701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271630701 != null" >
+        #{v1271630701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270930 != null" >
+        #{v1270930,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271830 != null" >
+        #{v1271830,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271730 != null" >
+        #{v1271730,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260940701 != null" >
+        #{v1260940701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271640701 != null" >
+        #{v1271640701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270940 != null" >
+        #{v1270940,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271840 != null" >
+        #{v1271840,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271740 != null" >
+        #{v1271740,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270500 != null" >
+        #{v1270500,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270300 != null" >
+        #{v1270300,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270600 != null" >
+        #{v1270600,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270400 != null" >
+        #{v1270400,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269900701 != null" >
+        #{v1269900701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270000 != null" >
+        #{v1270000,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270100 != null" >
+        #{v1270100,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270200 != null" >
+        #{v1270200,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270505 != null" >
+        #{v1270505,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270305 != null" >
+        #{v1270305,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270605 != null" >
+        #{v1270605,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270405 != null" >
+        #{v1270405,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269905701 != null" >
+        #{v1269905701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270005 != null" >
+        #{v1270005,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270105 != null" >
+        #{v1270105,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270205 != null" >
+        #{v1270205,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270510 != null" >
+        #{v1270510,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270310 != null" >
+        #{v1270310,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270610 != null" >
+        #{v1270610,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270410 != null" >
+        #{v1270410,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269910701 != null" >
+        #{v1269910701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270010 != null" >
+        #{v1270010,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270110 != null" >
+        #{v1270110,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270210 != null" >
+        #{v1270210,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270512 != null" >
+        #{v1270512,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270312 != null" >
+        #{v1270312,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270612 != null" >
+        #{v1270612,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270412 != null" >
+        #{v1270412,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269912701 != null" >
+        #{v1269912701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270012 != null" >
+        #{v1270012,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270112 != null" >
+        #{v1270112,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270212 != null" >
+        #{v1270212,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270515 != null" >
+        #{v1270515,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270315 != null" >
+        #{v1270315,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270615 != null" >
+        #{v1270615,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270415 != null" >
+        #{v1270415,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269915701 != null" >
+        #{v1269915701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270015 != null" >
+        #{v1270015,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270115 != null" >
+        #{v1270115,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270215 != null" >
+        #{v1270215,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270520 != null" >
+        #{v1270520,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270320 != null" >
+        #{v1270320,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270620 != null" >
+        #{v1270620,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270420 != null" >
+        #{v1270420,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269920701 != null" >
+        #{v1269920701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270020 != null" >
+        #{v1270020,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270120 != null" >
+        #{v1270120,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270220 != null" >
+        #{v1270220,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270522 != null" >
+        #{v1270522,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270322 != null" >
+        #{v1270322,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270622 != null" >
+        #{v1270622,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270422 != null" >
+        #{v1270422,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269922701 != null" >
+        #{v1269922701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270022 != null" >
+        #{v1270022,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270122 != null" >
+        #{v1270122,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270222 != null" >
+        #{v1270222,jdbcType=DECIMAL},
+      </if>
+      <if test="v1261026 != null" >
+        #{v1261026,jdbcType=DECIMAL},
+      </if>
+      <if test="v1261118 != null" >
+        #{v1261118,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001008 != null" >
+        #{v12001008,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001004 != null" >
+        #{v12001004,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001021Pos != null" >
+        #{v12001021Pos,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001021Mnu != null" >
+        #{v12001021Mnu,jdbcType=DECIMAL},
+      </if>
+      <if test="v13004701 != null" >
+        #{v13004701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13004008 != null" >
+        #{v13004008,jdbcType=DECIMAL},
+      </if>
+      <if test="v13004004 != null" >
+        #{v13004004,jdbcType=DECIMAL},
+      </if>
+      <if test="v13004021Pos != null" >
+        #{v13004021Pos,jdbcType=DECIMAL},
+      </if>
+      <if test="v13004021Mnu != null" >
+        #{v13004021Mnu,jdbcType=DECIMAL},
+      </if>
+      <if test="v13003701 != null" >
+        #{v13003701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13003008 != null" >
+        #{v13003008,jdbcType=DECIMAL},
+      </if>
+      <if test="v13003004 != null" >
+        #{v13003004,jdbcType=DECIMAL},
+      </if>
+      <if test="v20010701 != null" >
+        #{v20010701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20051701 != null" >
+        #{v20051701,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050102701 != null" >
+        #{v2050102701,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050008701 != null" >
+        #{v2050008701,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050302701 != null" >
+        #{v2050302701,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050208701 != null" >
+        #{v2050208701,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050102061 != null" >
+        #{v2050102061,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050008061 != null" >
+        #{v2050008061,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050302061 != null" >
+        #{v2050302061,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050208061 != null" >
+        #{v2050208061,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011701 != null" >
+        #{v13011701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13060Max != null" >
+        #{v13060Max,jdbcType=DECIMAL},
+      </if>
+      <if test="v13060Max057 != null" >
+        #{v13060Max057,jdbcType=DECIMAL},
+      </if>
+      <if test="v13060Min != null" >
+        #{v13060Min,jdbcType=DECIMAL},
+      </if>
+      <if test="v13060Min057 != null" >
+        #{v13060Min057,jdbcType=DECIMAL},
+      </if>
+      <if test="v13052 != null" >
+        #{v13052,jdbcType=DECIMAL},
+      </if>
+      <if test="v13052057 != null" >
+        #{v13052057,jdbcType=DECIMAL},
+      </if>
+      <if test="v13052058 != null" >
+        #{v13052058,jdbcType=DECIMAL},
+      </if>
+      <if test="v13052060 != null" >
+        #{v13052060,jdbcType=DECIMAL},
+      </if>
+      <if test="v13353701 != null" >
+        #{v13353701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355001701 != null" >
+        #{v13355001701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355005701 != null" >
+        #{v13355005701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355010701 != null" >
+        #{v13355010701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355025701 != null" >
+        #{v13355025701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355050701 != null" >
+        #{v13355050701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355100701 != null" >
+        #{v13355100701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355150701 != null" >
+        #{v13355150701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20430701 != null" >
+        #{v20430701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13380 != null" >
+        #{v13380,jdbcType=DECIMAL},
+      </if>
+      <if test="v20212 != null" >
+        #{v20212,jdbcType=DECIMAL},
+      </if>
+      <if test="v20438 != null" >
+        #{v20438,jdbcType=DECIMAL},
+      </if>
+      <if test="v20431 != null" >
+        #{v20431,jdbcType=DECIMAL},
+      </if>
+      <if test="v13381 != null" >
+        #{v13381,jdbcType=DECIMAL},
+      </if>
+      <if test="v20434701 != null" >
+        #{v20434701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20210 != null" >
+        #{v20210,jdbcType=DECIMAL},
+      </if>
+      <if test="v20436 != null" >
+        #{v20436,jdbcType=DECIMAL},
+      </if>
+      <if test="v20435 != null" >
+        #{v20435,jdbcType=DECIMAL},
+      </if>
+      <if test="v20432701 != null" >
+        #{v20432701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20211 != null" >
+        #{v20211,jdbcType=DECIMAL},
+      </if>
+      <if test="v20437 != null" >
+        #{v20437,jdbcType=DECIMAL},
+      </if>
+      <if test="v20433 != null" >
+        #{v20433,jdbcType=DECIMAL},
+      </if>
+      <if test="v1338201 != null" >
+        #{v1338201,jdbcType=DECIMAL},
+      </if>
+      <if test="v1338201057 != null" >
+        #{v1338201057,jdbcType=DECIMAL},
+      </if>
+      <if test="v1338201058 != null" >
+        #{v1338201058,jdbcType=DECIMAL},
+      </if>
+      <if test="v1338201060 != null" >
+        #{v1338201060,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011008Rel != null" >
+        #{v13011008Rel,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011008 != null" >
+        #{v13011008,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011004Rel != null" >
+        #{v13011004Rel,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011004 != null" >
+        #{v13011004,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011023Pos != null" >
+        #{v13011023Pos,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011023Mnu != null" >
+        #{v13011023Mnu,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330089701 != null" >
+        #{v04330089701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330007701 != null" >
+        #{v04330007701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330006701 != null" >
+        #{v04330006701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330005701 != null" >
+        #{v04330005701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330008701 != null" >
+        #{v04330008701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330015701 != null" >
+        #{v04330015701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330015Mos != null" >
+        #{v04330015Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330015Lea != null" >
+        #{v04330015Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330031701 != null" >
+        #{v04330031701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330031Mos != null" >
+        #{v04330031Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330031Lea != null" >
+        #{v04330031Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330042701 != null" >
+        #{v04330042701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330042Mos != null" >
+        #{v04330042Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330042Lea != null" >
+        #{v04330042Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330017701 != null" >
+        #{v04330017701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330017Mos != null" >
+        #{v04330017Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330017Lea != null" >
+        #{v04330017Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330013701 != null" >
+        #{v04330013701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330013Mos != null" >
+        #{v04330013Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330013Lea != null" >
+        #{v04330013Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330002701 != null" >
+        #{v04330002701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330002Mos != null" >
+        #{v04330002Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330002Lea != null" >
+        #{v04330002Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330070701 != null" >
+        #{v04330070701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330070Mos != null" >
+        #{v04330070Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330070Lea != null" >
+        #{v04330070Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330016701 != null" >
+        #{v04330016701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330056701 != null" >
+        #{v04330056701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330048701 != null" >
+        #{v04330048701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20309001 != null" >
+        #{v20309001,jdbcType=DECIMAL},
+      </if>
+      <if test="v20309010 != null" >
+        #{v20309010,jdbcType=DECIMAL},
+      </if>
+      <if test="v13032 != null" >
+        #{v13032,jdbcType=DECIMAL},
+      </if>
+      <if test="v13033 != null" >
+        #{v13033,jdbcType=DECIMAL},
+      </if>
+      <if test="v13334 != null" >
+        #{v13334,jdbcType=DECIMAL},
+      </if>
+      <if test="v13334057 != null" >
+        #{v13334057,jdbcType=DECIMAL},
+      </if>
+      <if test="v13334058 != null" >
+        #{v13334058,jdbcType=DECIMAL},
+      </if>
+      <if test="v13334060 != null" >
+        #{v13334060,jdbcType=DECIMAL},
+      </if>
+      <if test="v13356001701 != null" >
+        #{v13356001701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13356005701 != null" >
+        #{v13356005701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13356010701 != null" >
+        #{v13356010701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13356020701 != null" >
+        #{v13356020701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13356030701 != null" >
+        #{v13356030701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330090 != null" >
+        #{v04330090,jdbcType=DECIMAL},
+      </if>
+      <if test="v20326Ns != null" >
+        #{v20326Ns,jdbcType=DECIMAL},
+      </if>
+      <if test="v20306Ns != null" >
+        #{v20306Ns,jdbcType=DECIMAL},
+      </if>
+      <if test="v20307Ns != null" >
+        #{v20307Ns,jdbcType=DECIMAL},
+      </if>
+      <if test="v20326Ns057 != null" >
+        #{v20326Ns057,jdbcType=DECIMAL},
+      </if>
+      <if test="v20306Ns058 != null" >
+        #{v20306Ns058,jdbcType=DECIMAL},
+      </if>
+      <if test="v20307Ns060 != null" >
+        #{v20307Ns060,jdbcType=DECIMAL},
+      </if>
+      <if test="v20326We != null" >
+        #{v20326We,jdbcType=DECIMAL},
+      </if>
+      <if test="v20306We != null" >
+        #{v20306We,jdbcType=DECIMAL},
+      </if>
+      <if test="v20307We != null" >
+        #{v20307We,jdbcType=DECIMAL},
+      </if>
+      <if test="v20326We057 != null" >
+        #{v20326We057,jdbcType=DECIMAL},
+      </if>
+      <if test="v20306We058 != null" >
+        #{v20306We058,jdbcType=DECIMAL},
+      </if>
+      <if test="v20307We060 != null" >
+        #{v20307We060,jdbcType=DECIMAL},
+      </if>
+      <if test="v11291701 != null" >
+        #{v11291701,jdbcType=DECIMAL},
+      </if>
+      <if test="v11046 != null" >
+        #{v11046,jdbcType=DECIMAL},
+      </if>
+      <if test="v11211 != null" >
+        #{v11211,jdbcType=DECIMAL},
+      </if>
+      <if test="v11046057 != null" >
+        #{v11046057,jdbcType=DECIMAL},
+      </if>
+      <if test="v11046058 != null" >
+        #{v11046058,jdbcType=DECIMAL},
+      </if>
+      <if test="v11046060 != null" >
+        #{v11046060,jdbcType=DECIMAL},
+      </if>
+      <if test="v1104205701 != null" >
+        #{v1104205701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1104210701 != null" >
+        #{v1104210701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1104212701 != null" >
+        #{v1104212701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1104215701 != null" >
+        #{v1104215701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1104217701 != null" >
+        #{v1104217701,jdbcType=DECIMAL},
+      </if>
+      <if test="v11314 != null" >
+        #{v11314,jdbcType=VARCHAR},
+      </if>
+      <if test="v11314061 != null" >
+        #{v11314061,jdbcType=DECIMAL},
+      </if>
+      <if test="v11315 != null" >
+        #{v11315,jdbcType=VARCHAR},
+      </if>
+      <if test="v11315061 != null" >
+        #{v11315061,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350N != null" >
+        #{v11350N,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Nne != null" >
+        #{v11350Nne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Ne != null" >
+        #{v11350Ne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Ene != null" >
+        #{v11350Ene,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350E != null" >
+        #{v11350E,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Ese != null" >
+        #{v11350Ese,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Se != null" >
+        #{v11350Se,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Sse != null" >
+        #{v11350Sse,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350S != null" >
+        #{v11350S,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Ssw != null" >
+        #{v11350Ssw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Sw != null" >
+        #{v11350Sw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Wsw != null" >
+        #{v11350Wsw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350W != null" >
+        #{v11350W,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Wnw != null" >
+        #{v11350Wnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Nw != null" >
+        #{v11350Nw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Nnw != null" >
+        #{v11350Nnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350C != null" >
+        #{v11350C,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351N != null" >
+        #{v11351N,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Nne != null" >
+        #{v11351Nne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Ne != null" >
+        #{v11351Ne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Ene != null" >
+        #{v11351Ene,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351E != null" >
+        #{v11351E,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Ese != null" >
+        #{v11351Ese,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Se != null" >
+        #{v11351Se,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Sse != null" >
+        #{v11351Sse,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351S != null" >
+        #{v11351S,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Ssw != null" >
+        #{v11351Ssw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Sw != null" >
+        #{v11351Sw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Wsw != null" >
+        #{v11351Wsw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351W != null" >
+        #{v11351W,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Wnw != null" >
+        #{v11351Wnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Nw != null" >
+        #{v11351Nw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Nnw != null" >
+        #{v11351Nnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042N != null" >
+        #{v11042N,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Nne != null" >
+        #{v11042Nne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Ne != null" >
+        #{v11042Ne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Ene != null" >
+        #{v11042Ene,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042E != null" >
+        #{v11042E,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Ese != null" >
+        #{v11042Ese,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Se != null" >
+        #{v11042Se,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Sse != null" >
+        #{v11042Sse,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042S != null" >
+        #{v11042S,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Ssw != null" >
+        #{v11042Ssw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Sw != null" >
+        #{v11042Sw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Wsw != null" >
+        #{v11042Wsw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042W != null" >
+        #{v11042W,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Wnw != null" >
+        #{v11042Wnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Nw != null" >
+        #{v11042Nw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Nnw != null" >
+        #{v11042Nnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v12120701 != null" >
+        #{v12120701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12311701 != null" >
+        #{v12311701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12121701 != null" >
+        #{v12121701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12311009 != null" >
+        #{v12311009,jdbcType=DECIMAL},
+      </if>
+      <if test="v12311057 != null" >
+        #{v12311057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12311058 != null" >
+        #{v12311058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12311060 != null" >
+        #{v12311060,jdbcType=DECIMAL},
+      </if>
+      <if test="v12121 != null" >
+        #{v12121,jdbcType=DECIMAL},
+      </if>
+      <if test="v12121057 != null" >
+        #{v12121057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12121058 != null" >
+        #{v12121058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12121060 != null" >
+        #{v12121060,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701005 != null" >
+        #{v12030701005,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701010 != null" >
+        #{v12030701010,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701015 != null" >
+        #{v12030701015,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701020 != null" >
+        #{v12030701020,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701040 != null" >
+        #{v12030701040,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701080 != null" >
+        #{v12030701080,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701160 != null" >
+        #{v12030701160,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701320 != null" >
+        #{v12030701320,jdbcType=DECIMAL},
+      </if>
+      <if test="v12620701 != null" >
+        #{v12620701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20334 != null" >
+        #{v20334,jdbcType=DECIMAL},
+      </if>
+      <if test="v20334057 != null" >
+        #{v20334057,jdbcType=DECIMAL},
+      </if>
+      <if test="v20334058 != null" >
+        #{v20334058,jdbcType=DECIMAL},
+      </if>
+      <if test="v20334060 != null" >
+        #{v20334060,jdbcType=DECIMAL},
+      </if>
+      <if test="v14032 != null" >
+        #{v14032,jdbcType=DECIMAL},
+      </if>
+      <if test="v14033 != null" >
+        #{v14033,jdbcType=DECIMAL},
+      </if>
+      <if test="v20302171701 != null" >
+        #{v20302171701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20302172701 != null" >
+        #{v20302172701,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suse.edu.bean.Myer" >
+    update SURF_CLI_CHN_MYER
+    <set >
+      <if test="dDataId != null" >
+        D_DATA_ID = #{dDataId,jdbcType=VARCHAR},
+      </if>
+      <if test="v04298 != null" >
+        V04298 = #{v04298,jdbcType=DECIMAL},
+      </if>
+      <if test="dIymdhm != null" >
+        D_IYMDHM = #{dIymdhm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dRymdhm != null" >
+        D_RYMDHM = #{dRymdhm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dUpdateTime != null" >
+        D_UPDATE_TIME = #{dUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="v01300 != null" >
+        V01300 = #{v01300,jdbcType=VARCHAR},
+      </if>
+      <if test="v05001 != null" >
+        V05001 = #{v05001,jdbcType=DECIMAL},
+      </if>
+      <if test="v06001 != null" >
+        V06001 = #{v06001,jdbcType=DECIMAL},
+      </if>
+      <if test="v07001 != null" >
+        V07001 = #{v07001,jdbcType=DECIMAL},
+      </if>
+      <if test="v07031 != null" >
+        V07031 = #{v07031,jdbcType=DECIMAL},
+      </if>
+      <if test="v07311 != null" >
+        V07311 = #{v07311,jdbcType=DECIMAL},
+      </if>
+      <if test="v0703204 != null" >
+        V07032_04 = #{v0703204,jdbcType=DECIMAL},
+      </if>
+      <if test="vTimeAvaila != null" >
+        V_TIME_AVAILA = #{vTimeAvaila,jdbcType=VARCHAR},
+      </if>
+      <if test="v10051701 != null" >
+        V10051_701 = #{v10051701,jdbcType=DECIMAL},
+      </if>
+      <if test="v10004701 != null" >
+        V10004_701 = #{v10004701,jdbcType=DECIMAL},
+      </if>
+      <if test="v10301 != null" >
+        V10301 = #{v10301,jdbcType=DECIMAL},
+      </if>
+      <if test="v10301057 != null" >
+        V10301_057 = #{v10301057,jdbcType=DECIMAL},
+      </if>
+      <if test="v10301058 != null" >
+        V10301_058 = #{v10301058,jdbcType=DECIMAL},
+      </if>
+      <if test="v10301060 != null" >
+        V10301_060 = #{v10301060,jdbcType=DECIMAL},
+      </if>
+      <if test="v10302 != null" >
+        V10302 = #{v10302,jdbcType=DECIMAL},
+      </if>
+      <if test="v10302057 != null" >
+        V10302_057 = #{v10302057,jdbcType=DECIMAL},
+      </if>
+      <if test="v10302058 != null" >
+        V10302_058 = #{v10302058,jdbcType=DECIMAL},
+      </if>
+      <if test="v10302060 != null" >
+        V10302_060 = #{v10302060,jdbcType=DECIMAL},
+      </if>
+      <if test="v10384 != null" >
+        V10384 = #{v10384,jdbcType=DECIMAL},
+      </if>
+      <if test="v10386 != null" >
+        V10386 = #{v10386,jdbcType=DECIMAL},
+      </if>
+      <if test="v10389 != null" >
+        V10389 = #{v10389,jdbcType=DECIMAL},
+      </if>
+      <if test="v10390 != null" >
+        V10390 = #{v10390,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001701 != null" >
+        V12001_701 = #{v12001701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12306 != null" >
+        V12306 = #{v12306,jdbcType=DECIMAL},
+      </if>
+      <if test="v12011701 != null" >
+        V12011_701 = #{v12011701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12012701 != null" >
+        V12012_701 = #{v12012701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12011 != null" >
+        V12011 = #{v12011,jdbcType=DECIMAL},
+      </if>
+      <if test="v12011057 != null" >
+        V12011_057 = #{v12011057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12011058 != null" >
+        V12011_058 = #{v12011058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12011060 != null" >
+        V12011_060 = #{v12011060,jdbcType=DECIMAL},
+      </if>
+      <if test="v12012 != null" >
+        V12012 = #{v12012,jdbcType=DECIMAL},
+      </if>
+      <if test="v12012057 != null" >
+        V12012_057 = #{v12012057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12012058 != null" >
+        V12012_058 = #{v12012058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12012060 != null" >
+        V12012_060 = #{v12012060,jdbcType=DECIMAL},
+      </if>
+      <if test="v12303701 != null" >
+        V12303_701 = #{v12303701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12304 != null" >
+        V12304 = #{v12304,jdbcType=DECIMAL},
+      </if>
+      <if test="v12304057 != null" >
+        V12304_057 = #{v12304057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12304058 != null" >
+        V12304_058 = #{v12304058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12304060 != null" >
+        V12304_060 = #{v12304060,jdbcType=DECIMAL},
+      </if>
+      <if test="v12305 != null" >
+        V12305 = #{v12305,jdbcType=DECIMAL},
+      </if>
+      <if test="v12305057 != null" >
+        V12305_057 = #{v12305057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12305058 != null" >
+        V12305_058 = #{v12305058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12305060 != null" >
+        V12305_060 = #{v12305060,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260530701 != null" >
+        V12605_30_701 = #{v1260530701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271030701 != null" >
+        V12710_30_701 = #{v1271030701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270730 != null" >
+        V12707_30 = #{v1270730,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271230 != null" >
+        V12712_30 = #{v1271230,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271130 != null" >
+        V12711_30 = #{v1271130,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260535701 != null" >
+        V12605_35_701 = #{v1260535701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271035701 != null" >
+        V12710_35_701 = #{v1271035701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270735 != null" >
+        V12707_35 = #{v1270735,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271235 != null" >
+        V12712_35 = #{v1271235,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271135 != null" >
+        V12711_35 = #{v1271135,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260537701 != null" >
+        V12605_37_701 = #{v1260537701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271037701 != null" >
+        V12710_37_701 = #{v1271037701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270737 != null" >
+        V12707_37 = #{v1270737,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271237 != null" >
+        V12712_37 = #{v1271237,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271137 != null" >
+        V12711_37 = #{v1271137,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260540701 != null" >
+        V12605_40_701 = #{v1260540701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271040701 != null" >
+        V12710_40_701 = #{v1271040701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270740 != null" >
+        V12707_40 = #{v1270740,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271240 != null" >
+        V12712_40 = #{v1271240,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271140 != null" >
+        V12711_40 = #{v1271140,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260702701 != null" >
+        V12607_02_701 = #{v1260702701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271302701 != null" >
+        V12713_02_701 = #{v1271302701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270802 != null" >
+        V12708_02 = #{v1270802,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271502 != null" >
+        V12715_02 = #{v1271502,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271402 != null" >
+        V12714_02 = #{v1271402,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260300701 != null" >
+        V12603_00_701 = #{v1260300701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271300701 != null" >
+        V12713_00_701 = #{v1271300701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270800 != null" >
+        V12708_00 = #{v1270800,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271500 != null" >
+        V12715_00 = #{v1271500,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271400 != null" >
+        V12714_00 = #{v1271400,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260902701 != null" >
+        V12609_02_701 = #{v1260902701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271602701 != null" >
+        V12716_02_701 = #{v1271602701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270902 != null" >
+        V12709_02 = #{v1270902,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271802 != null" >
+        V12718_02 = #{v1271802,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271702 != null" >
+        V12717_02 = #{v1271702,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260915701 != null" >
+        V12609_15_701 = #{v1260915701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271615701 != null" >
+        V12716_15_701 = #{v1271615701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270915 != null" >
+        V12709_15 = #{v1270915,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271815 != null" >
+        V12718_15 = #{v1271815,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271715 != null" >
+        V12717_15 = #{v1271715,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260930701 != null" >
+        V12609_30_701 = #{v1260930701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271630701 != null" >
+        V12716_30_701 = #{v1271630701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270930 != null" >
+        V12709_30 = #{v1270930,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271830 != null" >
+        V12718_30 = #{v1271830,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271730 != null" >
+        V12717_30 = #{v1271730,jdbcType=DECIMAL},
+      </if>
+      <if test="v1260940701 != null" >
+        V12609_40_701 = #{v1260940701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271640701 != null" >
+        V12716_40_701 = #{v1271640701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270940 != null" >
+        V12709_40 = #{v1270940,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271840 != null" >
+        V12718_40 = #{v1271840,jdbcType=DECIMAL},
+      </if>
+      <if test="v1271740 != null" >
+        V12717_40 = #{v1271740,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270500 != null" >
+        V12705_00 = #{v1270500,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270300 != null" >
+        V12703_00 = #{v1270300,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270600 != null" >
+        V12706_00 = #{v1270600,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270400 != null" >
+        V12704_00 = #{v1270400,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269900701 != null" >
+        V12699_00_701 = #{v1269900701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270000 != null" >
+        V12700_00 = #{v1270000,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270100 != null" >
+        V12701_00 = #{v1270100,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270200 != null" >
+        V12702_00 = #{v1270200,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270505 != null" >
+        V12705_05 = #{v1270505,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270305 != null" >
+        V12703_05 = #{v1270305,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270605 != null" >
+        V12706_05 = #{v1270605,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270405 != null" >
+        V12704_05 = #{v1270405,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269905701 != null" >
+        V12699_05_701 = #{v1269905701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270005 != null" >
+        V12700_05 = #{v1270005,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270105 != null" >
+        V12701_05 = #{v1270105,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270205 != null" >
+        V12702_05 = #{v1270205,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270510 != null" >
+        V12705_10 = #{v1270510,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270310 != null" >
+        V12703_10 = #{v1270310,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270610 != null" >
+        V12706_10 = #{v1270610,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270410 != null" >
+        V12704_10 = #{v1270410,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269910701 != null" >
+        V12699_10_701 = #{v1269910701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270010 != null" >
+        V12700_10 = #{v1270010,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270110 != null" >
+        V12701_10 = #{v1270110,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270210 != null" >
+        V12702_10 = #{v1270210,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270512 != null" >
+        V12705_12 = #{v1270512,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270312 != null" >
+        V12703_12 = #{v1270312,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270612 != null" >
+        V12706_12 = #{v1270612,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270412 != null" >
+        V12704_12 = #{v1270412,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269912701 != null" >
+        V12699_12_701 = #{v1269912701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270012 != null" >
+        V12700_12 = #{v1270012,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270112 != null" >
+        V12701_12 = #{v1270112,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270212 != null" >
+        V12702_12 = #{v1270212,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270515 != null" >
+        V12705_15 = #{v1270515,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270315 != null" >
+        V12703_15 = #{v1270315,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270615 != null" >
+        V12706_15 = #{v1270615,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270415 != null" >
+        V12704_15 = #{v1270415,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269915701 != null" >
+        V12699_15_701 = #{v1269915701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270015 != null" >
+        V12700_15 = #{v1270015,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270115 != null" >
+        V12701_15 = #{v1270115,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270215 != null" >
+        V12702_15 = #{v1270215,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270520 != null" >
+        V12705_20 = #{v1270520,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270320 != null" >
+        V12703_20 = #{v1270320,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270620 != null" >
+        V12706_20 = #{v1270620,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270420 != null" >
+        V12704_20 = #{v1270420,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269920701 != null" >
+        V12699_20_701 = #{v1269920701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270020 != null" >
+        V12700_20 = #{v1270020,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270120 != null" >
+        V12701_20 = #{v1270120,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270220 != null" >
+        V12702_20 = #{v1270220,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270522 != null" >
+        V12705_22 = #{v1270522,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270322 != null" >
+        V12703_22 = #{v1270322,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270622 != null" >
+        V12706_22 = #{v1270622,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270422 != null" >
+        V12704_22 = #{v1270422,jdbcType=DECIMAL},
+      </if>
+      <if test="v1269922701 != null" >
+        V12699_22_701 = #{v1269922701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270022 != null" >
+        V12700_22 = #{v1270022,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270122 != null" >
+        V12701_22 = #{v1270122,jdbcType=DECIMAL},
+      </if>
+      <if test="v1270222 != null" >
+        V12702_22 = #{v1270222,jdbcType=DECIMAL},
+      </if>
+      <if test="v1261026 != null" >
+        V12610_26 = #{v1261026,jdbcType=DECIMAL},
+      </if>
+      <if test="v1261118 != null" >
+        V12611_18 = #{v1261118,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001008 != null" >
+        V12001_008 = #{v12001008,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001004 != null" >
+        V12001_004 = #{v12001004,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001021Pos != null" >
+        V12001_021_POS = #{v12001021Pos,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001021Mnu != null" >
+        V12001_021_MNU = #{v12001021Mnu,jdbcType=DECIMAL},
+      </if>
+      <if test="v13004701 != null" >
+        V13004_701 = #{v13004701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13004008 != null" >
+        V13004_008 = #{v13004008,jdbcType=DECIMAL},
+      </if>
+      <if test="v13004004 != null" >
+        V13004_004 = #{v13004004,jdbcType=DECIMAL},
+      </if>
+      <if test="v13004021Pos != null" >
+        V13004_021_POS = #{v13004021Pos,jdbcType=DECIMAL},
+      </if>
+      <if test="v13004021Mnu != null" >
+        V13004_021_MNU = #{v13004021Mnu,jdbcType=DECIMAL},
+      </if>
+      <if test="v13003701 != null" >
+        V13003_701 = #{v13003701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13003008 != null" >
+        V13003_008 = #{v13003008,jdbcType=DECIMAL},
+      </if>
+      <if test="v13003004 != null" >
+        V13003_004 = #{v13003004,jdbcType=DECIMAL},
+      </if>
+      <if test="v20010701 != null" >
+        V20010_701 = #{v20010701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20051701 != null" >
+        V20051_701 = #{v20051701,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050102701 != null" >
+        V20501_02_701 = #{v2050102701,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050008701 != null" >
+        V20500_08_701 = #{v2050008701,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050302701 != null" >
+        V20503_02_701 = #{v2050302701,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050208701 != null" >
+        V20502_08_701 = #{v2050208701,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050102061 != null" >
+        V20501_02_061 = #{v2050102061,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050008061 != null" >
+        V20500_08_061 = #{v2050008061,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050302061 != null" >
+        V20503_02_061 = #{v2050302061,jdbcType=DECIMAL},
+      </if>
+      <if test="v2050208061 != null" >
+        V20502_08_061 = #{v2050208061,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011701 != null" >
+        V13011_701 = #{v13011701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13060Max != null" >
+        V13060_MAX = #{v13060Max,jdbcType=DECIMAL},
+      </if>
+      <if test="v13060Max057 != null" >
+        V13060_MAX_057 = #{v13060Max057,jdbcType=DECIMAL},
+      </if>
+      <if test="v13060Min != null" >
+        V13060_MIN = #{v13060Min,jdbcType=DECIMAL},
+      </if>
+      <if test="v13060Min057 != null" >
+        V13060_MIN_057 = #{v13060Min057,jdbcType=DECIMAL},
+      </if>
+      <if test="v13052 != null" >
+        V13052 = #{v13052,jdbcType=DECIMAL},
+      </if>
+      <if test="v13052057 != null" >
+        V13052_057 = #{v13052057,jdbcType=DECIMAL},
+      </if>
+      <if test="v13052058 != null" >
+        V13052_058 = #{v13052058,jdbcType=DECIMAL},
+      </if>
+      <if test="v13052060 != null" >
+        V13052_060 = #{v13052060,jdbcType=DECIMAL},
+      </if>
+      <if test="v13353701 != null" >
+        V13353_701 = #{v13353701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355001701 != null" >
+        V13355_001_701 = #{v13355001701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355005701 != null" >
+        V13355_005_701 = #{v13355005701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355010701 != null" >
+        V13355_010_701 = #{v13355010701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355025701 != null" >
+        V13355_025_701 = #{v13355025701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355050701 != null" >
+        V13355_050_701 = #{v13355050701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355100701 != null" >
+        V13355_100_701 = #{v13355100701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13355150701 != null" >
+        V13355_150_701 = #{v13355150701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20430701 != null" >
+        V20430_701 = #{v20430701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13380 != null" >
+        V13380 = #{v13380,jdbcType=DECIMAL},
+      </if>
+      <if test="v20212 != null" >
+        V20212 = #{v20212,jdbcType=DECIMAL},
+      </if>
+      <if test="v20438 != null" >
+        V20438 = #{v20438,jdbcType=DECIMAL},
+      </if>
+      <if test="v20431 != null" >
+        V20431 = #{v20431,jdbcType=DECIMAL},
+      </if>
+      <if test="v13381 != null" >
+        V13381 = #{v13381,jdbcType=DECIMAL},
+      </if>
+      <if test="v20434701 != null" >
+        V20434_701 = #{v20434701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20210 != null" >
+        V20210 = #{v20210,jdbcType=DECIMAL},
+      </if>
+      <if test="v20436 != null" >
+        V20436 = #{v20436,jdbcType=DECIMAL},
+      </if>
+      <if test="v20435 != null" >
+        V20435 = #{v20435,jdbcType=DECIMAL},
+      </if>
+      <if test="v20432701 != null" >
+        V20432_701 = #{v20432701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20211 != null" >
+        V20211 = #{v20211,jdbcType=DECIMAL},
+      </if>
+      <if test="v20437 != null" >
+        V20437 = #{v20437,jdbcType=DECIMAL},
+      </if>
+      <if test="v20433 != null" >
+        V20433 = #{v20433,jdbcType=DECIMAL},
+      </if>
+      <if test="v1338201 != null" >
+        V13382_01 = #{v1338201,jdbcType=DECIMAL},
+      </if>
+      <if test="v1338201057 != null" >
+        V13382_01_057 = #{v1338201057,jdbcType=DECIMAL},
+      </if>
+      <if test="v1338201058 != null" >
+        V13382_01_058 = #{v1338201058,jdbcType=DECIMAL},
+      </if>
+      <if test="v1338201060 != null" >
+        V13382_01_060 = #{v1338201060,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011008Rel != null" >
+        V13011_008_REL = #{v13011008Rel,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011008 != null" >
+        V13011_008 = #{v13011008,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011004Rel != null" >
+        V13011_004_REL = #{v13011004Rel,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011004 != null" >
+        V13011_004 = #{v13011004,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011023Pos != null" >
+        V13011_023_POS = #{v13011023Pos,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011023Mnu != null" >
+        V13011_023_MNU = #{v13011023Mnu,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330089701 != null" >
+        V04330_089_701 = #{v04330089701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330007701 != null" >
+        V04330_007_701 = #{v04330007701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330006701 != null" >
+        V04330_006_701 = #{v04330006701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330005701 != null" >
+        V04330_005_701 = #{v04330005701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330008701 != null" >
+        V04330_008_701 = #{v04330008701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330015701 != null" >
+        V04330_015_701 = #{v04330015701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330015Mos != null" >
+        V04330_015_MOS = #{v04330015Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330015Lea != null" >
+        V04330_015_LEA = #{v04330015Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330031701 != null" >
+        V04330_031_701 = #{v04330031701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330031Mos != null" >
+        V04330_031_MOS = #{v04330031Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330031Lea != null" >
+        V04330_031_LEA = #{v04330031Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330042701 != null" >
+        V04330_042_701 = #{v04330042701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330042Mos != null" >
+        V04330_042_MOS = #{v04330042Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330042Lea != null" >
+        V04330_042_LEA = #{v04330042Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330017701 != null" >
+        V04330_017_701 = #{v04330017701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330017Mos != null" >
+        V04330_017_MOS = #{v04330017Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330017Lea != null" >
+        V04330_017_LEA = #{v04330017Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330013701 != null" >
+        V04330_013_701 = #{v04330013701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330013Mos != null" >
+        V04330_013_MOS = #{v04330013Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330013Lea != null" >
+        V04330_013_LEA = #{v04330013Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330002701 != null" >
+        V04330_002_701 = #{v04330002701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330002Mos != null" >
+        V04330_002_MOS = #{v04330002Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330002Lea != null" >
+        V04330_002_LEA = #{v04330002Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330070701 != null" >
+        V04330_070_701 = #{v04330070701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330070Mos != null" >
+        V04330_070_MOS = #{v04330070Mos,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330070Lea != null" >
+        V04330_070_LEA = #{v04330070Lea,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330016701 != null" >
+        V04330_016_701 = #{v04330016701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330056701 != null" >
+        V04330_056_701 = #{v04330056701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330048701 != null" >
+        V04330_048_701 = #{v04330048701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20309001 != null" >
+        V20309_001 = #{v20309001,jdbcType=DECIMAL},
+      </if>
+      <if test="v20309010 != null" >
+        V20309_010 = #{v20309010,jdbcType=DECIMAL},
+      </if>
+      <if test="v13032 != null" >
+        V13032 = #{v13032,jdbcType=DECIMAL},
+      </if>
+      <if test="v13033 != null" >
+        V13033 = #{v13033,jdbcType=DECIMAL},
+      </if>
+      <if test="v13334 != null" >
+        V13334 = #{v13334,jdbcType=DECIMAL},
+      </if>
+      <if test="v13334057 != null" >
+        V13334_057 = #{v13334057,jdbcType=DECIMAL},
+      </if>
+      <if test="v13334058 != null" >
+        V13334_058 = #{v13334058,jdbcType=DECIMAL},
+      </if>
+      <if test="v13334060 != null" >
+        V13334_060 = #{v13334060,jdbcType=DECIMAL},
+      </if>
+      <if test="v13356001701 != null" >
+        V13356_001_701 = #{v13356001701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13356005701 != null" >
+        V13356_005_701 = #{v13356005701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13356010701 != null" >
+        V13356_010_701 = #{v13356010701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13356020701 != null" >
+        V13356_020_701 = #{v13356020701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13356030701 != null" >
+        V13356_030_701 = #{v13356030701,jdbcType=DECIMAL},
+      </if>
+      <if test="v04330090 != null" >
+        V04330_090 = #{v04330090,jdbcType=DECIMAL},
+      </if>
+      <if test="v20326Ns != null" >
+        V20326_NS = #{v20326Ns,jdbcType=DECIMAL},
+      </if>
+      <if test="v20306Ns != null" >
+        V20306_NS = #{v20306Ns,jdbcType=DECIMAL},
+      </if>
+      <if test="v20307Ns != null" >
+        V20307_NS = #{v20307Ns,jdbcType=DECIMAL},
+      </if>
+      <if test="v20326Ns057 != null" >
+        V20326_NS_057 = #{v20326Ns057,jdbcType=DECIMAL},
+      </if>
+      <if test="v20306Ns058 != null" >
+        V20306_NS_058 = #{v20306Ns058,jdbcType=DECIMAL},
+      </if>
+      <if test="v20307Ns060 != null" >
+        V20307_NS_060 = #{v20307Ns060,jdbcType=DECIMAL},
+      </if>
+      <if test="v20326We != null" >
+        V20326_WE = #{v20326We,jdbcType=DECIMAL},
+      </if>
+      <if test="v20306We != null" >
+        V20306_WE = #{v20306We,jdbcType=DECIMAL},
+      </if>
+      <if test="v20307We != null" >
+        V20307_WE = #{v20307We,jdbcType=DECIMAL},
+      </if>
+      <if test="v20326We057 != null" >
+        V20326_WE_057 = #{v20326We057,jdbcType=DECIMAL},
+      </if>
+      <if test="v20306We058 != null" >
+        V20306_WE_058 = #{v20306We058,jdbcType=DECIMAL},
+      </if>
+      <if test="v20307We060 != null" >
+        V20307_WE_060 = #{v20307We060,jdbcType=DECIMAL},
+      </if>
+      <if test="v11291701 != null" >
+        V11291_701 = #{v11291701,jdbcType=DECIMAL},
+      </if>
+      <if test="v11046 != null" >
+        V11046 = #{v11046,jdbcType=DECIMAL},
+      </if>
+      <if test="v11211 != null" >
+        V11211 = #{v11211,jdbcType=DECIMAL},
+      </if>
+      <if test="v11046057 != null" >
+        V11046_057 = #{v11046057,jdbcType=DECIMAL},
+      </if>
+      <if test="v11046058 != null" >
+        V11046_058 = #{v11046058,jdbcType=DECIMAL},
+      </if>
+      <if test="v11046060 != null" >
+        V11046_060 = #{v11046060,jdbcType=DECIMAL},
+      </if>
+      <if test="v1104205701 != null" >
+        V11042_05_701 = #{v1104205701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1104210701 != null" >
+        V11042_10_701 = #{v1104210701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1104212701 != null" >
+        V11042_12_701 = #{v1104212701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1104215701 != null" >
+        V11042_15_701 = #{v1104215701,jdbcType=DECIMAL},
+      </if>
+      <if test="v1104217701 != null" >
+        V11042_17_701 = #{v1104217701,jdbcType=DECIMAL},
+      </if>
+      <if test="v11314 != null" >
+        V11314 = #{v11314,jdbcType=VARCHAR},
+      </if>
+      <if test="v11314061 != null" >
+        V11314_061 = #{v11314061,jdbcType=DECIMAL},
+      </if>
+      <if test="v11315 != null" >
+        V11315 = #{v11315,jdbcType=VARCHAR},
+      </if>
+      <if test="v11315061 != null" >
+        V11315_061 = #{v11315061,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350N != null" >
+        V11350_N = #{v11350N,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Nne != null" >
+        V11350_NNE = #{v11350Nne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Ne != null" >
+        V11350_NE = #{v11350Ne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Ene != null" >
+        V11350_ENE = #{v11350Ene,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350E != null" >
+        V11350_E = #{v11350E,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Ese != null" >
+        V11350_ESE = #{v11350Ese,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Se != null" >
+        V11350_SE = #{v11350Se,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Sse != null" >
+        V11350_SSE = #{v11350Sse,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350S != null" >
+        V11350_S = #{v11350S,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Ssw != null" >
+        V11350_SSW = #{v11350Ssw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Sw != null" >
+        V11350_SW = #{v11350Sw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Wsw != null" >
+        V11350_WSW = #{v11350Wsw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350W != null" >
+        V11350_W = #{v11350W,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Wnw != null" >
+        V11350_WNW = #{v11350Wnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Nw != null" >
+        V11350_NW = #{v11350Nw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350Nnw != null" >
+        V11350_NNW = #{v11350Nnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11350C != null" >
+        V11350_C = #{v11350C,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351N != null" >
+        V11351_N = #{v11351N,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Nne != null" >
+        V11351_NNE = #{v11351Nne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Ne != null" >
+        V11351_NE = #{v11351Ne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Ene != null" >
+        V11351_ENE = #{v11351Ene,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351E != null" >
+        V11351_E = #{v11351E,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Ese != null" >
+        V11351_ESE = #{v11351Ese,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Se != null" >
+        V11351_SE = #{v11351Se,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Sse != null" >
+        V11351_SSE = #{v11351Sse,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351S != null" >
+        V11351_S = #{v11351S,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Ssw != null" >
+        V11351_SSW = #{v11351Ssw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Sw != null" >
+        V11351_SW = #{v11351Sw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Wsw != null" >
+        V11351_WSW = #{v11351Wsw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351W != null" >
+        V11351_W = #{v11351W,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Wnw != null" >
+        V11351_WNW = #{v11351Wnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Nw != null" >
+        V11351_NW = #{v11351Nw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11351Nnw != null" >
+        V11351_NNW = #{v11351Nnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042N != null" >
+        V11042_N = #{v11042N,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Nne != null" >
+        V11042_NNE = #{v11042Nne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Ne != null" >
+        V11042_NE = #{v11042Ne,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Ene != null" >
+        V11042_ENE = #{v11042Ene,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042E != null" >
+        V11042_E = #{v11042E,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Ese != null" >
+        V11042_ESE = #{v11042Ese,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Se != null" >
+        V11042_SE = #{v11042Se,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Sse != null" >
+        V11042_SSE = #{v11042Sse,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042S != null" >
+        V11042_S = #{v11042S,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Ssw != null" >
+        V11042_SSW = #{v11042Ssw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Sw != null" >
+        V11042_SW = #{v11042Sw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Wsw != null" >
+        V11042_WSW = #{v11042Wsw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042W != null" >
+        V11042_W = #{v11042W,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Wnw != null" >
+        V11042_WNW = #{v11042Wnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Nw != null" >
+        V11042_NW = #{v11042Nw,jdbcType=DECIMAL},
+      </if>
+      <if test="v11042Nnw != null" >
+        V11042_NNW = #{v11042Nnw,jdbcType=DECIMAL},
+      </if>
+      <if test="v12120701 != null" >
+        V12120_701 = #{v12120701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12311701 != null" >
+        V12311_701 = #{v12311701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12121701 != null" >
+        V12121_701 = #{v12121701,jdbcType=DECIMAL},
+      </if>
+      <if test="v12311009 != null" >
+        V12311_009 = #{v12311009,jdbcType=DECIMAL},
+      </if>
+      <if test="v12311057 != null" >
+        V12311_057 = #{v12311057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12311058 != null" >
+        V12311_058 = #{v12311058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12311060 != null" >
+        V12311_060 = #{v12311060,jdbcType=DECIMAL},
+      </if>
+      <if test="v12121 != null" >
+        V12121 = #{v12121,jdbcType=DECIMAL},
+      </if>
+      <if test="v12121057 != null" >
+        V12121_057 = #{v12121057,jdbcType=DECIMAL},
+      </if>
+      <if test="v12121058 != null" >
+        V12121_058 = #{v12121058,jdbcType=DECIMAL},
+      </if>
+      <if test="v12121060 != null" >
+        V12121_060 = #{v12121060,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701005 != null" >
+        V12030_701_005 = #{v12030701005,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701010 != null" >
+        V12030_701_010 = #{v12030701010,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701015 != null" >
+        V12030_701_015 = #{v12030701015,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701020 != null" >
+        V12030_701_020 = #{v12030701020,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701040 != null" >
+        V12030_701_040 = #{v12030701040,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701080 != null" >
+        V12030_701_080 = #{v12030701080,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701160 != null" >
+        V12030_701_160 = #{v12030701160,jdbcType=DECIMAL},
+      </if>
+      <if test="v12030701320 != null" >
+        V12030_701_320 = #{v12030701320,jdbcType=DECIMAL},
+      </if>
+      <if test="v12620701 != null" >
+        V12620_701 = #{v12620701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20334 != null" >
+        V20334 = #{v20334,jdbcType=DECIMAL},
+      </if>
+      <if test="v20334057 != null" >
+        V20334_057 = #{v20334057,jdbcType=DECIMAL},
+      </if>
+      <if test="v20334058 != null" >
+        V20334_058 = #{v20334058,jdbcType=DECIMAL},
+      </if>
+      <if test="v20334060 != null" >
+        V20334_060 = #{v20334060,jdbcType=DECIMAL},
+      </if>
+      <if test="v14032 != null" >
+        V14032 = #{v14032,jdbcType=DECIMAL},
+      </if>
+      <if test="v14033 != null" >
+        V14033 = #{v14033,jdbcType=DECIMAL},
+      </if>
+      <if test="v20302171701 != null" >
+        V20302_171_701 = #{v20302171701,jdbcType=DECIMAL},
+      </if>
+      <if test="v20302172701 != null" >
+        V20302_172_701 = #{v20302172701,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where D_RECORD_ID = #{dRecordId,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suse.edu.bean.Myer" >
+    update SURF_CLI_CHN_MYER
+    set D_DATA_ID = #{dDataId,jdbcType=VARCHAR},
+      V04298 = #{v04298,jdbcType=DECIMAL},
+      D_IYMDHM = #{dIymdhm,jdbcType=TIMESTAMP},
+      D_RYMDHM = #{dRymdhm,jdbcType=TIMESTAMP},
+      D_UPDATE_TIME = #{dUpdateTime,jdbcType=TIMESTAMP},
+      V01300 = #{v01300,jdbcType=VARCHAR},
+      V05001 = #{v05001,jdbcType=DECIMAL},
+      V06001 = #{v06001,jdbcType=DECIMAL},
+      V07001 = #{v07001,jdbcType=DECIMAL},
+      V07031 = #{v07031,jdbcType=DECIMAL},
+      V07311 = #{v07311,jdbcType=DECIMAL},
+      V07032_04 = #{v0703204,jdbcType=DECIMAL},
+      V_TIME_AVAILA = #{vTimeAvaila,jdbcType=VARCHAR},
+      V10051_701 = #{v10051701,jdbcType=DECIMAL},
+      V10004_701 = #{v10004701,jdbcType=DECIMAL},
+      V10301 = #{v10301,jdbcType=DECIMAL},
+      V10301_057 = #{v10301057,jdbcType=DECIMAL},
+      V10301_058 = #{v10301058,jdbcType=DECIMAL},
+      V10301_060 = #{v10301060,jdbcType=DECIMAL},
+      V10302 = #{v10302,jdbcType=DECIMAL},
+      V10302_057 = #{v10302057,jdbcType=DECIMAL},
+      V10302_058 = #{v10302058,jdbcType=DECIMAL},
+      V10302_060 = #{v10302060,jdbcType=DECIMAL},
+      V10384 = #{v10384,jdbcType=DECIMAL},
+      V10386 = #{v10386,jdbcType=DECIMAL},
+      V10389 = #{v10389,jdbcType=DECIMAL},
+      V10390 = #{v10390,jdbcType=DECIMAL},
+      V12001_701 = #{v12001701,jdbcType=DECIMAL},
+      V12306 = #{v12306,jdbcType=DECIMAL},
+      V12011_701 = #{v12011701,jdbcType=DECIMAL},
+      V12012_701 = #{v12012701,jdbcType=DECIMAL},
+      V12011 = #{v12011,jdbcType=DECIMAL},
+      V12011_057 = #{v12011057,jdbcType=DECIMAL},
+      V12011_058 = #{v12011058,jdbcType=DECIMAL},
+      V12011_060 = #{v12011060,jdbcType=DECIMAL},
+      V12012 = #{v12012,jdbcType=DECIMAL},
+      V12012_057 = #{v12012057,jdbcType=DECIMAL},
+      V12012_058 = #{v12012058,jdbcType=DECIMAL},
+      V12012_060 = #{v12012060,jdbcType=DECIMAL},
+      V12303_701 = #{v12303701,jdbcType=DECIMAL},
+      V12304 = #{v12304,jdbcType=DECIMAL},
+      V12304_057 = #{v12304057,jdbcType=DECIMAL},
+      V12304_058 = #{v12304058,jdbcType=DECIMAL},
+      V12304_060 = #{v12304060,jdbcType=DECIMAL},
+      V12305 = #{v12305,jdbcType=DECIMAL},
+      V12305_057 = #{v12305057,jdbcType=DECIMAL},
+      V12305_058 = #{v12305058,jdbcType=DECIMAL},
+      V12305_060 = #{v12305060,jdbcType=DECIMAL},
+      V12605_30_701 = #{v1260530701,jdbcType=DECIMAL},
+      V12710_30_701 = #{v1271030701,jdbcType=DECIMAL},
+      V12707_30 = #{v1270730,jdbcType=DECIMAL},
+      V12712_30 = #{v1271230,jdbcType=DECIMAL},
+      V12711_30 = #{v1271130,jdbcType=DECIMAL},
+      V12605_35_701 = #{v1260535701,jdbcType=DECIMAL},
+      V12710_35_701 = #{v1271035701,jdbcType=DECIMAL},
+      V12707_35 = #{v1270735,jdbcType=DECIMAL},
+      V12712_35 = #{v1271235,jdbcType=DECIMAL},
+      V12711_35 = #{v1271135,jdbcType=DECIMAL},
+      V12605_37_701 = #{v1260537701,jdbcType=DECIMAL},
+      V12710_37_701 = #{v1271037701,jdbcType=DECIMAL},
+      V12707_37 = #{v1270737,jdbcType=DECIMAL},
+      V12712_37 = #{v1271237,jdbcType=DECIMAL},
+      V12711_37 = #{v1271137,jdbcType=DECIMAL},
+      V12605_40_701 = #{v1260540701,jdbcType=DECIMAL},
+      V12710_40_701 = #{v1271040701,jdbcType=DECIMAL},
+      V12707_40 = #{v1270740,jdbcType=DECIMAL},
+      V12712_40 = #{v1271240,jdbcType=DECIMAL},
+      V12711_40 = #{v1271140,jdbcType=DECIMAL},
+      V12607_02_701 = #{v1260702701,jdbcType=DECIMAL},
+      V12713_02_701 = #{v1271302701,jdbcType=DECIMAL},
+      V12708_02 = #{v1270802,jdbcType=DECIMAL},
+      V12715_02 = #{v1271502,jdbcType=DECIMAL},
+      V12714_02 = #{v1271402,jdbcType=DECIMAL},
+      V12603_00_701 = #{v1260300701,jdbcType=DECIMAL},
+      V12713_00_701 = #{v1271300701,jdbcType=DECIMAL},
+      V12708_00 = #{v1270800,jdbcType=DECIMAL},
+      V12715_00 = #{v1271500,jdbcType=DECIMAL},
+      V12714_00 = #{v1271400,jdbcType=DECIMAL},
+      V12609_02_701 = #{v1260902701,jdbcType=DECIMAL},
+      V12716_02_701 = #{v1271602701,jdbcType=DECIMAL},
+      V12709_02 = #{v1270902,jdbcType=DECIMAL},
+      V12718_02 = #{v1271802,jdbcType=DECIMAL},
+      V12717_02 = #{v1271702,jdbcType=DECIMAL},
+      V12609_15_701 = #{v1260915701,jdbcType=DECIMAL},
+      V12716_15_701 = #{v1271615701,jdbcType=DECIMAL},
+      V12709_15 = #{v1270915,jdbcType=DECIMAL},
+      V12718_15 = #{v1271815,jdbcType=DECIMAL},
+      V12717_15 = #{v1271715,jdbcType=DECIMAL},
+      V12609_30_701 = #{v1260930701,jdbcType=DECIMAL},
+      V12716_30_701 = #{v1271630701,jdbcType=DECIMAL},
+      V12709_30 = #{v1270930,jdbcType=DECIMAL},
+      V12718_30 = #{v1271830,jdbcType=DECIMAL},
+      V12717_30 = #{v1271730,jdbcType=DECIMAL},
+      V12609_40_701 = #{v1260940701,jdbcType=DECIMAL},
+      V12716_40_701 = #{v1271640701,jdbcType=DECIMAL},
+      V12709_40 = #{v1270940,jdbcType=DECIMAL},
+      V12718_40 = #{v1271840,jdbcType=DECIMAL},
+      V12717_40 = #{v1271740,jdbcType=DECIMAL},
+      V12705_00 = #{v1270500,jdbcType=DECIMAL},
+      V12703_00 = #{v1270300,jdbcType=DECIMAL},
+      V12706_00 = #{v1270600,jdbcType=DECIMAL},
+      V12704_00 = #{v1270400,jdbcType=DECIMAL},
+      V12699_00_701 = #{v1269900701,jdbcType=DECIMAL},
+      V12700_00 = #{v1270000,jdbcType=DECIMAL},
+      V12701_00 = #{v1270100,jdbcType=DECIMAL},
+      V12702_00 = #{v1270200,jdbcType=DECIMAL},
+      V12705_05 = #{v1270505,jdbcType=DECIMAL},
+      V12703_05 = #{v1270305,jdbcType=DECIMAL},
+      V12706_05 = #{v1270605,jdbcType=DECIMAL},
+      V12704_05 = #{v1270405,jdbcType=DECIMAL},
+      V12699_05_701 = #{v1269905701,jdbcType=DECIMAL},
+      V12700_05 = #{v1270005,jdbcType=DECIMAL},
+      V12701_05 = #{v1270105,jdbcType=DECIMAL},
+      V12702_05 = #{v1270205,jdbcType=DECIMAL},
+      V12705_10 = #{v1270510,jdbcType=DECIMAL},
+      V12703_10 = #{v1270310,jdbcType=DECIMAL},
+      V12706_10 = #{v1270610,jdbcType=DECIMAL},
+      V12704_10 = #{v1270410,jdbcType=DECIMAL},
+      V12699_10_701 = #{v1269910701,jdbcType=DECIMAL},
+      V12700_10 = #{v1270010,jdbcType=DECIMAL},
+      V12701_10 = #{v1270110,jdbcType=DECIMAL},
+      V12702_10 = #{v1270210,jdbcType=DECIMAL},
+      V12705_12 = #{v1270512,jdbcType=DECIMAL},
+      V12703_12 = #{v1270312,jdbcType=DECIMAL},
+      V12706_12 = #{v1270612,jdbcType=DECIMAL},
+      V12704_12 = #{v1270412,jdbcType=DECIMAL},
+      V12699_12_701 = #{v1269912701,jdbcType=DECIMAL},
+      V12700_12 = #{v1270012,jdbcType=DECIMAL},
+      V12701_12 = #{v1270112,jdbcType=DECIMAL},
+      V12702_12 = #{v1270212,jdbcType=DECIMAL},
+      V12705_15 = #{v1270515,jdbcType=DECIMAL},
+      V12703_15 = #{v1270315,jdbcType=DECIMAL},
+      V12706_15 = #{v1270615,jdbcType=DECIMAL},
+      V12704_15 = #{v1270415,jdbcType=DECIMAL},
+      V12699_15_701 = #{v1269915701,jdbcType=DECIMAL},
+      V12700_15 = #{v1270015,jdbcType=DECIMAL},
+      V12701_15 = #{v1270115,jdbcType=DECIMAL},
+      V12702_15 = #{v1270215,jdbcType=DECIMAL},
+      V12705_20 = #{v1270520,jdbcType=DECIMAL},
+      V12703_20 = #{v1270320,jdbcType=DECIMAL},
+      V12706_20 = #{v1270620,jdbcType=DECIMAL},
+      V12704_20 = #{v1270420,jdbcType=DECIMAL},
+      V12699_20_701 = #{v1269920701,jdbcType=DECIMAL},
+      V12700_20 = #{v1270020,jdbcType=DECIMAL},
+      V12701_20 = #{v1270120,jdbcType=DECIMAL},
+      V12702_20 = #{v1270220,jdbcType=DECIMAL},
+      V12705_22 = #{v1270522,jdbcType=DECIMAL},
+      V12703_22 = #{v1270322,jdbcType=DECIMAL},
+      V12706_22 = #{v1270622,jdbcType=DECIMAL},
+      V12704_22 = #{v1270422,jdbcType=DECIMAL},
+      V12699_22_701 = #{v1269922701,jdbcType=DECIMAL},
+      V12700_22 = #{v1270022,jdbcType=DECIMAL},
+      V12701_22 = #{v1270122,jdbcType=DECIMAL},
+      V12702_22 = #{v1270222,jdbcType=DECIMAL},
+      V12610_26 = #{v1261026,jdbcType=DECIMAL},
+      V12611_18 = #{v1261118,jdbcType=DECIMAL},
+      V12001_008 = #{v12001008,jdbcType=DECIMAL},
+      V12001_004 = #{v12001004,jdbcType=DECIMAL},
+      V12001_021_POS = #{v12001021Pos,jdbcType=DECIMAL},
+      V12001_021_MNU = #{v12001021Mnu,jdbcType=DECIMAL},
+      V13004_701 = #{v13004701,jdbcType=DECIMAL},
+      V13004_008 = #{v13004008,jdbcType=DECIMAL},
+      V13004_004 = #{v13004004,jdbcType=DECIMAL},
+      V13004_021_POS = #{v13004021Pos,jdbcType=DECIMAL},
+      V13004_021_MNU = #{v13004021Mnu,jdbcType=DECIMAL},
+      V13003_701 = #{v13003701,jdbcType=DECIMAL},
+      V13003_008 = #{v13003008,jdbcType=DECIMAL},
+      V13003_004 = #{v13003004,jdbcType=DECIMAL},
+      V20010_701 = #{v20010701,jdbcType=DECIMAL},
+      V20051_701 = #{v20051701,jdbcType=DECIMAL},
+      V20501_02_701 = #{v2050102701,jdbcType=DECIMAL},
+      V20500_08_701 = #{v2050008701,jdbcType=DECIMAL},
+      V20503_02_701 = #{v2050302701,jdbcType=DECIMAL},
+      V20502_08_701 = #{v2050208701,jdbcType=DECIMAL},
+      V20501_02_061 = #{v2050102061,jdbcType=DECIMAL},
+      V20500_08_061 = #{v2050008061,jdbcType=DECIMAL},
+      V20503_02_061 = #{v2050302061,jdbcType=DECIMAL},
+      V20502_08_061 = #{v2050208061,jdbcType=DECIMAL},
+      V13011_701 = #{v13011701,jdbcType=DECIMAL},
+      V13060_MAX = #{v13060Max,jdbcType=DECIMAL},
+      V13060_MAX_057 = #{v13060Max057,jdbcType=DECIMAL},
+      V13060_MIN = #{v13060Min,jdbcType=DECIMAL},
+      V13060_MIN_057 = #{v13060Min057,jdbcType=DECIMAL},
+      V13052 = #{v13052,jdbcType=DECIMAL},
+      V13052_057 = #{v13052057,jdbcType=DECIMAL},
+      V13052_058 = #{v13052058,jdbcType=DECIMAL},
+      V13052_060 = #{v13052060,jdbcType=DECIMAL},
+      V13353_701 = #{v13353701,jdbcType=DECIMAL},
+      V13355_001_701 = #{v13355001701,jdbcType=DECIMAL},
+      V13355_005_701 = #{v13355005701,jdbcType=DECIMAL},
+      V13355_010_701 = #{v13355010701,jdbcType=DECIMAL},
+      V13355_025_701 = #{v13355025701,jdbcType=DECIMAL},
+      V13355_050_701 = #{v13355050701,jdbcType=DECIMAL},
+      V13355_100_701 = #{v13355100701,jdbcType=DECIMAL},
+      V13355_150_701 = #{v13355150701,jdbcType=DECIMAL},
+      V20430_701 = #{v20430701,jdbcType=DECIMAL},
+      V13380 = #{v13380,jdbcType=DECIMAL},
+      V20212 = #{v20212,jdbcType=DECIMAL},
+      V20438 = #{v20438,jdbcType=DECIMAL},
+      V20431 = #{v20431,jdbcType=DECIMAL},
+      V13381 = #{v13381,jdbcType=DECIMAL},
+      V20434_701 = #{v20434701,jdbcType=DECIMAL},
+      V20210 = #{v20210,jdbcType=DECIMAL},
+      V20436 = #{v20436,jdbcType=DECIMAL},
+      V20435 = #{v20435,jdbcType=DECIMAL},
+      V20432_701 = #{v20432701,jdbcType=DECIMAL},
+      V20211 = #{v20211,jdbcType=DECIMAL},
+      V20437 = #{v20437,jdbcType=DECIMAL},
+      V20433 = #{v20433,jdbcType=DECIMAL},
+      V13382_01 = #{v1338201,jdbcType=DECIMAL},
+      V13382_01_057 = #{v1338201057,jdbcType=DECIMAL},
+      V13382_01_058 = #{v1338201058,jdbcType=DECIMAL},
+      V13382_01_060 = #{v1338201060,jdbcType=DECIMAL},
+      V13011_008_REL = #{v13011008Rel,jdbcType=DECIMAL},
+      V13011_008 = #{v13011008,jdbcType=DECIMAL},
+      V13011_004_REL = #{v13011004Rel,jdbcType=DECIMAL},
+      V13011_004 = #{v13011004,jdbcType=DECIMAL},
+      V13011_023_POS = #{v13011023Pos,jdbcType=DECIMAL},
+      V13011_023_MNU = #{v13011023Mnu,jdbcType=DECIMAL},
+      V04330_089_701 = #{v04330089701,jdbcType=DECIMAL},
+      V04330_007_701 = #{v04330007701,jdbcType=DECIMAL},
+      V04330_006_701 = #{v04330006701,jdbcType=DECIMAL},
+      V04330_005_701 = #{v04330005701,jdbcType=DECIMAL},
+      V04330_008_701 = #{v04330008701,jdbcType=DECIMAL},
+      V04330_015_701 = #{v04330015701,jdbcType=DECIMAL},
+      V04330_015_MOS = #{v04330015Mos,jdbcType=DECIMAL},
+      V04330_015_LEA = #{v04330015Lea,jdbcType=DECIMAL},
+      V04330_031_701 = #{v04330031701,jdbcType=DECIMAL},
+      V04330_031_MOS = #{v04330031Mos,jdbcType=DECIMAL},
+      V04330_031_LEA = #{v04330031Lea,jdbcType=DECIMAL},
+      V04330_042_701 = #{v04330042701,jdbcType=DECIMAL},
+      V04330_042_MOS = #{v04330042Mos,jdbcType=DECIMAL},
+      V04330_042_LEA = #{v04330042Lea,jdbcType=DECIMAL},
+      V04330_017_701 = #{v04330017701,jdbcType=DECIMAL},
+      V04330_017_MOS = #{v04330017Mos,jdbcType=DECIMAL},
+      V04330_017_LEA = #{v04330017Lea,jdbcType=DECIMAL},
+      V04330_013_701 = #{v04330013701,jdbcType=DECIMAL},
+      V04330_013_MOS = #{v04330013Mos,jdbcType=DECIMAL},
+      V04330_013_LEA = #{v04330013Lea,jdbcType=DECIMAL},
+      V04330_002_701 = #{v04330002701,jdbcType=DECIMAL},
+      V04330_002_MOS = #{v04330002Mos,jdbcType=DECIMAL},
+      V04330_002_LEA = #{v04330002Lea,jdbcType=DECIMAL},
+      V04330_070_701 = #{v04330070701,jdbcType=DECIMAL},
+      V04330_070_MOS = #{v04330070Mos,jdbcType=DECIMAL},
+      V04330_070_LEA = #{v04330070Lea,jdbcType=DECIMAL},
+      V04330_016_701 = #{v04330016701,jdbcType=DECIMAL},
+      V04330_056_701 = #{v04330056701,jdbcType=DECIMAL},
+      V04330_048_701 = #{v04330048701,jdbcType=DECIMAL},
+      V20309_001 = #{v20309001,jdbcType=DECIMAL},
+      V20309_010 = #{v20309010,jdbcType=DECIMAL},
+      V13032 = #{v13032,jdbcType=DECIMAL},
+      V13033 = #{v13033,jdbcType=DECIMAL},
+      V13334 = #{v13334,jdbcType=DECIMAL},
+      V13334_057 = #{v13334057,jdbcType=DECIMAL},
+      V13334_058 = #{v13334058,jdbcType=DECIMAL},
+      V13334_060 = #{v13334060,jdbcType=DECIMAL},
+      V13356_001_701 = #{v13356001701,jdbcType=DECIMAL},
+      V13356_005_701 = #{v13356005701,jdbcType=DECIMAL},
+      V13356_010_701 = #{v13356010701,jdbcType=DECIMAL},
+      V13356_020_701 = #{v13356020701,jdbcType=DECIMAL},
+      V13356_030_701 = #{v13356030701,jdbcType=DECIMAL},
+      V04330_090 = #{v04330090,jdbcType=DECIMAL},
+      V20326_NS = #{v20326Ns,jdbcType=DECIMAL},
+      V20306_NS = #{v20306Ns,jdbcType=DECIMAL},
+      V20307_NS = #{v20307Ns,jdbcType=DECIMAL},
+      V20326_NS_057 = #{v20326Ns057,jdbcType=DECIMAL},
+      V20306_NS_058 = #{v20306Ns058,jdbcType=DECIMAL},
+      V20307_NS_060 = #{v20307Ns060,jdbcType=DECIMAL},
+      V20326_WE = #{v20326We,jdbcType=DECIMAL},
+      V20306_WE = #{v20306We,jdbcType=DECIMAL},
+      V20307_WE = #{v20307We,jdbcType=DECIMAL},
+      V20326_WE_057 = #{v20326We057,jdbcType=DECIMAL},
+      V20306_WE_058 = #{v20306We058,jdbcType=DECIMAL},
+      V20307_WE_060 = #{v20307We060,jdbcType=DECIMAL},
+      V11291_701 = #{v11291701,jdbcType=DECIMAL},
+      V11046 = #{v11046,jdbcType=DECIMAL},
+      V11211 = #{v11211,jdbcType=DECIMAL},
+      V11046_057 = #{v11046057,jdbcType=DECIMAL},
+      V11046_058 = #{v11046058,jdbcType=DECIMAL},
+      V11046_060 = #{v11046060,jdbcType=DECIMAL},
+      V11042_05_701 = #{v1104205701,jdbcType=DECIMAL},
+      V11042_10_701 = #{v1104210701,jdbcType=DECIMAL},
+      V11042_12_701 = #{v1104212701,jdbcType=DECIMAL},
+      V11042_15_701 = #{v1104215701,jdbcType=DECIMAL},
+      V11042_17_701 = #{v1104217701,jdbcType=DECIMAL},
+      V11314 = #{v11314,jdbcType=VARCHAR},
+      V11314_061 = #{v11314061,jdbcType=DECIMAL},
+      V11315 = #{v11315,jdbcType=VARCHAR},
+      V11315_061 = #{v11315061,jdbcType=DECIMAL},
+      V11350_N = #{v11350N,jdbcType=DECIMAL},
+      V11350_NNE = #{v11350Nne,jdbcType=DECIMAL},
+      V11350_NE = #{v11350Ne,jdbcType=DECIMAL},
+      V11350_ENE = #{v11350Ene,jdbcType=DECIMAL},
+      V11350_E = #{v11350E,jdbcType=DECIMAL},
+      V11350_ESE = #{v11350Ese,jdbcType=DECIMAL},
+      V11350_SE = #{v11350Se,jdbcType=DECIMAL},
+      V11350_SSE = #{v11350Sse,jdbcType=DECIMAL},
+      V11350_S = #{v11350S,jdbcType=DECIMAL},
+      V11350_SSW = #{v11350Ssw,jdbcType=DECIMAL},
+      V11350_SW = #{v11350Sw,jdbcType=DECIMAL},
+      V11350_WSW = #{v11350Wsw,jdbcType=DECIMAL},
+      V11350_W = #{v11350W,jdbcType=DECIMAL},
+      V11350_WNW = #{v11350Wnw,jdbcType=DECIMAL},
+      V11350_NW = #{v11350Nw,jdbcType=DECIMAL},
+      V11350_NNW = #{v11350Nnw,jdbcType=DECIMAL},
+      V11350_C = #{v11350C,jdbcType=DECIMAL},
+      V11351_N = #{v11351N,jdbcType=DECIMAL},
+      V11351_NNE = #{v11351Nne,jdbcType=DECIMAL},
+      V11351_NE = #{v11351Ne,jdbcType=DECIMAL},
+      V11351_ENE = #{v11351Ene,jdbcType=DECIMAL},
+      V11351_E = #{v11351E,jdbcType=DECIMAL},
+      V11351_ESE = #{v11351Ese,jdbcType=DECIMAL},
+      V11351_SE = #{v11351Se,jdbcType=DECIMAL},
+      V11351_SSE = #{v11351Sse,jdbcType=DECIMAL},
+      V11351_S = #{v11351S,jdbcType=DECIMAL},
+      V11351_SSW = #{v11351Ssw,jdbcType=DECIMAL},
+      V11351_SW = #{v11351Sw,jdbcType=DECIMAL},
+      V11351_WSW = #{v11351Wsw,jdbcType=DECIMAL},
+      V11351_W = #{v11351W,jdbcType=DECIMAL},
+      V11351_WNW = #{v11351Wnw,jdbcType=DECIMAL},
+      V11351_NW = #{v11351Nw,jdbcType=DECIMAL},
+      V11351_NNW = #{v11351Nnw,jdbcType=DECIMAL},
+      V11042_N = #{v11042N,jdbcType=DECIMAL},
+      V11042_NNE = #{v11042Nne,jdbcType=DECIMAL},
+      V11042_NE = #{v11042Ne,jdbcType=DECIMAL},
+      V11042_ENE = #{v11042Ene,jdbcType=DECIMAL},
+      V11042_E = #{v11042E,jdbcType=DECIMAL},
+      V11042_ESE = #{v11042Ese,jdbcType=DECIMAL},
+      V11042_SE = #{v11042Se,jdbcType=DECIMAL},
+      V11042_SSE = #{v11042Sse,jdbcType=DECIMAL},
+      V11042_S = #{v11042S,jdbcType=DECIMAL},
+      V11042_SSW = #{v11042Ssw,jdbcType=DECIMAL},
+      V11042_SW = #{v11042Sw,jdbcType=DECIMAL},
+      V11042_WSW = #{v11042Wsw,jdbcType=DECIMAL},
+      V11042_W = #{v11042W,jdbcType=DECIMAL},
+      V11042_WNW = #{v11042Wnw,jdbcType=DECIMAL},
+      V11042_NW = #{v11042Nw,jdbcType=DECIMAL},
+      V11042_NNW = #{v11042Nnw,jdbcType=DECIMAL},
+      V12120_701 = #{v12120701,jdbcType=DECIMAL},
+      V12311_701 = #{v12311701,jdbcType=DECIMAL},
+      V12121_701 = #{v12121701,jdbcType=DECIMAL},
+      V12311_009 = #{v12311009,jdbcType=DECIMAL},
+      V12311_057 = #{v12311057,jdbcType=DECIMAL},
+      V12311_058 = #{v12311058,jdbcType=DECIMAL},
+      V12311_060 = #{v12311060,jdbcType=DECIMAL},
+      V12121 = #{v12121,jdbcType=DECIMAL},
+      V12121_057 = #{v12121057,jdbcType=DECIMAL},
+      V12121_058 = #{v12121058,jdbcType=DECIMAL},
+      V12121_060 = #{v12121060,jdbcType=DECIMAL},
+      V12030_701_005 = #{v12030701005,jdbcType=DECIMAL},
+      V12030_701_010 = #{v12030701010,jdbcType=DECIMAL},
+      V12030_701_015 = #{v12030701015,jdbcType=DECIMAL},
+      V12030_701_020 = #{v12030701020,jdbcType=DECIMAL},
+      V12030_701_040 = #{v12030701040,jdbcType=DECIMAL},
+      V12030_701_080 = #{v12030701080,jdbcType=DECIMAL},
+      V12030_701_160 = #{v12030701160,jdbcType=DECIMAL},
+      V12030_701_320 = #{v12030701320,jdbcType=DECIMAL},
+      V12620_701 = #{v12620701,jdbcType=DECIMAL},
+      V20334 = #{v20334,jdbcType=DECIMAL},
+      V20334_057 = #{v20334057,jdbcType=DECIMAL},
+      V20334_058 = #{v20334058,jdbcType=DECIMAL},
+      V20334_060 = #{v20334060,jdbcType=DECIMAL},
+      V14032 = #{v14032,jdbcType=DECIMAL},
+      V14033 = #{v14033,jdbcType=DECIMAL},
+      V20302_171_701 = #{v20302171701,jdbcType=DECIMAL},
+      V20302_172_701 = #{v20302172701,jdbcType=DECIMAL}
+    where D_RECORD_ID = #{dRecordId,jdbcType=DECIMAL}
+  </update>
+</mapper>

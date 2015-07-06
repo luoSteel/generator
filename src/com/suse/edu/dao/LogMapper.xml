@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.suse.edu.dao.LogMapper">
+  <resultMap id="BaseResultMap" type="com.suse.edu.bean.Log">
+    <id column="LOGID" jdbcType="VARCHAR" property="logid" />
+    <result column="OPREATE" jdbcType="VARCHAR" property="opreate" />
+    <result column="LOG_TYPE" jdbcType="DECIMAL" property="logType" />
+    <result column="RECORD_TIME" jdbcType="TIMESTAMP" property="recordTime" />
+    <result column="OPER_USER" jdbcType="VARCHAR" property="operUser" />
+    <result column="OPER_CONTENT" jdbcType="VARCHAR" property="operContent" />
+    <result column="RESULT" jdbcType="DECIMAL" property="result" />
+    <result column="PARAM" jdbcType="VARCHAR" property="param" />
+    <result column="REQUEST_IP" jdbcType="VARCHAR" property="requestIp" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    LOGID, OPREATE, LOG_TYPE, RECORD_TIME, OPER_USER, OPER_CONTENT, RESULT, PARAM, REQUEST_IP
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from T_SYSTEM_LOG
+    where LOGID = #{logid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from T_SYSTEM_LOG
+    where LOGID = #{logid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.suse.edu.bean.Log">
+    insert into T_SYSTEM_LOG (LOGID, OPREATE, LOG_TYPE, 
+      RECORD_TIME, OPER_USER, OPER_CONTENT, 
+      RESULT, PARAM, REQUEST_IP
+      )
+    values (#{logid,jdbcType=VARCHAR}, #{opreate,jdbcType=VARCHAR}, #{logType,jdbcType=DECIMAL}, 
+      #{recordTime,jdbcType=TIMESTAMP}, #{operUser,jdbcType=VARCHAR}, #{operContent,jdbcType=VARCHAR}, 
+      #{result,jdbcType=DECIMAL}, #{param,jdbcType=VARCHAR}, #{requestIp,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.suse.edu.bean.Log">
+    insert into T_SYSTEM_LOG
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="logid != null">
+        LOGID,
+      </if>
+      <if test="opreate != null">
+        OPREATE,
+      </if>
+      <if test="logType != null">
+        LOG_TYPE,
+      </if>
+      <if test="recordTime != null">
+        RECORD_TIME,
+      </if>
+      <if test="operUser != null">
+        OPER_USER,
+      </if>
+      <if test="operContent != null">
+        OPER_CONTENT,
+      </if>
+      <if test="result != null">
+        RESULT,
+      </if>
+      <if test="param != null">
+        PARAM,
+      </if>
+      <if test="requestIp != null">
+        REQUEST_IP,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="logid != null">
+        #{logid,jdbcType=VARCHAR},
+      </if>
+      <if test="opreate != null">
+        #{opreate,jdbcType=VARCHAR},
+      </if>
+      <if test="logType != null">
+        #{logType,jdbcType=DECIMAL},
+      </if>
+      <if test="recordTime != null">
+        #{recordTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operUser != null">
+        #{operUser,jdbcType=VARCHAR},
+      </if>
+      <if test="operContent != null">
+        #{operContent,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null">
+        #{result,jdbcType=DECIMAL},
+      </if>
+      <if test="param != null">
+        #{param,jdbcType=VARCHAR},
+      </if>
+      <if test="requestIp != null">
+        #{requestIp,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suse.edu.bean.Log">
+    update T_SYSTEM_LOG
+    <set>
+      <if test="opreate != null">
+        OPREATE = #{opreate,jdbcType=VARCHAR},
+      </if>
+      <if test="logType != null">
+        LOG_TYPE = #{logType,jdbcType=DECIMAL},
+      </if>
+      <if test="recordTime != null">
+        RECORD_TIME = #{recordTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operUser != null">
+        OPER_USER = #{operUser,jdbcType=VARCHAR},
+      </if>
+      <if test="operContent != null">
+        OPER_CONTENT = #{operContent,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null">
+        RESULT = #{result,jdbcType=DECIMAL},
+      </if>
+      <if test="param != null">
+        PARAM = #{param,jdbcType=VARCHAR},
+      </if>
+      <if test="requestIp != null">
+        REQUEST_IP = #{requestIp,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where LOGID = #{logid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suse.edu.bean.Log">
+    update T_SYSTEM_LOG
+    set OPREATE = #{opreate,jdbcType=VARCHAR},
+      LOG_TYPE = #{logType,jdbcType=DECIMAL},
+      RECORD_TIME = #{recordTime,jdbcType=TIMESTAMP},
+      OPER_USER = #{operUser,jdbcType=VARCHAR},
+      OPER_CONTENT = #{operContent,jdbcType=VARCHAR},
+      RESULT = #{result,jdbcType=DECIMAL},
+      PARAM = #{param,jdbcType=VARCHAR},
+      REQUEST_IP = #{requestIp,jdbcType=VARCHAR}
+    where LOGID = #{logid,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.suse.edu.bean.Log">
+    <id column="LOGID" jdbcType="VARCHAR" property="logid" />
+    <result column="OPREATE" jdbcType="VARCHAR" property="opreate" />
+    <result column="LOG_TYPE" jdbcType="DECIMAL" property="logType" />
+    <result column="RECORD_TIME" jdbcType="TIMESTAMP" property="recordTime" />
+    <result column="OPER_USER" jdbcType="VARCHAR" property="operUser" />
+    <result column="OPER_CONTENT" jdbcType="VARCHAR" property="operContent" />
+    <result column="RESULT" jdbcType="DECIMAL" property="result" />
+    <result column="PARAM" jdbcType="VARCHAR" property="param" />
+    <result column="REQUEST_IP" jdbcType="VARCHAR" property="requestIp" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    LOGID, OPREATE, LOG_TYPE, RECORD_TIME, OPER_USER, OPER_CONTENT, RESULT, PARAM, REQUEST_IP
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from T_SYSTEM_LOG
+    where LOGID = #{logid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from T_SYSTEM_LOG
+    where LOGID = #{logid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.suse.edu.bean.Log">
+    insert into T_SYSTEM_LOG (LOGID, OPREATE, LOG_TYPE, 
+      RECORD_TIME, OPER_USER, OPER_CONTENT, 
+      RESULT, PARAM, REQUEST_IP
+      )
+    values (#{logid,jdbcType=VARCHAR}, #{opreate,jdbcType=VARCHAR}, #{logType,jdbcType=DECIMAL}, 
+      #{recordTime,jdbcType=TIMESTAMP}, #{operUser,jdbcType=VARCHAR}, #{operContent,jdbcType=VARCHAR}, 
+      #{result,jdbcType=DECIMAL}, #{param,jdbcType=VARCHAR}, #{requestIp,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.suse.edu.bean.Log">
+    insert into T_SYSTEM_LOG
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="logid != null">
+        LOGID,
+      </if>
+      <if test="opreate != null">
+        OPREATE,
+      </if>
+      <if test="logType != null">
+        LOG_TYPE,
+      </if>
+      <if test="recordTime != null">
+        RECORD_TIME,
+      </if>
+      <if test="operUser != null">
+        OPER_USER,
+      </if>
+      <if test="operContent != null">
+        OPER_CONTENT,
+      </if>
+      <if test="result != null">
+        RESULT,
+      </if>
+      <if test="param != null">
+        PARAM,
+      </if>
+      <if test="requestIp != null">
+        REQUEST_IP,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="logid != null">
+        #{logid,jdbcType=VARCHAR},
+      </if>
+      <if test="opreate != null">
+        #{opreate,jdbcType=VARCHAR},
+      </if>
+      <if test="logType != null">
+        #{logType,jdbcType=DECIMAL},
+      </if>
+      <if test="recordTime != null">
+        #{recordTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operUser != null">
+        #{operUser,jdbcType=VARCHAR},
+      </if>
+      <if test="operContent != null">
+        #{operContent,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null">
+        #{result,jdbcType=DECIMAL},
+      </if>
+      <if test="param != null">
+        #{param,jdbcType=VARCHAR},
+      </if>
+      <if test="requestIp != null">
+        #{requestIp,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suse.edu.bean.Log">
+    update T_SYSTEM_LOG
+    <set>
+      <if test="opreate != null">
+        OPREATE = #{opreate,jdbcType=VARCHAR},
+      </if>
+      <if test="logType != null">
+        LOG_TYPE = #{logType,jdbcType=DECIMAL},
+      </if>
+      <if test="recordTime != null">
+        RECORD_TIME = #{recordTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operUser != null">
+        OPER_USER = #{operUser,jdbcType=VARCHAR},
+      </if>
+      <if test="operContent != null">
+        OPER_CONTENT = #{operContent,jdbcType=VARCHAR},
+      </if>
+      <if test="result != null">
+        RESULT = #{result,jdbcType=DECIMAL},
+      </if>
+      <if test="param != null">
+        PARAM = #{param,jdbcType=VARCHAR},
+      </if>
+      <if test="requestIp != null">
+        REQUEST_IP = #{requestIp,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where LOGID = #{logid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suse.edu.bean.Log">
+    update T_SYSTEM_LOG
+    set OPREATE = #{opreate,jdbcType=VARCHAR},
+      LOG_TYPE = #{logType,jdbcType=DECIMAL},
+      RECORD_TIME = #{recordTime,jdbcType=TIMESTAMP},
+      OPER_USER = #{operUser,jdbcType=VARCHAR},
+      OPER_CONTENT = #{operContent,jdbcType=VARCHAR},
+      RESULT = #{result,jdbcType=DECIMAL},
+      PARAM = #{param,jdbcType=VARCHAR},
+      REQUEST_IP = #{requestIp,jdbcType=VARCHAR}
+    where LOGID = #{logid,jdbcType=VARCHAR}
+  </update>
+</mapper>

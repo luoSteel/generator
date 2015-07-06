@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suse.edu.dao.DictMapper" >
+  <resultMap id="BaseResultMap" type="com.suse.edu.bean.Dict" >
+    <id column="VAL_ID" property="valId" jdbcType="VARCHAR" />
+    <result column="DICT_CODE" property="dictCode" jdbcType="VARCHAR" />
+    <result column="DICT_VALUE" property="dictValue" jdbcType="VARCHAR" />
+    <result column="ADD_TIME" property="addTime" jdbcType="TIMESTAMP" />
+    <result column="DICT_VAL_NAME" property="dictValName" jdbcType="VARCHAR" />
+    <result column="DICT_NAME" property="dictName" jdbcType="VARCHAR" />
+    <result column="DICT_TYPE" property="dictType" jdbcType="DECIMAL" />
+    <result column="DICT_STATUS" property="dictStatus" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    VAL_ID, DICT_CODE, DICT_VALUE, ADD_TIME, DICT_VAL_NAME, DICT_NAME, DICT_TYPE, DICT_STATUS
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_SYSTEM_DICT
+    where VAL_ID = #{valId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from T_SYSTEM_DICT
+    where VAL_ID = #{valId,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.suse.edu.bean.Dict" >
+    insert into T_SYSTEM_DICT (VAL_ID, DICT_CODE, DICT_VALUE, 
+      ADD_TIME, DICT_VAL_NAME, DICT_NAME, 
+      DICT_TYPE, DICT_STATUS)
+    values (#{valId,jdbcType=VARCHAR}, #{dictCode,jdbcType=VARCHAR}, #{dictValue,jdbcType=VARCHAR}, 
+      #{addTime,jdbcType=TIMESTAMP}, #{dictValName,jdbcType=VARCHAR}, #{dictName,jdbcType=VARCHAR}, 
+      #{dictType,jdbcType=DECIMAL}, #{dictStatus,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suse.edu.bean.Dict" >
+    insert into T_SYSTEM_DICT
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="valId != null" >
+        VAL_ID,
+      </if>
+      <if test="dictCode != null" >
+        DICT_CODE,
+      </if>
+      <if test="dictValue != null" >
+        DICT_VALUE,
+      </if>
+      <if test="addTime != null" >
+        ADD_TIME,
+      </if>
+      <if test="dictValName != null" >
+        DICT_VAL_NAME,
+      </if>
+      <if test="dictName != null" >
+        DICT_NAME,
+      </if>
+      <if test="dictType != null" >
+        DICT_TYPE,
+      </if>
+      <if test="dictStatus != null" >
+        DICT_STATUS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="valId != null" >
+        #{valId,jdbcType=VARCHAR},
+      </if>
+      <if test="dictCode != null" >
+        #{dictCode,jdbcType=VARCHAR},
+      </if>
+      <if test="dictValue != null" >
+        #{dictValue,jdbcType=VARCHAR},
+      </if>
+      <if test="addTime != null" >
+        #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dictValName != null" >
+        #{dictValName,jdbcType=VARCHAR},
+      </if>
+      <if test="dictName != null" >
+        #{dictName,jdbcType=VARCHAR},
+      </if>
+      <if test="dictType != null" >
+        #{dictType,jdbcType=DECIMAL},
+      </if>
+      <if test="dictStatus != null" >
+        #{dictStatus,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suse.edu.bean.Dict" >
+    update T_SYSTEM_DICT
+    <set >
+      <if test="dictCode != null" >
+        DICT_CODE = #{dictCode,jdbcType=VARCHAR},
+      </if>
+      <if test="dictValue != null" >
+        DICT_VALUE = #{dictValue,jdbcType=VARCHAR},
+      </if>
+      <if test="addTime != null" >
+        ADD_TIME = #{addTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dictValName != null" >
+        DICT_VAL_NAME = #{dictValName,jdbcType=VARCHAR},
+      </if>
+      <if test="dictName != null" >
+        DICT_NAME = #{dictName,jdbcType=VARCHAR},
+      </if>
+      <if test="dictType != null" >
+        DICT_TYPE = #{dictType,jdbcType=DECIMAL},
+      </if>
+      <if test="dictStatus != null" >
+        DICT_STATUS = #{dictStatus,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where VAL_ID = #{valId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suse.edu.bean.Dict" >
+    update T_SYSTEM_DICT
+    set DICT_CODE = #{dictCode,jdbcType=VARCHAR},
+      DICT_VALUE = #{dictValue,jdbcType=VARCHAR},
+      ADD_TIME = #{addTime,jdbcType=TIMESTAMP},
+      DICT_VAL_NAME = #{dictValName,jdbcType=VARCHAR},
+      DICT_NAME = #{dictName,jdbcType=VARCHAR},
+      DICT_TYPE = #{dictType,jdbcType=DECIMAL},
+      DICT_STATUS = #{dictStatus,jdbcType=DECIMAL}
+    where VAL_ID = #{valId,jdbcType=VARCHAR}
+  </update>
+</mapper>

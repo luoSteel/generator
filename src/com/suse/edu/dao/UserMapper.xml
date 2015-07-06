@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suse.edu.dao.UserMapper" >
+  <resultMap id="BaseResultMap" type="com.suse.edu.bean.User" >
+    <id column="USERID" property="userid" jdbcType="VARCHAR" />
+    <result column="GROUPID" property="groupid" jdbcType="VARCHAR" />
+    <result column="ACCOUNT" property="account" jdbcType="VARCHAR" />
+    <result column="USERNAME" property="username" jdbcType="VARCHAR" />
+    <result column="PASSWORD" property="password" jdbcType="VARCHAR" />
+    <result column="PHONE" property="phone" jdbcType="VARCHAR" />
+    <result column="ADDRESS" property="address" jdbcType="VARCHAR" />
+    <result column="STATUS" property="status" jdbcType="DECIMAL" />
+    <result column="ADDUSER" property="adduser" jdbcType="VARCHAR" />
+    <result column="ADDTIME" property="addtime" jdbcType="TIMESTAMP" />
+    <result column="USER_TYPE" property="userType" jdbcType="DECIMAL" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="COMPANY" property="company" jdbcType="VARCHAR" />
+    <result column="LOCK_DATE" property="lockDate" jdbcType="TIMESTAMP" />
+    <result column="ERRORCOUNT" property="errorcount" jdbcType="DECIMAL" />
+    <result column="DATA_PERMISSION_FLAG" property="dataPermissionFlag" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    USERID, GROUPID, ACCOUNT, USERNAME, PASSWORD, PHONE, ADDRESS, STATUS, ADDUSER, ADDTIME, 
+    USER_TYPE, EMAIL, COMPANY, LOCK_DATE, ERRORCOUNT, DATA_PERMISSION_FLAG
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from T_SYSTEM_USER
+    where USERID = #{userid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from T_SYSTEM_USER
+    where USERID = #{userid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.suse.edu.bean.User" >
+    insert into T_SYSTEM_USER (USERID, GROUPID, ACCOUNT, 
+      USERNAME, PASSWORD, PHONE, 
+      ADDRESS, STATUS, ADDUSER, 
+      ADDTIME, USER_TYPE, EMAIL, 
+      COMPANY, LOCK_DATE, ERRORCOUNT, 
+      DATA_PERMISSION_FLAG)
+    values (#{userid,jdbcType=VARCHAR}, #{groupid,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}, 
+      #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR}, 
+      #{address,jdbcType=VARCHAR}, #{status,jdbcType=DECIMAL}, #{adduser,jdbcType=VARCHAR}, 
+      #{addtime,jdbcType=TIMESTAMP}, #{userType,jdbcType=DECIMAL}, #{email,jdbcType=VARCHAR}, 
+      #{company,jdbcType=VARCHAR}, #{lockDate,jdbcType=TIMESTAMP}, #{errorcount,jdbcType=DECIMAL}, 
+      #{dataPermissionFlag,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suse.edu.bean.User" >
+    insert into T_SYSTEM_USER
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        USERID,
+      </if>
+      <if test="groupid != null" >
+        GROUPID,
+      </if>
+      <if test="account != null" >
+        ACCOUNT,
+      </if>
+      <if test="username != null" >
+        USERNAME,
+      </if>
+      <if test="password != null" >
+        PASSWORD,
+      </if>
+      <if test="phone != null" >
+        PHONE,
+      </if>
+      <if test="address != null" >
+        ADDRESS,
+      </if>
+      <if test="status != null" >
+        STATUS,
+      </if>
+      <if test="adduser != null" >
+        ADDUSER,
+      </if>
+      <if test="addtime != null" >
+        ADDTIME,
+      </if>
+      <if test="userType != null" >
+        USER_TYPE,
+      </if>
+      <if test="email != null" >
+        EMAIL,
+      </if>
+      <if test="company != null" >
+        COMPANY,
+      </if>
+      <if test="lockDate != null" >
+        LOCK_DATE,
+      </if>
+      <if test="errorcount != null" >
+        ERRORCOUNT,
+      </if>
+      <if test="dataPermissionFlag != null" >
+        DATA_PERMISSION_FLAG,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="userid != null" >
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="groupid != null" >
+        #{groupid,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null" >
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="adduser != null" >
+        #{adduser,jdbcType=VARCHAR},
+      </if>
+      <if test="addtime != null" >
+        #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userType != null" >
+        #{userType,jdbcType=DECIMAL},
+      </if>
+      <if test="email != null" >
+        #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null" >
+        #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="lockDate != null" >
+        #{lockDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="errorcount != null" >
+        #{errorcount,jdbcType=DECIMAL},
+      </if>
+      <if test="dataPermissionFlag != null" >
+        #{dataPermissionFlag,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suse.edu.bean.User" >
+    update T_SYSTEM_USER
+    <set >
+      <if test="groupid != null" >
+        GROUPID = #{groupid,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null" >
+        ACCOUNT = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="username != null" >
+        USERNAME = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        PASSWORD = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        PHONE = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="address != null" >
+        ADDRESS = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null" >
+        STATUS = #{status,jdbcType=DECIMAL},
+      </if>
+      <if test="adduser != null" >
+        ADDUSER = #{adduser,jdbcType=VARCHAR},
+      </if>
+      <if test="addtime != null" >
+        ADDTIME = #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="userType != null" >
+        USER_TYPE = #{userType,jdbcType=DECIMAL},
+      </if>
+      <if test="email != null" >
+        EMAIL = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="company != null" >
+        COMPANY = #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="lockDate != null" >
+        LOCK_DATE = #{lockDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="errorcount != null" >
+        ERRORCOUNT = #{errorcount,jdbcType=DECIMAL},
+      </if>
+      <if test="dataPermissionFlag != null" >
+        DATA_PERMISSION_FLAG = #{dataPermissionFlag,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where USERID = #{userid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suse.edu.bean.User" >
+    update T_SYSTEM_USER
+    set GROUPID = #{groupid,jdbcType=VARCHAR},
+      ACCOUNT = #{account,jdbcType=VARCHAR},
+      USERNAME = #{username,jdbcType=VARCHAR},
+      PASSWORD = #{password,jdbcType=VARCHAR},
+      PHONE = #{phone,jdbcType=VARCHAR},
+      ADDRESS = #{address,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=DECIMAL},
+      ADDUSER = #{adduser,jdbcType=VARCHAR},
+      ADDTIME = #{addtime,jdbcType=TIMESTAMP},
+      USER_TYPE = #{userType,jdbcType=DECIMAL},
+      EMAIL = #{email,jdbcType=VARCHAR},
+      COMPANY = #{company,jdbcType=VARCHAR},
+      LOCK_DATE = #{lockDate,jdbcType=TIMESTAMP},
+      ERRORCOUNT = #{errorcount,jdbcType=DECIMAL},
+      DATA_PERMISSION_FLAG = #{dataPermissionFlag,jdbcType=VARCHAR}
+    where USERID = #{userid,jdbcType=VARCHAR}
+  </update>
+</mapper>

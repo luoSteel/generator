@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.suse.edu.dao.MtemMapper" >
+  <resultMap id="BaseResultMap" type="com.suse.edu.bean.Mtem" >
+    <id column="D_RECORD_ID" property="dRecordId" jdbcType="DECIMAL" />
+    <result column="D_DATA_ID" property="dDataId" jdbcType="VARCHAR" />
+    <result column="V04298" property="v04298" jdbcType="DECIMAL" />
+    <result column="D_IYMDHM" property="dIymdhm" jdbcType="TIMESTAMP" />
+    <result column="D_RYMDHM" property="dRymdhm" jdbcType="TIMESTAMP" />
+    <result column="D_UPDATE_TIME" property="dUpdateTime" jdbcType="TIMESTAMP" />
+    <result column="V01300" property="v01300" jdbcType="VARCHAR" />
+    <result column="V05001" property="v05001" jdbcType="DECIMAL" />
+    <result column="V06001" property="v06001" jdbcType="DECIMAL" />
+    <result column="V07001" property="v07001" jdbcType="DECIMAL" />
+    <result column="V07031" property="v07031" jdbcType="DECIMAL" />
+    <result column="V07311" property="v07311" jdbcType="DECIMAL" />
+    <result column="V07032_04" property="v0703204" jdbcType="DECIMAL" />
+    <result column="V04294" property="v04294" jdbcType="DECIMAL" />
+    <result column="V12001_701" property="v12001701" jdbcType="DECIMAL" />
+    <result column="V13011" property="v13011" jdbcType="DECIMAL" />
+    <result column="V13011_008_REL" property="v13011008Rel" jdbcType="DECIMAL" />
+    <result column="V13011_008" property="v13011008" jdbcType="DECIMAL" />
+    <result column="V13011_004_REL" property="v13011004Rel" jdbcType="DECIMAL" />
+    <result column="V13011_004" property="v13011004" jdbcType="DECIMAL" />
+    <result column="V13011_023_MNU" property="v13011023Mnu" jdbcType="DECIMAL" />
+    <result column="V13011_023_POS" property="v13011023Pos" jdbcType="DECIMAL" />
+    <result column="V13032" property="v13032" jdbcType="DECIMAL" />
+    <result column="V13033" property="v13033" jdbcType="DECIMAL" />
+    <result column="V14032" property="v14032" jdbcType="DECIMAL" />
+    <result column="V14033" property="v14033" jdbcType="DECIMAL" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    D_RECORD_ID, D_DATA_ID, V04298, D_IYMDHM, D_RYMDHM, D_UPDATE_TIME, V01300, V05001, 
+    V06001, V07001, V07031, V07311, V07032_04, V04294, V12001_701, V13011, V13011_008_REL, 
+    V13011_008, V13011_004_REL, V13011_004, V13011_023_MNU, V13011_023_POS, V13032, V13033, 
+    V14032, V14033
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.math.BigDecimal" >
+    select 
+    <include refid="Base_Column_List" />
+    from SURF_CLI_CHN_MUL_MTEN
+    where D_RECORD_ID = #{dRecordId,jdbcType=DECIMAL}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.math.BigDecimal" >
+    delete from SURF_CLI_CHN_MUL_MTEN
+    where D_RECORD_ID = #{dRecordId,jdbcType=DECIMAL}
+  </delete>
+  <insert id="insert" parameterType="com.suse.edu.bean.Mtem" >
+    insert into SURF_CLI_CHN_MUL_MTEN (D_RECORD_ID, D_DATA_ID, V04298, 
+      D_IYMDHM, D_RYMDHM, D_UPDATE_TIME, 
+      V01300, V05001, V06001, 
+      V07001, V07031, V07311, 
+      V07032_04, V04294, V12001_701, 
+      V13011, V13011_008_REL, V13011_008, 
+      V13011_004_REL, V13011_004, V13011_023_MNU, 
+      V13011_023_POS, V13032, V13033, 
+      V14032, V14033)
+    values (#{dRecordId,jdbcType=DECIMAL}, #{dDataId,jdbcType=VARCHAR}, #{v04298,jdbcType=DECIMAL}, 
+      #{dIymdhm,jdbcType=TIMESTAMP}, #{dRymdhm,jdbcType=TIMESTAMP}, #{dUpdateTime,jdbcType=TIMESTAMP}, 
+      #{v01300,jdbcType=VARCHAR}, #{v05001,jdbcType=DECIMAL}, #{v06001,jdbcType=DECIMAL}, 
+      #{v07001,jdbcType=DECIMAL}, #{v07031,jdbcType=DECIMAL}, #{v07311,jdbcType=DECIMAL}, 
+      #{v0703204,jdbcType=DECIMAL}, #{v04294,jdbcType=DECIMAL}, #{v12001701,jdbcType=DECIMAL}, 
+      #{v13011,jdbcType=DECIMAL}, #{v13011008Rel,jdbcType=DECIMAL}, #{v13011008,jdbcType=DECIMAL}, 
+      #{v13011004Rel,jdbcType=DECIMAL}, #{v13011004,jdbcType=DECIMAL}, #{v13011023Mnu,jdbcType=DECIMAL}, 
+      #{v13011023Pos,jdbcType=DECIMAL}, #{v13032,jdbcType=DECIMAL}, #{v13033,jdbcType=DECIMAL}, 
+      #{v14032,jdbcType=DECIMAL}, #{v14033,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="com.suse.edu.bean.Mtem" >
+    insert into SURF_CLI_CHN_MUL_MTEN
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="dRecordId != null" >
+        D_RECORD_ID,
+      </if>
+      <if test="dDataId != null" >
+        D_DATA_ID,
+      </if>
+      <if test="v04298 != null" >
+        V04298,
+      </if>
+      <if test="dIymdhm != null" >
+        D_IYMDHM,
+      </if>
+      <if test="dRymdhm != null" >
+        D_RYMDHM,
+      </if>
+      <if test="dUpdateTime != null" >
+        D_UPDATE_TIME,
+      </if>
+      <if test="v01300 != null" >
+        V01300,
+      </if>
+      <if test="v05001 != null" >
+        V05001,
+      </if>
+      <if test="v06001 != null" >
+        V06001,
+      </if>
+      <if test="v07001 != null" >
+        V07001,
+      </if>
+      <if test="v07031 != null" >
+        V07031,
+      </if>
+      <if test="v07311 != null" >
+        V07311,
+      </if>
+      <if test="v0703204 != null" >
+        V07032_04,
+      </if>
+      <if test="v04294 != null" >
+        V04294,
+      </if>
+      <if test="v12001701 != null" >
+        V12001_701,
+      </if>
+      <if test="v13011 != null" >
+        V13011,
+      </if>
+      <if test="v13011008Rel != null" >
+        V13011_008_REL,
+      </if>
+      <if test="v13011008 != null" >
+        V13011_008,
+      </if>
+      <if test="v13011004Rel != null" >
+        V13011_004_REL,
+      </if>
+      <if test="v13011004 != null" >
+        V13011_004,
+      </if>
+      <if test="v13011023Mnu != null" >
+        V13011_023_MNU,
+      </if>
+      <if test="v13011023Pos != null" >
+        V13011_023_POS,
+      </if>
+      <if test="v13032 != null" >
+        V13032,
+      </if>
+      <if test="v13033 != null" >
+        V13033,
+      </if>
+      <if test="v14032 != null" >
+        V14032,
+      </if>
+      <if test="v14033 != null" >
+        V14033,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="dRecordId != null" >
+        #{dRecordId,jdbcType=DECIMAL},
+      </if>
+      <if test="dDataId != null" >
+        #{dDataId,jdbcType=VARCHAR},
+      </if>
+      <if test="v04298 != null" >
+        #{v04298,jdbcType=DECIMAL},
+      </if>
+      <if test="dIymdhm != null" >
+        #{dIymdhm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dRymdhm != null" >
+        #{dRymdhm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dUpdateTime != null" >
+        #{dUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="v01300 != null" >
+        #{v01300,jdbcType=VARCHAR},
+      </if>
+      <if test="v05001 != null" >
+        #{v05001,jdbcType=DECIMAL},
+      </if>
+      <if test="v06001 != null" >
+        #{v06001,jdbcType=DECIMAL},
+      </if>
+      <if test="v07001 != null" >
+        #{v07001,jdbcType=DECIMAL},
+      </if>
+      <if test="v07031 != null" >
+        #{v07031,jdbcType=DECIMAL},
+      </if>
+      <if test="v07311 != null" >
+        #{v07311,jdbcType=DECIMAL},
+      </if>
+      <if test="v0703204 != null" >
+        #{v0703204,jdbcType=DECIMAL},
+      </if>
+      <if test="v04294 != null" >
+        #{v04294,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001701 != null" >
+        #{v12001701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011 != null" >
+        #{v13011,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011008Rel != null" >
+        #{v13011008Rel,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011008 != null" >
+        #{v13011008,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011004Rel != null" >
+        #{v13011004Rel,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011004 != null" >
+        #{v13011004,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011023Mnu != null" >
+        #{v13011023Mnu,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011023Pos != null" >
+        #{v13011023Pos,jdbcType=DECIMAL},
+      </if>
+      <if test="v13032 != null" >
+        #{v13032,jdbcType=DECIMAL},
+      </if>
+      <if test="v13033 != null" >
+        #{v13033,jdbcType=DECIMAL},
+      </if>
+      <if test="v14032 != null" >
+        #{v14032,jdbcType=DECIMAL},
+      </if>
+      <if test="v14033 != null" >
+        #{v14033,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.suse.edu.bean.Mtem" >
+    update SURF_CLI_CHN_MUL_MTEN
+    <set >
+      <if test="dDataId != null" >
+        D_DATA_ID = #{dDataId,jdbcType=VARCHAR},
+      </if>
+      <if test="v04298 != null" >
+        V04298 = #{v04298,jdbcType=DECIMAL},
+      </if>
+      <if test="dIymdhm != null" >
+        D_IYMDHM = #{dIymdhm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dRymdhm != null" >
+        D_RYMDHM = #{dRymdhm,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dUpdateTime != null" >
+        D_UPDATE_TIME = #{dUpdateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="v01300 != null" >
+        V01300 = #{v01300,jdbcType=VARCHAR},
+      </if>
+      <if test="v05001 != null" >
+        V05001 = #{v05001,jdbcType=DECIMAL},
+      </if>
+      <if test="v06001 != null" >
+        V06001 = #{v06001,jdbcType=DECIMAL},
+      </if>
+      <if test="v07001 != null" >
+        V07001 = #{v07001,jdbcType=DECIMAL},
+      </if>
+      <if test="v07031 != null" >
+        V07031 = #{v07031,jdbcType=DECIMAL},
+      </if>
+      <if test="v07311 != null" >
+        V07311 = #{v07311,jdbcType=DECIMAL},
+      </if>
+      <if test="v0703204 != null" >
+        V07032_04 = #{v0703204,jdbcType=DECIMAL},
+      </if>
+      <if test="v04294 != null" >
+        V04294 = #{v04294,jdbcType=DECIMAL},
+      </if>
+      <if test="v12001701 != null" >
+        V12001_701 = #{v12001701,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011 != null" >
+        V13011 = #{v13011,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011008Rel != null" >
+        V13011_008_REL = #{v13011008Rel,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011008 != null" >
+        V13011_008 = #{v13011008,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011004Rel != null" >
+        V13011_004_REL = #{v13011004Rel,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011004 != null" >
+        V13011_004 = #{v13011004,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011023Mnu != null" >
+        V13011_023_MNU = #{v13011023Mnu,jdbcType=DECIMAL},
+      </if>
+      <if test="v13011023Pos != null" >
+        V13011_023_POS = #{v13011023Pos,jdbcType=DECIMAL},
+      </if>
+      <if test="v13032 != null" >
+        V13032 = #{v13032,jdbcType=DECIMAL},
+      </if>
+      <if test="v13033 != null" >
+        V13033 = #{v13033,jdbcType=DECIMAL},
+      </if>
+      <if test="v14032 != null" >
+        V14032 = #{v14032,jdbcType=DECIMAL},
+      </if>
+      <if test="v14033 != null" >
+        V14033 = #{v14033,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where D_RECORD_ID = #{dRecordId,jdbcType=DECIMAL}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.suse.edu.bean.Mtem" >
+    update SURF_CLI_CHN_MUL_MTEN
+    set D_DATA_ID = #{dDataId,jdbcType=VARCHAR},
+      V04298 = #{v04298,jdbcType=DECIMAL},
+      D_IYMDHM = #{dIymdhm,jdbcType=TIMESTAMP},
+      D_RYMDHM = #{dRymdhm,jdbcType=TIMESTAMP},
+      D_UPDATE_TIME = #{dUpdateTime,jdbcType=TIMESTAMP},
+      V01300 = #{v01300,jdbcType=VARCHAR},
+      V05001 = #{v05001,jdbcType=DECIMAL},
+      V06001 = #{v06001,jdbcType=DECIMAL},
+      V07001 = #{v07001,jdbcType=DECIMAL},
+      V07031 = #{v07031,jdbcType=DECIMAL},
+      V07311 = #{v07311,jdbcType=DECIMAL},
+      V07032_04 = #{v0703204,jdbcType=DECIMAL},
+      V04294 = #{v04294,jdbcType=DECIMAL},
+      V12001_701 = #{v12001701,jdbcType=DECIMAL},
+      V13011 = #{v13011,jdbcType=DECIMAL},
+      V13011_008_REL = #{v13011008Rel,jdbcType=DECIMAL},
+      V13011_008 = #{v13011008,jdbcType=DECIMAL},
+      V13011_004_REL = #{v13011004Rel,jdbcType=DECIMAL},
+      V13011_004 = #{v13011004,jdbcType=DECIMAL},
+      V13011_023_MNU = #{v13011023Mnu,jdbcType=DECIMAL},
+      V13011_023_POS = #{v13011023Pos,jdbcType=DECIMAL},
+      V13032 = #{v13032,jdbcType=DECIMAL},
+      V13033 = #{v13033,jdbcType=DECIMAL},
+      V14032 = #{v14032,jdbcType=DECIMAL},
+      V14033 = #{v14033,jdbcType=DECIMAL}
+    where D_RECORD_ID = #{dRecordId,jdbcType=DECIMAL}
+  </update>
+</mapper>
